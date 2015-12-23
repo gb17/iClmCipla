@@ -216,13 +216,26 @@ public class Utility {
         paramsplayicon.leftMargin = 167;
         paramsplayicon.topMargin = 80;
 
-        ImageView playIcon = new ImageView(context);
+        final ImageView playIcon = new ImageView(context);
         // TextView playIcon = new TextView(context);
         playIcon.setLayoutParams(paramsplayicon);
         // playIcon.setTextColor(Color.WHITE);
         // playIcon.setTextSize(34);
         // playIcon.setText(context.getResources().getString(R.string.icon_play));
         playIcon.setImageResource(R.drawable.playlist_icon);
+        playIcon.setTag("1");
+        playIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (playIcon.getTag().equals("1")) {
+                    playIcon.setTag("0");
+                    playIcon.setImageResource(R.drawable.playlist_icon_green);
+                } else {
+                    playIcon.setTag("1");
+                    playIcon.setImageResource(R.drawable.playlist_icon);
+                }
+            }
+        });
 
         RelativeLayout child = new RelativeLayout(context);
         LayoutParams myparam = new RelativeLayout.LayoutParams(213, 55);
@@ -320,9 +333,30 @@ public class Utility {
 
             }
         });
+        RelativeLayout.LayoutParams paramsnewicon = new LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        paramsnewicon.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        paramsnewicon.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+
+        ImageView newicon = new ImageView(context);
+        newicon.setLayoutParams(paramsnewicon);
+        newicon.setId(1991);
+        newicon.setImageResource(R.drawable.newtag);
+        parent.addView(newicon);
         // parent.setBackgroundColor(colorForThumbnailBg);
         parent.addView(playIcon);
         parent.addView(child);
+
+
+        RelativeLayout.LayoutParams paramsreficon = new RelativeLayout.LayoutParams(
+                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+
+        paramsreficon.addRule(RelativeLayout.RIGHT_OF, 1991);
+        paramsreficon.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+
+        ImageView reficon = new ImageView(context);
+        reficon.setLayoutParams(paramsreficon);
+        reficon.setImageResource(R.drawable.reftag);
+        parent.addView(reficon);
 
         return parent;
     }
