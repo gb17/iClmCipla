@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="msapplication-tap-highlight" content="no" />
+
+
+<script src="jquery/jquery-1.10.1.min.js"></script>
+<script src="jquery/jquery-2.0.0.min.js"></script>
+
+
+<script> 
+$(document).ready(function(){
+
+
+	$("#panel").animate({opacity:'1.0'},2).click(function(){
+		    	OnHSPClick('NextBrand','');
+		});
+
+    
+
+    
+
+
+});
+
+   function SendCLID(id)
+	{
+
+	    cpjs.sendToAndroid(id);
+	}
+
+
+		function OnHSPClick(ID,redirPage)
+	{
+
+  
+ var IDPREF = ID;
+		if(ID != 'NextBrand')
+								 
+	   SendCLID(IDPREF);
+
+	   if(redirPage != '')
+		 window.location.href = redirPage;
+	   else
+		 javaObj.playNextFocussedBrand();
+
+
+	  
+	}
+
+	
+function ageselect()
+	{
+	if ($('#name5').is(':checked')) {
+ 
+$('#name4').removeAttr('checked');
+}
+else {
+   
+}
+	
+	}	
+function ageselect2()
+	{
+	if ($('#name4').is(':checked')) {
+   
+$('#name5').removeAttr('checked');
+}
+else {
+   
+}
+	
+	}	
+
+
+
+</script>
+ 
+<style type="text/css"> 
+    html, body
+    {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+		overflow:hidden;
+    }
+
+img, div
+	{
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+                
+	}
+
+
+
+#panel
+{
+text-align:center;
+/*background-color:#e5eecc;
+border:solid 1px #c3c3c3;*/
+height:100%;
+width:100%;
+position:absolute;
+z-index:5;
+background-size: contain;
+}
+
+#panel
+{
+opacity:0.0;
+}
+#panel1
+{
+display:none;
+height:80%;
+width:40%;
+top:21.5%;
+left:-25%;
+position:absolute;
+background-color:transparent;
+/*border:solid 1px #c3c3c3;*/
+z-index:2;
+}
+
+
+#panel2
+{
+display:none;
+height:50px;
+width:70px;
+top:50px;
+left:500px;
+position:absolute;
+background-color:#555555;
+border:solid 1px #c3c3c3;
+z-index:2;
+}
+#popup1, #popup2,#popup3,  #popup4, #popup5 ,#popup
+{
+display:none;
+height:100%;
+width:100%;
+	top:0%;
+	left:0%;
+position:absolute;
+z-index:12;
+opacity:1.0;
+/*border:solid 1px #c3c3c3;*/
+}
+
+#name1, #name2,#name3,#name4,#name5,#name6,#name7,#name8
+{
+
+position:absolute;
+z-index:5;
+height:5%;
+width:30%;
+/*border:solid 1px #c3c3c3;*/
+}
+
+#name1
+{
+width:100%;
+position:absolute;
+z-index:15;
+align:center;
+font-size: 250%;
+color:white ;
+background-size:100% 100%;
+background-position:center;
+position:absolute;
+top: 15%;
+left:0%;
+
+height:8%;
+
+z-index:17;
+/*border:solid 1px #c3c3c3;*/
+}
+
+#name4
+{
+
+background-size:13% 70%;
+background-position:center;
+
+top: 60%;
+left: 25.3%;
+z-index:10;
+height:7%;
+width:7%;
+
+}
+
+
+
+#name5
+{
+
+background-size:13% 70%;
+background-position:center;
+
+top: 60%;
+left:46%;
+z-index:10;
+height:7%;
+width:7%;
+z-index:7;
+}
+#name7
+{
+
+background-size:13% 70%;
+background-position:center;
+
+top: 60%;
+left:68%;
+z-index:10;
+height:7%;
+width:7%;
+z-index:7;
+}
+#yes
+{
+background-size:100% 100%;
+background-position:center;
+position:absolute;
+
+left:64%;
+top: 57%;
+
+font-size: 180%;
+height:auto;
+
+color:#004fa6 ;
+z-index:17;
+}
+
+#No
+{
+background-size:100% 100%;
+background-position:center;
+position:absolute;
+top: 56.5%;
+left:12%;
+font-size: 190%;
+color:#004fa6 ;
+
+
+z-index:17;
+}
+
+#text1
+{
+background-size:100% 100%;
+background-position:center;
+position:absolute;
+top: 56.5%;
+left:41%;
+font-size: 190%;
+color:#004fa6 ;
+height:8%;
+
+z-index:17;
+}
+</style>
+</head>
+<body>
+ 
+
+<div id="panel" >
+<img src="images/bg1.png" style="height:100%;width:100%;" onclick="OnHSPClick('cefiximeqn2','cefiximeqn2.htm');"  />
+	
+</div>
+
+<p id="name1" >	In Which Indicationy do you use Cefixme as First Choise of Treatment ?</p>
+
+<p id="text1">LRTI</p>
+
+<input id="name5" type="checkbox" onclick="ageselect2();" name="tb1" value="check">
+<input id="name4" type="checkbox" name="tb2"  onclick="ageselect();"  value="check">
+
+<input id="name7" type="checkbox" name="tb3"  onclick="ageselect3();"  value="check">
+<p id="yes" >GIT</p>
+<p id="No" >Thypoid Fever</p>
+</body>
+
+
+</html>

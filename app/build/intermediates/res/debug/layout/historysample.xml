@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:id="@+id/tr1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Brand SKUs"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sampling QTY"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Inputs"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="QTY"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tr1"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="C-FIX 50DT"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dip"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="Pen"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="5"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tr2"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="20dip" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="C-FIX 100DT"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dip"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="2"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="Chit Container"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tr3"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="20dip" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="C-FIX 200DT"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dip"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="3"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="RX Pad"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tr4"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="20dip" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="C-FIX DRY SYRUP"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dip"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="2015 Calender"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="20sp" />
+        </TableRow>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/textdone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Signature Done" />
+
+        <ImageView
+            android:id="@+id/gestures"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@id/textdone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/bg_rounded" />
+    </RelativeLayout>
+
+</LinearLayout>
+<!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/historysample.xml -->

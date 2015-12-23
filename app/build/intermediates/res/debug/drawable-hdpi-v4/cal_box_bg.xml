@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+            <corners android:radius="8dip" />
+
+            <gradient
+                android:angle="270"
+                android:endColor="#9E9397"
+                android:startColor="#9E9397"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item android:top="20dip">
+        <shape android:shape="rectangle" >
+            <corners
+                android:bottomLeftRadius="8dp"
+                android:bottomRightRadius="8dp" />
+
+            <solid android:color="#40000000" />
+        </shape>
+    </item>
+
+</layer-list><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/drawable-hdpi/cal_box_bg.xml -->

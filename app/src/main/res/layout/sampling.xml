@@ -1,0 +1,362 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="1dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="#FFFFFF"
+    tools:context="com.cirrius.iclmcipla.MainActivity" >
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="SAMPLING"
+        android:textColor="#2E2E2E"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textview"
+        tools:context="com.cirrius.iclmcipla.MainActivity" >
+
+        <RelativeLayout
+            android:id="@+id/relativefirst"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" >
+
+            <TextView
+                android:id="@+id/textBrands"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Brands"
+                android:textColor="#2E2E2E"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textcfix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textBrands"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:text="C-FIX"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textdfix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textBrands"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textcfix"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:text="D-FIX"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textmezzodrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textBrands"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textdfix"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:text="Mezzo Drop"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textefix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textcfix"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:text="E-FIX"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text10dewpill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textcfix"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/textefix"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:text="10 Dew Pill"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textinput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textefix"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="70dp"
+                android:text="Input"
+                android:textColor="#2E2E2E"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textinput"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round"
+                android:text="Pen"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textpaperwight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textinput"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textpen"
+                android:background="@drawable/round"
+                android:text="Paperweight"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text2015calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textinput"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textpaperwight"
+                android:background="@drawable/round"
+                android:text="2015 Calender"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textRXpad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textpen"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round"
+                android:text="RX Pad"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textchitcontainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textpen"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textRXpad"
+                android:background="@drawable/round"
+                android:text="Chit Container"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textpenwithpad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textpen"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textchitcontainer"
+                android:background="@drawable/round"
+                android:text="Pen Pad"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textglimmic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textRXpad"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round"
+                android:text="Glimmic"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textpenstand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textRXpad"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textglimmic"
+                android:background="@drawable/round"
+                android:text="Pen Stand"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textsticksone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textRXpad"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textpenstand"
+                android:background="@drawable/round"
+                android:text="Stick One"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="4.6"
+            android:background="@drawable/round"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="3"
+                android:orientation="vertical" >
+
+                <TableRow
+                    android:id="@+id/table1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:gravity="center_horizontal"
+                        android:text="Brands SKU"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="2.2"
+                        android:gravity="left"
+                        android:text="QTY"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <LinearLayout
+                    android:id="@+id/linearone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TableRow
+                    android:id="@+id/table2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:gravity="center_horizontal"
+                        android:text="Inputs"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="2.2"
+                        android:gravity="left"
+                        android:text="QTY"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <LinearLayout
+                    android:id="@+id/linearthree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineartwo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingLeft="10dp" >
+
+                <include
+                    android:id="@+id/keyboard"
+                    android:layout_width="200dp"
+                    android:layout_height="270dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="45dp"
+                    layout="@layout/calculator"
+                    android:background="#B4B4B4" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/textdone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:text="Signature Done" />
+
+            <ImageView
+                android:id="@+id/gestures"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_below="@id/textdone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_rounded" />
+
+            <ImageView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:visibility="invisible"
+                android:layout_marginBottom="60dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/donenew" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

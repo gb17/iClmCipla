@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_rounded"
+    android:padding="30dp"
+    android:paddingBottom="30dp"
+    tools:context="com.cirrius.iclmcipla.MainActivity" >
+
+    <TextView
+        android:id="@+id/TextViewActionPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Forward Message \nTo, Physician"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/icon_cross"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <TableRow
+        android:id="@+id/tablerow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewActionPoint"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/TextViewselectbrand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dr Jonh Mayor"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <RelativeLayout
+        android:id="@+id/fwdmsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow1"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_doted_with_color" >
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Brand_document20080915.pdf[Link]"
+            android:textColor="#00b0ff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/attach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/addfrnd"
+            android:layout_weight="1"
+            android:text="@string/icon_paperclip"
+            android:textColor="#424242"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/addfrnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="@string/icon_addpro"
+            android:textColor="#424242"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <TableRow
+        android:id="@+id/tablerow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fwdmsg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Subject"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <EditText
+        android:id="@+id/editsubject"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tablerow2"
+        android:background="@drawable/bg_broder_grey"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/TextViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editsubject"
+        android:layout_marginTop="20dp"
+        android:text="Message"
+        android:textColor="#848484"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/EdittextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewDescription"
+        android:background="@drawable/bg_broder_grey"
+        android:lines="5"
+        android:maxLines="5"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/doneap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/roundforsave"
+        android:text="SEND"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/ap_fedmsg.xml -->

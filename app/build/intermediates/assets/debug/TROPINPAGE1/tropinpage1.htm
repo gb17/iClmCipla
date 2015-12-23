@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <script>
+  function red()
+  {
+  window.location.href = "Tropin1.htm";
+  }
+
+ function SendCLID(id)
+	{
+	    cpjs.sendToAndroid(id);
+	}
+
+function OnHSPClick(ID,redirPage)
+{
+   var IDPREF = "tropinpage2";
+   SendCLID(IDPREF);
+   
+   window.location.href = redirPage;
+
+}
+  </script>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+
+  
+ </HEAD>
+
+ <BODY>
+  <div id="mainpage"><img src="pop1.png" onclick="OnHSPClick('POP-P1','tropinpage2.htm');"style="height:100%;width:100%;"/></div>
+ </BODY>
+</HTML>

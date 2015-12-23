@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  setTimeout(function(){$("#name3").show(); $("#name3").attr('class','topslide1');},0);
+                setTimeout(function(){$("#name4").show(); $("#name4").attr('class','topslide2');},100);
+                setTimeout(function(){$("#name5").show(); $("#name5").attr('class','topslide3');},200);
+
+});
+
+function SendCLID(id)
+	{
+	    cpjs.sendToAndroid(id);
+	}
+
+function OnHSPClick(ID,redirPage)
+{
+   var IDPREF = "Liop-"+ID;
+   SendCLID(IDPREF);
+   
+   window.location.href = redirPage;
+
+}
+ 
+</script>
+
+  <style>
+  .topslide1
+{
+  -webkit-animation: slideDownRibbon1 1.0s 0.0s 1 ease forwards;
+  -moz-animation: slideDownRibbon1 1.0s 0.0s 1 ease forwards;
+}
+
+.topslide2
+{
+  -webkit-animation: slideDownRibbon2 1.0s 0.0s 1 ease forwards;
+  -moz-animation: slideDownRibbon2 1.0s 0.0s 1 ease forwards;
+}
+
+.topslide3
+{
+  -webkit-animation: slideDownRibbon3 1.0s 0.0s 1 ease forwards;
+  -moz-animation: slideDownRibbon3 1.0s 0.0s 1 ease forwards;
+}
+
+ @-webkit-keyframes slideDownRibbon1	
+    {
+    	0%
+    	{
+    	   
+    	   opacity:0;
+		   -webkit-transform:translateY( -65%);
+    	}
+      
+        
+    	100%
+    	{
+    		
+    		opacity:10;
+			-webkit-transform:translateY(175%);
+        }
+    }
+
+
+
+@-webkit-keyframes slideDownRibbon2
+    {
+    	0%
+    	{
+    	   
+    	   opacity:0;
+		   -webkit-transform:translateY( -65%);
+    	}
+      
+        
+    	100%
+    	{
+    		
+    		opacity:10;
+			-webkit-transform:translateY(220%);
+        }
+    }
+
+
+
+@-webkit-keyframes slideDownRibbon3
+    {
+    	0%
+    	{
+    	   
+    	   opacity:0;
+		   -webkit-transform:translateY( -65%);
+    	}
+      
+        
+    	100%
+    	{
+    		
+    		opacity:10;
+			-webkit-transform:translateY(190%);
+        }
+    }
+
+
+
+#name3, #name4, #name5
+{
+display:none;
+
+position:absolute;
+z-index:13;
+
+/*border:solid 1px #c3c3c3;*/
+}
+
+#name3  /*AAS.png*/
+{
+top: -45%;
+left:36.5%;
+}
+
+#name4  /*OSA.png*/
+{
+top:-40%;
+left:54.7%;
+}
+#name5  /*RA.png*/
+{
+top:-51%;
+left:76%;
+}
+  </style>
+
+  <script>
+  function red()
+  {
+  window.location.href = "Liopril1.htm";
+  }
+  </script>
+ </HEAD>
+
+ <BODY>
+   <div id="Lioprilpage2"><img src="ebg.png" onclick="OnHSPClick('POP-P2','Liopril1.htm');" style="height:100%;width:100%;"/></div>
+    <div id="name3"><img src="55.png" onclick="OnHSPClick('POP-P2','Liopril1.htm');"></div>
+  <div id="name4"><img src="98.png" onclick="OnHSPClick('POP-P2','Liopril1.htm');"></div>
+  <div id="name5"><img src="22.png" onclick="OnHSPClick('POP-P2','Liopril1.htm');"></div>
+
+ </BODY>
+</HTML>

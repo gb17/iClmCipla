@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/pcanvas" android:state_focused="true" android:state_pressed="false"/>
+    <item android:drawable="@drawable/pcanvas" android:state_pressed="true"/>
+    <item android:drawable="@drawable/canvas"/>
+
+</selector>
+<!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/drawable/canvasbutton.xml -->

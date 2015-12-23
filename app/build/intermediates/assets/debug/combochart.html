@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawVisualization);
+
+function drawVisualization() {
+  // Some raw data (not necessarily accurate)
+  var data = google.visualization.arrayToDataTable([
+    ['Month', 'Unit',  'Average'],
+    ['Jan',  165,       130],
+    ['Feb',   200,   180],
+    ['March',   300,    240],
+    ['April',   400    ,  250],
+    ['May',   500   ,300]
+  ]);
+
+  var options = {
+    title : '',
+    vAxis: {title: "Date"},
+    hAxis: {title: "Month"},
+    seriesType: "bars",
+    series: {1: {type: "line"}}
+  };
+
+  var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+}
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 500px; height: 500px;"></div>
+  </body>
+</html>

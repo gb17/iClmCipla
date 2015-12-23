@@ -1,0 +1,58 @@
+<html>
+<head>
+  <script type="text/javascript" src="jquery/line.js"></script>
+  <script type="text/javascript">
+/*    google.load('visualization', '1.1', {packages: ['line']});*/
+    google.load("visualization", "1.1", {packages:["corechart"],"callback":drawChart});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Week');
+       data.addColumn('number', 'Tugain');
+      
+
+      data.addRows([
+       
+        [1, 6],
+        [2, 5],
+        [3, 11],
+        [4,  8],
+        [5, 17],
+        [6,  12],
+        [7,   20],
+        [8,  27],
+        [9,  22],
+        [10,  18],
+        [11,  27],
+        [12,  22],
+        [13,  32],
+        [14,   30]
+      ]);
+
+      
+
+ var options = {
+          'legend':'bottom',
+         
+          pointSize: 5
+        };
+
+      var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+
+      chart.draw(data, options);
+    }
+
+/*legend: 'none', colors: ['#15A0C8'],
+          pointShape: { type: 'triangle', rotation: 90 }*/
+  </script>
+</head>
+<body>
+ 
+  <div id="linechart_material" style="width:400; height:300"></div>
+</body>
+</html>
+
+
+

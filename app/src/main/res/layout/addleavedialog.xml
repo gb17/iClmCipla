@@ -1,0 +1,434 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_roundedwhitewithoutpadding"
+    android:paddingBottom="30dp"
+    tools:context="com.cirrius.iclmcipla.MainActivity" >
+
+    <TextView
+        android:id="@+id/TextViewActionPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Add Leave"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:text="@string/icon_cross"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <TableRow
+        android:id="@+id/tablerow11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewActionPoint"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Select Type"
+            android:textColor="#848484"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow11"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <Spinner
+            android:id="@+id/leavespin"
+            android:layout_width="350dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/leave"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/totspin"
+            android:layout_width="350dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/tot"
+            android:visibility="gone" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/leave"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/sicklv"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Sick Level"
+            android:textColor="#616161"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/allv"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Annual Level"
+            android:textColor="#616161"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sicklv1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Disaster Relief"
+            android:textColor="#616161"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sicklv2"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Share Leave"
+            android:textColor="#616161"
+            android:visibility="gone" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow999"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow111"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/sicklv3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Emergency Level"
+            android:textColor="#616161" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/sicklv4"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Leave Without Pay"
+            android:textColor="#616161" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/sicklv5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Turn Off with Compensation"
+            android:textColor="#616161" />
+
+        <TextView
+            android:id="@+id/sicklv8"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Turn Off with Compensation"
+            android:textColor="#616161"
+            android:visibility="gone" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow999"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" >
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow1"
+        android:layout_marginLeft="20dp" >
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@android:color/white" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/Duedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Date"
+        android:textColor="#848484"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/Duetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow2"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/Duedate"
+        android:text="Time"
+        android:textColor="#848484"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/edittextDuedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:paddingBottom="4dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:text="15/09/2015"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edittime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/edittextDuedate"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:ems="6"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="11:46"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TableRow
+        android:id="@+id/tablerow799"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edittime"
+        android:layout_marginLeft="138dp"
+        android:layout_marginRight="20dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="To"
+            android:textColor="#848484"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow339"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow799"
+        android:layout_marginRight="20dp" >
+
+        <EditText
+            android:id="@+id/edittextDuedate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Duedate"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bg_roundedgray"
+            android:editable="false"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:paddingBottom="4dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="15/09/2015"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edittime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Duedate"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/edittextDuedate"
+            android:background="@drawable/bg_roundedgray"
+            android:editable="false"
+            android:ems="6"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="11:46"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow339"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/sicklv6"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Full Day"
+            android:textColor="#616161" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/sicklv7"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Partial"
+            android:textColor="#616161" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/TextViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow121"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Remarks"
+        android:textColor="#848484"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/EdittextDescription"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewDescription"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bg_broderforedittext"
+        android:lines="5"
+        android:maxLines="5"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/ButtonSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:ems="5"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="Set"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+</RelativeLayout>

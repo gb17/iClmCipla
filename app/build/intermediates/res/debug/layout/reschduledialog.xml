@@ -1,0 +1,407 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_roundedwhitewithoutpadding"
+    android:paddingBottom="30dp"
+    tools:context="com.cirrius.iclmcipla.MainActivity" >
+
+    <TextView
+        android:id="@+id/TextViewActionPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Reschedule/Add New Appointment"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:text="@string/icon_cross"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <TableRow
+        android:id="@+id/tablerow11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewActionPoint"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" >
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow11"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/childiewoflist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#484848"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/upperlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="13dp" >
+
+                        <ImageView
+                            android:id="@+id/dr_image"
+                            android:layout_width="58dp"
+                            android:layout_height="58dp"
+                            android:layout_gravity="left"
+                            android:src="@drawable/doct_7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:id="@+id/eventsListEventRowText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Dr. Elizabeth B"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewItemPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="BROOKLYN Blvd"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/childtextview3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Neurologist"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/childtextview4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Data4"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical"
+                        android:paddingTop="13dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:text="28 july"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/time2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:text="11:00"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/menufordr"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="..."
+                                android:textColor="#FFFFFF"
+                                android:textSize="28sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/masklay"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_alignTop="@+id/childiewoflist"
+                android:background="#8C000000"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_roundeddown"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/icon_download"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-10dp"
+                        android:padding="10dp"
+                        android:text="RETRY"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:max="100"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </TableRow>
+
+    <TextView
+        android:id="@+id/Duedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow111"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Date"
+        android:textColor="#848484"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/Duetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow111"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/Duedate"
+        android:text="Time"
+        android:textColor="#848484"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/edittextDuedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/round"
+        android:editable="false"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:paddingBottom="4dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:text="15/09/2015"
+        android:textColor="#616161"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edittime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/edittextDuedate"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="--:-- XX"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/sicklv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/edittime"
+        android:layout_weight="1"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:text="Skip time"
+        android:textColor="#616161"
+        android:textSize="16sp" />
+
+    <TableRow
+        android:id="@+id/tablerow799"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edittime"
+        android:layout_marginLeft="138dp"
+        android:layout_marginRight="20dp" >
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow339"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow799"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Schedule"
+            android:textColor="#848484"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow339"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/sicklv6"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Reschdule"
+            android:textColor="#616161" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/sicklv8"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:text="Add New Appointment"
+            android:textColor="#616161" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+    </TableRow>
+
+    <EditText
+        android:id="@+id/ButtonSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:ems="5"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="Save"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+</RelativeLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/reschduledialog.xml -->

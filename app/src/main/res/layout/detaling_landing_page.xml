@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlineare"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/listfordoc"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" >
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/scroll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white" >
+
+                <TableRow
+                    android:id="@+id/row31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <include
+                        android:id="@+id/thumbview31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        layout="@layout/thumbnailbr1"
+                        android:background="@drawable/selector_for_list" />
+
+                    <include
+                        android:id="@+id/thumbview32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        layout="@layout/thumbnailbr2"
+                        android:background="@drawable/bg_broderfor_tumbnail" />
+
+                    <include
+                        android:id="@+id/thumbview33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        layout="@layout/thumbnailbr3"
+                        android:background="@drawable/bg_broderfor_tumbnail" />
+
+                    <include
+                        android:id="@+id/thumbview34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        layout="@layout/thumbnailbr4"
+                        android:background="@drawable/bg_broderfor_tumbnail" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/row31"
+                    android:layout_marginTop="2dp" >
+
+                    <include
+                        android:id="@+id/thumbview35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        layout="@layout/thumbnailbr6"
+                        android:background="@drawable/bg_broderfor_tumbnail" />
+
+                    <include
+                        android:id="@+id/thumbview36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        layout="@layout/thumbnailbr7"
+                        android:background="@drawable/bg_broderfor_tumbnail" />
+
+                    <include
+                        android:id="@+id/thumbview37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        layout="@layout/thumbnailbr4"
+                        android:background="@drawable/bg_broderfor_tumbnail" />
+
+                    <include
+                        android:id="@+id/thumbview38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        layout="@layout/thumbnailbr5"
+                        android:background="@drawable/bg_broderfor_tumbnail" />
+                </TableRow>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/scroll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scroll1"
+                android:orientation="vertical" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

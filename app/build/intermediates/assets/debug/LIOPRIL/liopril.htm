@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+	
+	$("#mainpage").click(function(){
+		$("#mainpage").attr('class','leftslidemain').queue(function(next){
+		SendCLID("Liop-LP");
+        setTimeout(function(){window.location.href = "Liopril1.htm";},800);
+		next();
+		});
+	});
+
+});
+
+function SendCLID(id)
+	{
+	    cpjs.sendToAndroid(id);
+	}
+
+function OnHSPClick(ID,redirPage)
+{
+   var IDPREF = "Trop-"+ID;
+   SendCLID(IDPREF);
+   
+   window.location.href = redirPage;
+
+}
+
+
+</script>
+ 
+<style type="text/css"> 
+    html, body
+    {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+		overflow:hidden;
+    }
+
+img, div
+	{
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+
+
+
+#panel, #mainpage
+{
+text-align:center;
+/*background-color:#e5eecc;
+border:solid 1px #c3c3c3;*/
+height:100%;
+width:100%;
+position:absolute;
+z-index:1;
+
+}
+#mainpage
+{
+z-index:10;
+background-size: contain;
+}
+#panel
+{
+opacity:0.0;
+}
+#panel1
+{
+display:none;
+ position: absolute;
+            left: -100%;
+            top: 3%;
+            width: 65%;
+            height: 76%;
+background-color:transparent;
+/*border:solid 1px #c3c3c3;*/
+z-index:2;
+}
+#panel3
+{
+display:none;
+position: absolute;
+ 
+            left: 1%;
+            top: -100%;
+            
+            width: 35%;
+            height: 62%;           	
+
+/*height:73%;
+width:30%;
+top:-135%;
+left:2.1%;
+position:absolute;
+background-color:transparent;
+border:solid 1px #c3c3c3;*/
+z-index:3;
+}
+
+#panel2
+{
+display:none;
+height:50px;
+width:70px;
+top:50px;
+left:500px;
+position:absolute;
+background-color:#555555;
+border:solid 1px #c3c3c3;
+z-index:2;
+}
+#popup1, #popup2, #popup4, #popup5 ,#popup
+{
+display:none;
+height:50%;
+width:50%;
+	top:0%;
+	left:0%;
+position:absolute;
+z-index:12;
+opacity:1.0;
+/*border:solid 1px #c3c3c3;*/
+}
+
+
+
+
+#name1
+{
+	display:none;
+            position: fixed;
+            left: 550px;
+            top: 38%;
+            z-index: 2;
+            width: 24%;
+            height:48%;
+        
+}
+#name2
+{
+	display:none;
+            position: fixed;
+            left: 952.7px;
+            top: 35%;
+            z-index: 2;
+            width: 20%;
+            height:48%;
+}
+
+
+.leftslidelogo
+{
+ -webkit-animation: slideleftlogo 1.5s 0.0s 1 ease forwards;
+        -moz-animation: slideleftlogo 1.5s 0.0s 1 ease forwards;
+}
+
+.leftslidebar
+{
+ -webkit-animation: slideleftbar 1.5s 1.0s 1 ease forwards;
+        -moz-animation: slideleftbar 1.5s 1.0s 1 ease forwards;
+}
+
+
+
+.leftslidemain
+{
+   -webkit-animation: slideleft1 1.0s 0.0s 1 ease forwards;
+        -moz-animation: slideleft1 1.0s 0.0s 1 ease forwards;
+}
+
+@-webkit-keyframes slideleftlogo
+    {
+    	0%
+    	{
+    	   
+    	   -webkit-transform:translateY( -100%);
+    	}
+    	100%
+    	{
+    		
+    		-webkit-transform:translateY(84%);
+        }
+    }
+
+@-webkit-keyframes slideleftbar
+    {
+    	0%
+    	{
+    	   
+    	   -webkit-transform:translateX(-100%);
+    	}
+    	100%
+    	{
+    		
+    		-webkit-transform:translateX(207%);
+        }
+    }
+
+@-webkit-keyframes slideleft1
+    {
+    	0%
+    	{
+    	   
+    	   -webkit-transform:translateX( 0%);
+    	}
+    	100%
+    	{
+    		
+    		-webkit-transform:translateX(-105%);
+        }
+    }
+
+
+
+
+</style>
+</head>
+<body >
+ 
+<div id="mainpage"><img src="cover page.png" style="height:100%;width:100%;"/></div>
+
+</body>
+
+
+</html>
+

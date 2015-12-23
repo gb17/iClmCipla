@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="#464646"
+    android:padding="4dp" >
+
+    <TextView
+        android:id="@+id/bin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_circle"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="@string/icon_trash"
+        android:textColor="#464646"
+        android:textSize="40sp" />
+
+</RelativeLayout>

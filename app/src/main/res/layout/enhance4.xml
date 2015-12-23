@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="213dp"
+    android:layout_height="102dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/infofromtumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="4dp"
+        android:text="@string/icon_info"
+        android:textColor="#bdbdbd"
+        android:textSize="34sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cficx1"
+        android:layout_width="213dp"
+        android:layout_height="136dp"
+        android:layout_below="@+id/infofromtumbnail"
+        android:background="@drawable/enh4" />
+
+    <TextView
+        android:layout_width="41dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="112dp"
+        android:background="#80000000"
+        android:gravity="center"
+        android:text="06"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="167dp"
+        android:layout_marginTop="80dp"
+        android:visibility="invisible"
+        android:src="@drawable/playlist_icon" />
+
+    <RelativeLayout
+        android:id="@+id/relativeforpage"
+        android:layout_width="213dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/cficx1"
+        android:background="#CDCDCD"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/seq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="MR visits information or\nKnowledge sharing"
+            android:textColor="#1e1e1e"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/threedot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text=""
+            android:textColor="#1e1e1e"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/desc1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/seq"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="#1e1e1e"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/desc2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/desc1"
+            android:text="dolor sit amet"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

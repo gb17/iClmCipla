@@ -1,0 +1,60 @@
+<html>
+<head>
+  <script type="text/javascript" src="jquery/line.js"></script>
+  <script type="text/javascript">
+/*    google.load('visualization', '1.1', {packages: ['line']});*/
+    google.load("visualization", "1.1", {packages:["corechart"],"callback":drawChart});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Camping');
+      data.addColumn('number', 'insite');
+      data.addColumn('number', 'Camping2');
+      data.addColumn('number', 'Camping3');
+       data.addColumn('number', 'Camping4');
+
+      data.addRows([
+       
+        [1,  10, 8, 6,2],
+        [2,  10, 7, 5,4],
+        [3, 12, 15, 11,5],
+        [4,  20,  13,  8,6],
+        [5,  30,  20,  17,9],
+        [6,  33,  17,  12,10],
+        [7,  37,  27,  20,12],
+        [8,  42,  20, 27,15],
+        [9,  45, 32, 22,18],
+        [10,  47,  36, 18,21],
+        [11,  50, 40, 27,24],
+        [12,  53, 35, 22,27],
+        [13,   56, 45, 32,30],
+        [14,   54, 40,  30,33]
+      ]);
+
+      
+
+ var options = {
+          'legend':'bottom',
+         
+          pointSize: 5
+        };
+
+      var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+
+      chart.draw(data, options);
+    }
+
+/*legend: 'none', colors: ['#15A0C8'],
+          pointShape: { type: 'triangle', rotation: 90 }*/
+  </script>
+</head>
+<body>
+ 
+  <div id="linechart_material" style="width:400; height:300"></div>
+</body>
+</html>
+
+
+

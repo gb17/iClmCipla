@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="#4D000000" />
+
+    <padding android:bottom="0dip" />
+
+    <corners
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp" />
+
+</shape><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/drawable/bg_bottomedge.xml -->

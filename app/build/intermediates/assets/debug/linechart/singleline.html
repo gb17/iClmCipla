@@ -1,0 +1,59 @@
+<html>
+<head>
+  <script type="text/javascript" src="jquery/line.js"></script>
+  <script type="text/javascript">
+/*    google.load('visualization', '1.1', {packages: ['line']});*/
+    google.load("visualization", "1.1", {packages:["corechart"],"callback":drawChart});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+
+
+     data.addColumn('number', 'Day');
+ data.addColumn('number', 'Column Al');
+     
+
+      data.addRows([
+       
+        [1,2],
+        [2,6],
+        [3,4],
+        [4,8],
+        [5, 6],
+        [6,10],
+        [7,8],
+        [8,12],
+        [9, 10],
+        [10, 15],
+        [11,13],
+        [12, 18],
+        [13,16],
+        [14,21]  ]);
+
+      
+
+ var options = {
+          'legend':'bottom',
+         
+        
+        };
+
+      var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+
+      chart.draw(data, options);
+    }
+
+/*legend: 'none', colors: ['#15A0C8'],
+          pointShape: { type: 'triangle', rotation: 90 }*/
+  </script>
+</head>
+<body>
+ 
+  <div id="linechart_material" style="width:400; height:300"></div>
+</body>
+</html>
+
+
+

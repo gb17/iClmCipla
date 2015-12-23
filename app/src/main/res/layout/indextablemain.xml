@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/mainlineare"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <include
+            android:id="@+id/viewlist"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/mainindextable"
+            android:padding="10dp" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+        <!-- <CalendarView -->
+        <!-- android:id="@+id/calendar" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_margin="10dp" -->
+        <!-- android:layout_weight="1" /> -->
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" >
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp" >
+
+                <TextView
+                    android:id="@+id/brandName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="SPECIALITY"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="800dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/brandName1"
+                    android:layout_marginLeft="10dp"
+                    android:background="#ff33b5e5"
+                    android:visibility="gone" >
+                </View>
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="70dp"
+                    android:background="#979797" >
+                </View>
+
+                <ScrollView
+                    android:id="@+id/scroll1"
+                    android:layout_width="900dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TableRow
+                                android:id="@+id/row1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <include
+                                    android:id="@+id/thumbview1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    layout="@layout/thumbnail" />
+
+                                <include
+                                    android:id="@+id/thumbview2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail2" />
+
+                                <include
+                                    android:id="@+id/thumbview3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail3" />
+
+                                <include
+                                    android:id="@+id/thumbview5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail5" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/row1"
+                                android:layout_marginTop="10dp" >
+
+                                <include
+                                    android:id="@+id/thumbview4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    layout="@layout/thumbnail4" />
+
+                                <include
+                                    android:id="@+id/thumbview6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail6" />
+
+                                <include
+                                    android:id="@+id/thumbview7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail7" />
+                            </TableRow>
+                        </RelativeLayout>
+                        <!-- </HorizontalScrollView> -->
+                    </LinearLayout>
+                </ScrollView>
+
+                <View
+                    android:id="@+id/viewport"
+                    android:layout_width="1dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@+id/scroll1"
+                    android:background="#979797" >
+                </View>
+
+                <TextView
+                    android:id="@+id/brandName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/scroll1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:text="THERAPY"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="800dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/brandName2"
+                    android:layout_marginLeft="10dp"
+                    android:background="#ff33b5e5"
+                    android:visibility="gone" >
+                </View>
+
+                <View
+                    android:id="@+id/view21"
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="70dp"
+                    android:background="#979797" >
+                </View>
+
+                <ScrollView
+                    android:id="@+id/scroll2"
+                    android:layout_width="900dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:orientation="vertical" >
+
+                        <!-- <HorizontalScrollView -->
+                        <!-- android:id="@+id/hscroll1" -->
+                        <!-- android:layout_width="wrap_content" -->
+                        <!-- android:layout_height="match_parent" -->
+                        <!-- android:scrollbars="none" > -->
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TableRow
+                                android:id="@+id/row11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <include
+                                    android:id="@+id/thumbview21"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    layout="@layout/thumbnail" />
+
+                                <include
+                                    android:id="@+id/thumbview22"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail2" />
+
+                                <include
+                                    android:id="@+id/thumbview23"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail3" />
+
+                                <include
+                                    android:id="@+id/thumbview24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail4" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/row11"
+                                android:layout_marginTop="10dp" >
+
+                                <include
+                                    android:id="@+id/thumbview25"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    layout="@layout/thumbnail5" />
+
+                                <include
+                                    android:id="@+id/thumbview26"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="1dp"
+                                    layout="@layout/thumbnail6" />
+
+                                <include
+                                    android:id="@+id/thumbview27"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail7" />
+                            </TableRow>
+                        </RelativeLayout>
+                        <!-- </HorizontalScrollView> -->
+                    </LinearLayout>
+                </ScrollView>
+
+                <View
+                    android:id="@+id/viewport2"
+                    android:layout_width="1dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/scroll1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@+id/scroll2"
+                    android:background="#979797" >
+                </View>
+
+                <TextView
+                    android:id="@+id/brandName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/scroll2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:text="TROPIN"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="800dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/brandName3"
+                    android:layout_marginLeft="10dp"
+                    android:background="#ff33b5e5"
+                    android:visibility="gone" >
+                </View>
+
+                <View
+                    android:id="@+id/view31"
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="70dp"
+                    android:background="#979797" >
+                </View>
+
+                <ScrollView
+                    android:id="@+id/scroll3"
+                    android:layout_width="900dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view3"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:orientation="vertical" >
+
+                        <!-- <HorizontalScrollView -->
+                        <!-- android:id="@+id/hscroll1" -->
+                        <!-- android:layout_width="wrap_content" -->
+                        <!-- android:layout_height="match_parent" -->
+                        <!-- android:scrollbars="none" > -->
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TableRow
+                                android:id="@+id/row31"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <include
+                                    android:id="@+id/thumbview31"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    layout="@layout/thumbnail"
+                                    android:background="@drawable/bg_broderfor_tumbnail" />
+
+                                <include
+                                    android:id="@+id/thumbview32"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail2"
+                                    android:background="@drawable/bg_broderfor_tumbnail" />
+
+                                <include
+                                    android:id="@+id/thumbview33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail3"
+                                    android:background="@drawable/bg_broderfor_tumbnail" />
+
+                                <include
+                                    android:id="@+id/thumbview34"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail4"
+                                    android:background="@drawable/bg_broderfor_tumbnail" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/row31"
+                                android:layout_marginTop="10dp" >
+
+                                <include
+                                    android:id="@+id/thumbview35"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    layout="@layout/thumbnail5"
+                                    android:background="@drawable/bg_broderfor_tumbnail" />
+
+                                <include
+                                    android:id="@+id/thumbview36"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="1dp"
+                                    layout="@layout/thumbnail6"
+                                    android:background="@drawable/bg_broderfor_tumbnail" />
+
+                                <include
+                                    android:id="@+id/thumbview37"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail7"
+                                    android:background="@drawable/bg_broderfor_tumbnail" />
+                            </TableRow>
+                        </RelativeLayout>
+                        <!-- </HorizontalScrollView> -->
+                    </LinearLayout>
+                </ScrollView>
+
+                <View
+                    android:id="@+id/viewport3"
+                    android:layout_width="1dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/scroll2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@+id/scroll3"
+                    android:background="#979797" >
+                </View>
+
+                <TextView
+                    android:id="@+id/brandName4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/scroll3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:text="KETPROXER"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="800dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/brandName4"
+                    android:layout_marginLeft="10dp"
+                    android:background="#ff33b5e5"
+                    android:visibility="gone" >
+                </View>
+
+                <View
+                    android:id="@+id/view41"
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="70dp"
+                    android:background="#979797" >
+                </View>
+
+                <ScrollView
+                    android:id="@+id/scroll4"
+                    android:layout_width="900dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="40dp"
+                        android:orientation="vertical" >
+
+                        <!-- <HorizontalScrollView -->
+                        <!-- android:id="@+id/hscroll1" -->
+                        <!-- android:layout_width="wrap_content" -->
+                        <!-- android:layout_height="match_parent" -->
+                        <!-- android:scrollbars="none" > -->
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TableRow
+                                android:id="@+id/row41"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <include
+                                    android:id="@+id/thumbview41"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    layout="@layout/thumbnail" />
+
+                                <include
+                                    android:id="@+id/thumbview42"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail2" />
+
+                                <include
+                                    android:id="@+id/thumbview43"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail3" />
+
+                                <include
+                                    android:id="@+id/thumbview44"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail4" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/row41"
+                                android:layout_marginTop="10dp" >
+
+                                <include
+                                    android:id="@+id/thumbview45"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    layout="@layout/thumbnail5" />
+
+                                <include
+                                    android:id="@+id/thumbview46"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="1dp"
+                                    layout="@layout/thumbnail6" />
+
+                                <include
+                                    android:id="@+id/thumbview47"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    layout="@layout/thumbnail7" />
+                            </TableRow>
+                        </RelativeLayout>
+                        <!-- </HorizontalScrollView> -->
+                    </LinearLayout>
+                </ScrollView>
+
+                <View
+                    android:id="@+id/viewport4"
+                    android:layout_width="1dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/scroll3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@+id/scroll4"
+                    android:background="#979797" >
+                </View>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/contentlib"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/mainlineare"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:text="@string/icon_image"
+        android:textColor="#092B50"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="msapplication-tap-highlight" content="no" />
+
+<script src="jquery/jquery-1.10.1.min.js"></script>
+<script src="jquery/jquery-ui.js"></script>
+
+<script> 
+$(document).ready(function(){
+	var popupfadetime = 0;
+	
+	$("#panel").animate({opacity:'1.0'},2);
+
+
+
+   $( "#name1" ).fadeIn( 3000 );
+   $("#name2").fadeIn(1000);
+ $("#name4").show("slide", { direction: "down"}, 1000);
+ $("#name3").show("slide", { direction: "up" }, 1000);
+  
+  
+$("#name5").fadeIn(3000);
+ $("#name6").show("slide", { direction: "up" }, 5000);
+$("#name7").show("slide", { direction: "down" }, 5000);
+ $("#name8").fadeIn(3000);
+ $("#name9").show("slide", { direction: "up" }, 8000);
+$("#name10").show("slide", { direction: "down" }, 8000); 
+
+     $("#panel").css({position: 'fixed'});
+	
+
+ 
+	$("#panel").animate({opacity:'1.0'},2).click(function(){
+		    	
+			
+				   OnHSPClick('cefixime1','cefixime1.htm');
+		});
+
+});
+
+
+
+
+ function SendCLID(id)
+	{
+		
+	    cpjs.sendToAndroid(id);
+	}
+
+
+	function OnHSPClick(ID,redirPage)
+	{
+
+	   var IDPREF = ID;
+		if(ID != 'NextBrand')
+								 
+	   SendCLID(IDPREF);
+
+	   if(redirPage != '')
+		window.location.href = redirPage;
+	   else
+		 javaObj.playNextFocussedBrand();
+
+	}
+
+
+
+</script>
+ 
+<style type="text/css"> 
+    html, body
+    {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+		overflow:hidden;
+    }
+
+img, div
+	{
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+                
+	}
+
+
+
+
+#panel, #mainpage
+{
+text-align:center;
+/*background-color:#e5eecc;
+border:solid 1px #c3c3c3;*/
+height:100%;
+width:100%;
+position:fixed;
+z-index:1;
+background-size: contain;
+}
+#mainpage
+{
+z-index:10;
+background-color:#ffffff;
+background-size: contain;
+}
+#panel
+{
+opacity:0.0;
+}
+
+#panel3
+{
+display:none;
+height:73%;
+width:28%;
+top:-2%;
+left:1%;
+position:absolute;
+background-color:transparent;
+/*border:solid 1px #c3c3c3;*/
+z-index:3;
+}
+
+
+#name1, #name2, #name3, #name4, #name5,#name6,#name7,#name8,#name9,#name10
+{
+
+position:absolute;
+z-index:5;
+
+/*border:solid 1px #c3c3c3;*/
+}
+#name1
+{
+display:none;
+background-image:url(images/heading.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top:12%;
+left:13%;
+z-index:10;
+height:7%;
+width:69%;
+z-index:7;
+}
+#name2
+{
+display:none;
+background-image:url(images/2.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+left:10%;
+top: 48%;
+z-index:5;
+height:20%;
+width:13%;
+z-index:16;
+}
+#name3
+{
+display:none;
+background-image:url(images/1.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top: 21%;
+left:5.2%;
+z-index:1;
+height:33%;
+width:22%;
+z-index:17;
+}
+
+#name4
+{
+display:none;
+background-image: url(images/3.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top: 63%;
+left: 5%;
+height:33%;
+width:22%;
+z-index:17;
+}
+
+#name5
+{
+display:none;
+background-image: url(images/5.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top: 48%;
+left: 40%;
+height:20%;
+width:13%;
+z-index:13;
+}
+
+
+#name6
+{
+display:none;
+background-image: url(images/4.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top: 21.2%;
+left: 35%;
+height:33%;
+width:22%;
+z-index:17;
+}
+#name7
+{
+display:none;
+background-image: url(images/6.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top:63%;
+left: 35.5%;
+height:33%;
+width:22%;
+z-index:17;
+}
+#name8
+{
+display:none;
+background-image: url(images/8.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top:47%;
+left: 66.8%;
+height:21%;
+width:13%;
+z-index:17;
+}
+#name9
+{
+display:none;
+background-image: url(images/7.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top:19.2%;
+left:61.9%;
+height:33%;
+width:22%;
+z-index:17;
+}
+#name10
+{
+display:none;
+background-image: url(images/9.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-position:center;
+top:63.1%;
+left: 62.2%;
+height:33%;
+width:22%;
+z-index:17;
+}
+.leftslide
+{
+ -webkit-animation: slideleft 1.5s 1.0s 1 ease forwards;
+        -moz-animation: slideleft 1.5s 1.0s 1 ease forwards;
+}
+
+.topslide
+{
+  -webkit-animation: slideDown 1.5s 0.0s 1 ease forwards;
+  -moz-animation: slideDown 1.5s 0.0s 1 ease forwards;
+}
+
+.leftslidemain
+{
+   -webkit-animation: slideleft1 1.0s 0.0s 1 ease forwards;
+        -moz-animation: slideleft1 1.0s 0.0s 1 ease forwards;
+}
+
+@-webkit-keyframes slideleft
+    {
+    	0%
+    	{
+    	   
+    	   -webkit-transform:translateX( -105%);
+    	}
+    	100%
+    	{
+    		
+    		-webkit-transform:translateX(70%);
+        }
+    }
+
+@-webkit-keyframes slideleft1
+    {
+    	0%
+    	{
+    	   
+    	   -webkit-transform:translateX( 0%);
+    	}
+    	100%
+    	{
+    		
+    		-webkit-transform:translateX(-105%);
+        }
+    }
+
+
+@-webkit-keyframes slideDown
+    {
+    	0%
+    	{
+    	   
+    	   -webkit-transform:translateY( -75%);
+    	}
+    	100%
+    	{
+    		
+    		-webkit-transform:translateY(184.5%);
+        }
+    }
+
+
+ 
+
+	#panel3
+	{        
+		background-image:url(images/tag.png);
+		background-repeat:no-repeat;
+		background-size:85% 80%;
+		z-index:3;   
+	}
+
+	
+
+	
+</style>
+</head>
+<body>
+ 
+
+
+<div id="panel" >
+<img src="images/bg1.png" alt="" width="100%" height="100%">	
+</div>
+
+<div id="name1"  onclick="OnHSPClick('cefixime1','cefixime1.htm');"></div>
+
+<div id="name2"  onclick="OnHSPClick('cefixime1','cefixime1.htm');"></div>
+<div id="name3"  onclick="OnHSPClick('cefixime1','cefixime1.htm');"></div>
+
+<div id="name4" onClick="OnHSPClick('cefixime1','cefixime1.htm');" ></div>
+<div id="name5" onClick="OnHSPClick('cefixime1','cefixime1.htm');" ></div>
+<div id="name6" onClick="OnHSPClick('cefixime1','cefixime1.htm');" ></div>
+<div id="name7" onClick="OnHSPClick('cefixime1','cefixime1.htm');" ></div>
+<div id="name8" onClick="OnHSPClick('cefixime1','cefixime1.htm');" ></div>
+<div id="name9" onClick="OnHSPClick('cefixime1','cefixime1.htm');" ></div>
+<div id="name10" onClick="OnHSPClick('cefixime1','cefixime1.htm');" ></div>
+
+</body>
+
+</html>

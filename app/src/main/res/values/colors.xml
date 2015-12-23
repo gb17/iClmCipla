@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="transparent" type="color">#00FFFFFF</item>
+    <item name="grey" type="color">#555555</item>
+    <item name="green" type="color">#4499CC00</item>
+    <item name="darkgreen" type="color">#FF669900</item>
+    <item name="black" type="color">#000000</item>
+    <item name="pink" type="color">#FFE1F0</item>
+
+    <color name="gesture_color1">#000000</color>
+    <color name="lightgrey">#C0C0C0</color>
+    <color name="lightergrey">#ECEDEF</color>
+    <color name="aviva_blue">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="purple">#6c217e</color>
+    <color name="tabbg">#ffffff</color>
+    <color name="darkerthanlightergrey">#D5D5D5</color>
+    <color name="orange">#F69220</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="symptom_color_selected">#003366</color>
+    <color name="reaction_color_selected">#003366</color>
+    <color name="static_text_color">#003366</color>
+    <color name="journal_entry_listitem_text_color">#003366</color>
+    <color name="note_text_disabled">#333333</color>
+    <color name="blue">#0000FF</color>
+    <color name="navy">#6699FF</color>
+    <color name="sky">#0099CC</color>
+    <color name="gray">#808080</color>
+    <color name="lightgray">#e7e7e7</color>
+    <color name="lightgray02">#bfbfbf</color>
+    <color name="dark">#000015</color>
+    <color name="darkgrey">#2B2B2B</color>
+    <color name="lightgreen">#336666</color>
+    <color name="orrange">#e33d1b</color>
+    <color name="darkorrange">#cc2303</color>
+    <color name="divder">#949494</color>
+    <color name="today">#4b82ff</color>
+    <color name="birthday">#FF6600</color>
+    <color name="greyed_out">#c7c7c7</color>
+    <color name="summer">#44eebd82</color>
+    <color name="fall">#44d8d27e</color>
+    <color name="winter">#44a1c1da</color>
+    <color name="spring">#448da64b</color>
+    <color name="buttoncolor">#484848</color>
+
+    <item name="dblue" type="color">#487EB4</item>
+    <item name="dpink" type="color">#FE0965</item>
+
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="213dp"
+    android:layout_height="102dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/infofromtumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="4dp"
+        android:text="@string/icon_info"
+        android:textColor="#bdbdbd"
+        android:textSize="34sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cficx1"
+        android:layout_width="213dp"
+        android:layout_height="136dp"
+        android:layout_below="@+id/infofromtumbnail"
+        android:background="@drawable/newcfix1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="167dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/playlist_icon"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/relativeforpage"
+        android:layout_width="213dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/cficx1"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/seq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="C Fix"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/threedot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#67E0ED"
+            android:text="..."
+            android:textColor="#1e1e1e"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/desc1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/seq"
+            android:includeFontPadding="false"
+            android:text="lorem ipsum dolor"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/desc2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/desc1"
+            android:text="dolor sit amet"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

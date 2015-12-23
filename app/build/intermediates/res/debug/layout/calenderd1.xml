@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_roundedwhite"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            android:id="@+id/txtu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dip"
+            android:paddingRight="25dip"
+            android:text="@string/icon_cross"
+            android:textSize="28sp" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="2dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/txtu1"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/txtu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/v1"
+            android:padding="10dip"
+            android:text="@string/icon_add"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/textundo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dip"
+            android:background="@drawable/bg_roundedgray"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="8dp"
+            android:text="@string/icon_redo"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtu3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/textundo"
+            android:background="@drawable/bg_roundedgray"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="4dp"
+            android:text="Reset"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- <RelativeLayout -->
+        <!-- android:id="@+id/rel1" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginTop="10dip" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:background="@color/black" > -->
+
+
+        <!-- </RelativeLayout> -->
+
+
+        <!-- <RelativeLayout -->
+        <!-- android:id="@+id/rel2" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginTop="10dip" -->
+        <!-- android:layout_weight="1" > -->
+        <!-- </RelativeLayout> -->
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/calenderd1.xml -->

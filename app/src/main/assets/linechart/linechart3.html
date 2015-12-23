@@ -1,0 +1,60 @@
+<html>
+<head>
+  <script type="text/javascript" src="jquery/pie.js"></script>
+  <script type="text/javascript">
+/*    google.load('visualization', '1.1', {packages: ['line']});*/
+    google.load("visualization", "1.1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Day');
+      data.addColumn('number', 'Tugain');
+      data.addColumn('number', 'C-Fix');
+      data.addColumn('number', '8X');
+       data.addColumn('number', 'Week');
+
+      data.addRows([
+       
+        [1,  14, 8, 15,15],
+        [2,  20, 7, 15,24],
+        [3, 22, 10, 31,15],
+        [4,  10,  19,  12,36],
+        [5,  29,  10,  27,19],
+        [6,  20,  27,  37,30],
+        [7,  30,  37,  5,12],
+        [8,  25,  5, 17,35],
+        [9,  22, 40, 22,18],
+        [10,  28,  10, 10,31],
+        [11,  30, 50, 17,14],
+        [12,  40, 12, 12,57],
+        [13,   36, 15, 42,30],
+        [14,   48, 20,  20,13]
+      ]);
+
+      
+
+ var options = {
+          'legend':'bottom',
+         
+          pointSize: 5
+        };
+
+      var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+
+      chart.draw(data, options);
+    }
+
+/*legend: 'none', colors: ['#15A0C8'],
+          pointShape: { type: 'triangle', rotation: 90 }*/
+  </script>
+</head>
+<body>
+ 
+  <div id="linechart_material" style="width:400; height:300"></div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_roundedwhite" >
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/closenew" />
+
+    <ImageView
+        android:id="@+id/done"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/donenew" />
+
+    <TextView
+        android:id="@+id/joint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:text="ADD JOINT WORKING"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/joint"
+        android:layout_marginLeft="20dp"
+        android:text="17 JULY"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/physician"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/joint"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/date"
+        android:text="For Physician"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/date"
+        android:layout_marginLeft="20dp"
+        android:text="Fri"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/physician"
+        android:layout_marginLeft="84dp"
+        android:layout_toRightOf="@id/day"
+        android:text="Dr. John Cussack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/doc1"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/day"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundforlayoutcyan"
+        android:gravity="center_horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="John Patrick[ASM]"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/doc2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/day"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/doc1"
+        android:background="@drawable/roundforlayout"
+        android:gravity="center_horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Alan Brown[RSM]"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doc1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundforlayout"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/round_white"
+            android:gravity="center_horizontal"
+            android:hint="name"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/round_white"
+            android:entries="@array/items"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/closetxt1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/closenew" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundforlayout"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/round_white"
+            android:gravity="center_horizontal"
+            android:hint="name"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/round_white"
+            android:entries="@array/items"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/closetxt2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/closenew" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundforlayout"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/round_white"
+            android:gravity="center_horizontal"
+            android:hint="name"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/round_white"
+            android:entries="@array/items"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/closetxt3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/closenew" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundforlayout"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/add"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_white"
+            android:clickable="false"
+            android:editable="false"
+            android:gravity="center_horizontal"
+            android:text="Other +"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/joint_work.xml -->

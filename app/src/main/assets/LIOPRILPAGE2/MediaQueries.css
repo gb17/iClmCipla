@@ -1,0 +1,83 @@
+﻿body{font-size:18px;color:#FFF;}
+a{color:#FFF;}
+.classname{border:solid 1px #2d2d2d;text-align:center;background:#575757;padding:4% 2% 4% 40%;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:5%;}
+.classname{background-color:rgba(255, 0, 50, 0.9);background:rgba(255, 0, 50, 0.9);color:white;font-family:Comic Sans MS;font-size:25px;font-weight:bolder;vertical-align:middle;text-align:center;position:relative;}
+.bigbox{border:solid 1px #2d2d2d;text-align:center;background:#575757;padding:10px 10px 40px 20px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:230px;width:500px;float:right;}
+.bigbox{background-color:rgba(255,255,102, 1);background:rgba(255,255,102, 1);color:rgba(255,255,102, 1);color:Black;font-family:Comic Sans MS;font-size:13px;margin-right:30px;box-shadow:-10px 10px 5px #888888;}
+.classname1{border:solid 1px #2d2d2d;text-align:center;background:#575757;padding:10px 10px 40px 20px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:10px;width:400px;float:right;}
+.classname1{background-color:rgba(196,197,53, 1);background:rgba(196,197,53, 1);color:rgba(196,197,53, 1);color:Black;font-family:Comic Sans MS;font-size:20px;margin-right:20%;text-align:center;box-shadow:-10px 10px 5px #888888;}
+#demo{background-color:#0047AB;height:80px;position:relative;width:260px;}
+#demo:after{content:' ';height:0;position:absolute;width:0;border:10px solid transparent;border-top-color:#0047AB;top:100%;left:50%;margin-left:-10px;}
+.heartinhand{position:absolute;top:30%;margin-left:5%;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+.logoRousvasUp{position:absolute;margin-top:-9%;margin-left:8%;z-index:1;}
+.demoClass{float:left;font-family:Comic Sans MS;font-size:23px;font-weight:bold;text-align:center;margin-left:3%;margin-top:5%;}
+.tabbutClass{float:left;width:15%;height:85%;}
+.aClass{text-decoration:none;font-weight:bold;color:Black;}
+.tabClass{margin-left:55%;margin-top:14%;}
+.PopupClass{width:980px;height:480px;}
+.PopupClass1{width:880px;height:580px;}
+@media screen and (view-mode:minimized){body{font-size:8px;color:#FFF;}
+.classname{font-size:6px;}
+.bigbox{font-size:5px;}
+.classname1{font-size:6px;}
+.PopupClass{width:28px;height:28px;}
+.demoClass{font-size:8px;text-align:center;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+}
+@media (min-width:480px){body{font-size:10px;color:#FFF;}
+.classname{font-size:11px;}
+.bigbox{font-size:11px;}
+.classname1{font-size:11px;}
+.PopupClass{width:100px;height:80px;}
+.demoClass{font-size:10px;text-align:center;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+}
+@media screen and (max-width:460px){body{font-size:10px;color:#FFF;}
+.classname{font-size:11px;}
+.bigbox{font-size:11px;}
+.classname1{font-size:11px;}
+.PopupClass{width:90px;height:70px;}
+.demoClass{font-size:10px;text-align:center;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+}
+@media screen and (min-width:33em) and (max-width:35em){body{font-size:10px;color:#FFF;}
+.classname{font-size:11px;}
+.bigbox{font-size:11px;}
+.classname1{font-size:11px;}
+.PopupClass{width:150px;height:120px;}
+.demoClass{font-size:13px;text-align:center;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+}
+@media only screen and (min-width:620px){body{font-size:10px;color:#FFF;}
+.classname{font-size:13px;}
+.bigbox{font-size:13px;}
+.classname1{font-size:11px;}
+.PopupClass{width:250px;height:170px;}
+.demoClass{font-size:13px;text-align:center;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+}
+@media only print, only screen and (min-width:760px){body{font-size:18px;color:#FFF;}
+.classname{font-size:21px;}
+.bigbox{font-size:19px;}
+.classname1{font-size:19px;}
+.PopupClass{width:730px;height:400px;}
+.demoClass{font-size:19px;text-align:center;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+}
+@media only print and (min-width:1160px){body{font-size:18px;color:#FFF;}
+.classname{font-size:25px;}
+.bigbox{font-size:13px;}
+.classname1{font-size:20px;}
+.PopupClass{width:960px;height:460px;}
+.demoClass{font-size:23px;text-align:center;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+}
+@media only print and (min-width:1400px){body{font-size:23px;color:#FFF;}
+.classname{font-size:30px;}
+.bigbox{font-size:23px;}
+.classname1{font-size:22px;}
+.PopupClass{width:1100px;height:860px;}
+.demoClass{font-size:33px;text-align:center;}
+.logoRousvas{float:left;margin:-12% 0% 0% 10%;z-index:8px;position:relative;}
+}

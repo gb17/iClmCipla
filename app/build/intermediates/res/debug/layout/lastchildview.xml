@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:clickable="true"
+    android:orientation="horizontal"
+    tools:context="com.cirrius.iclmcipla.MainActivity" >
+
+    <include
+        android:id="@+id/doctorlist"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        layout="@layout/todaylistchildview" />
+
+    <include
+        android:id="@+id/abcforheader"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        layout="@layout/layoutfordocchildview"
+        android:background="@android:color/darker_gray" />
+
+</LinearLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/lastchildview.xml -->

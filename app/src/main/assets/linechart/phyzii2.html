@@ -1,0 +1,59 @@
+<html>
+<head>
+  <script type="text/javascript" src="jquery/line.js"></script>
+  <script type="text/javascript">
+/*    google.load('visualization', '1.1', {packages: ['line']});*/
+    google.load("visualization", "1.1", {packages:["corechart"],"callback":drawChart});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Week');
+    
+      data.addColumn('number', '8x');
+      
+
+      data.addRows([
+       
+        [1,   8],
+        [2,   7],
+        [3,  15],
+        [4,    13],
+        [5,   20,],
+        [6,    7],
+        [7,    2],
+        [8,   0],
+        [9,   32],
+        [10,  36],
+        [11,   40],
+        [12,  35],
+        [13,    5],
+        [14,   40]
+      ]);
+
+      
+
+ var options = {
+          'legend':'bottom',
+         
+          pointSize: 5
+        };
+
+      var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+
+      chart.draw(data, options);
+    }
+
+/*legend: 'none', colors: ['#15A0C8'],
+          pointShape: { type: 'triangle', rotation: 90 }*/
+  </script>
+</head>
+<body>
+ 
+  <div id="linechart_material" style="width:400; height:300"></div>
+</body>
+</html>
+
+
+

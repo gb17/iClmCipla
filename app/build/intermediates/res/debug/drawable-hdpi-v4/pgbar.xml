@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="5dip" />
+
+            <gradient
+                android:angle="270"
+                android:centerColor="#999"
+                android:centerY="0.75"
+                android:endColor="#999"
+                android:startColor="#999" />
+        </shape>
+    </item>
+      <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="5dip" />
+
+                <gradient
+                    android:angle="270"
+                    android:centerColor="#f58233"
+                    android:centerY="0.75"
+                    android:endColor="#f58233"
+                    android:startColor="#f58233" />
+            </shape>
+        </clip>
+
+        <color android:color="#f58233" />
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="5dip" />
+
+                <gradient
+                    android:angle="270"
+                    android:centerColor="#4ba6dd"
+                    android:centerY="0.75"
+                    android:endColor="#4ba6dd"
+                    android:startColor="#4ba6dd" />
+            </shape>
+        </clip>
+
+        <color android:color="#4ba6dd" />
+    </item>
+
+</layer-list><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/drawable-hdpi/pgbar.xml -->

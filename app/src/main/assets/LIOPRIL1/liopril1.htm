@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+	
+	$("#panel").animate({opacity:'1.0'},2).click(function(){
+		    OnHSPClick('P1','');
+		});
+	$("#panel3").animate({opacity:'1.0'},2).click(function(){
+		    OnHSPClick('P1','');
+		});
+
+	$("#panel3").show();
+	$("#panel3").attr('class','leftslide');
+	setTimeout(function(){$("#name1").fadeIn(2000)},1200);
+	setTimeout(function(){$("#name2").fadeIn(2000)},1200);
+
+	
+
+	$("map area").on("touchend", function() {
+   	return false;
+	});
+
+
+});
+
+
+function SendCLID(id)
+	{
+	    cpjs.sendToAndroid(id);
+	}
+
+function OnHSPClick(ID,redirPage)
+{
+   var IDPREF = "Liop-"+ID;
+   SendCLID(IDPREF);
+
+   if(redirPage != '')
+   window.location.href = redirPage;
+
+}
+
+
+
+
+</script>
+ 
+<style type="text/css"> 
+    html, body
+    {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+		overflow:hidden;
+    }
+
+	img, div
+	{
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+
+#panel, #mainpage
+{
+text-align:center;
+/*background-color:#e5eecc;
+border:solid 1px #c3c3c3;*/
+height:100%;
+width:100%;
+position:absolute;
+z-index:1;
+}
+#mainpage
+{
+z-index:10;
+background-size: contain;
+}
+#panel
+{
+opacity:0.0;
+}
+#panel1
+{
+display:none;
+height:80%;
+width:40%;
+top:21.5%;
+left:-25%;
+position:absolute;
+background-color:transparent;
+/*border:solid 1px #c3c3c3;*/
+z-index:2;
+}
+#panel3
+{
+display:none;
+position: absolute;
+       
+        left: -100%;
+        margin-top: 6.4%;
+		
+        z-index: 1;
+        width:50%;
+        height:78%;
+background-color:transparent;
+/*border:solid 1px #c3c3c3;*/
+z-index:3;
+}
+
+#panel2
+{
+display:none;
+height:50px;
+width:70px;
+top:50px;
+left:500px;
+position:absolute;
+background-color:#555555;
+border:solid 1px #c3c3c3;
+z-index:2;
+}
+#popup1, #popup2, #popup4, #popup5 ,#popup
+{
+display:none;
+	top:0%;
+	left:0%;
+position:absolute;
+z-index:12;
+opacity:1.0;
+/*border:solid 1px #c3c3c3;*/
+}
+
+#name1
+{
+	display:none;
+            position: fixed;
+            left: 510px;
+            top: 12%;
+            z-index: 2;
+            
+        
+}
+#name2
+{
+	display:none;
+            position: fixed;
+            left: 1018.7px;
+            top: 14.3%;
+            z-index: 2;
+             
+}
+
+#name3, #name4, #name5
+{
+display:none;
+
+position:absolute;
+z-index:13;
+
+/*border:solid 1px #c3c3c3;*/
+}
+
+#name3  /*AAS.png*/
+{
+top: -52%;
+left:36.5%;
+}
+
+#name4  /*OSA.png*/
+{
+top:-52%;
+left:55.7%;
+}
+
+#name5  /*RA.png*/
+{
+top:-52%;
+left:76%;
+}
+
+
+   .ClopClass
+    {
+       left:42.82%;
+       top:53%;
+       position:absolute;  	
+       z-index:1;
+       
+    }
+    
+    .CLtextClass
+    {
+       left:4.82%;
+       top:42.6%;
+       width:16%;
+       position:absolute;  	
+       z-index:1;
+    }
+
+     .AthtxtClass
+    {
+       left:61.82%;
+       top:42.6%;
+       width:16%;
+       position:absolute;     		
+       z-index:1;
+    }
+    
+
+
+
+.leftslide
+{
+ -webkit-animation: slideleft 1.5s 0.0s 1 ease forwards;
+        -moz-animation: slideleft 1.5s 0.0s 1 ease forwards;
+}
+
+.topslide1
+{
+  -webkit-animation: slideDownRibbon1 1.0s 0.0s 1 ease forwards;
+  -moz-animation: slideDownRibbon1 1.0s 0.0s 1 ease forwards;
+}
+
+.topslide2
+{
+  -webkit-animation: slideDownRibbon2 1.0s 0.0s 1 ease forwards;
+  -moz-animation: slideDownRibbon2 1.0s 0.0s 1 ease forwards;
+}
+
+.topslide3
+{
+  -webkit-animation: slideDownRibbon3 1.0s 0.0s 1 ease forwards;
+  -moz-animation: slideDownRibbon3 1.0s 0.0s 1 ease forwards;
+}
+
+.leftslidemain
+{
+   -webkit-animation: slideleft1 1.0s 0.0s 1 ease forwards;
+        -moz-animation: slideleft1 1.0s 0.0s 1 ease forwards;
+}
+
+@-webkit-keyframes slideleft
+    {
+    	0%
+    	{
+    	   
+    	   -webkit-transform:translateX( -100%);
+    	}
+    	100%
+    	{
+    		
+    		-webkit-transform:translateX(198.5%);
+        }
+    }
+
+@-webkit-keyframes slideleft1
+    {
+    	0%
+    	{
+    	   
+    	   -webkit-transform:translateX( 0%);
+    	}
+    	100%
+    	{
+    		
+    		-webkit-transform:translateX(-105%);
+        }
+    }
+
+
+@-webkit-keyframes slideDownRibbon1	
+    {
+    	0%
+    	{
+    	   
+    	   opacity:0;
+		   -webkit-transform:translateY( -65%);
+    	}
+      
+        
+    	100%
+    	{
+    		
+    		opacity:10;
+			-webkit-transform:translateY(175%);
+        }
+    }
+
+
+
+@-webkit-keyframes slideDownRibbon2
+    {
+    	0%
+    	{
+    	   
+    	   opacity:0;
+		   -webkit-transform:translateY( -65%);
+    	}
+      
+        
+    	100%
+    	{
+    		
+    		opacity:10;
+			-webkit-transform:translateY(220%);
+        }
+    }
+
+
+
+@-webkit-keyframes slideDownRibbon3
+    {
+    	0%
+    	{
+    	   
+    	   opacity:0;
+		   -webkit-transform:translateY( -65%);
+    	}
+      
+        
+    	100%
+    	{
+    		
+    		opacity:10;
+			-webkit-transform:translateY(190%);
+        }
+    }
+</style>
+</head>
+<body>
+ 
+
+<div id="panel"><img src="bg.png" style="height:100%;width:100%;" /></div>
+
+<div id="panel3"><img src="tag.png" /></div>
+<div id="panel2"><img src="ODTXT.png" style="height:50px;width:50px;"/></div>
+
+
+<div id="linkdiv1" class="ClopClass" style="text-align:center">
+   
+    <img src="po.png" usemap="#planetmap" onclick="OnHSPClick('P1','');" />
+      <map name="planetmap">
+  			<area shape="rect" coords="0, 80,320,280" href="javascript:OnHSPClick('P1-HSP1','Lioprilpage1.html');" >
+  			<area shape="rect" coords="320,80,640,280" href="javascript:OnHSPClick('P1-HSP2','Lioprilpage2.html');">
+  		      
+		</map>
+   
+ </div>
+
+ <div id="name1"><img src="img1.png" onclick="OnHSPClick('P1','');"></div>
+  <div id="name2"><img src="img2.png" onclick="OnHSPClick('P1','');"></div>
+
+</body>
+
+</html>

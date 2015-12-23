@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<title>Untitled</title>
+<!--Adobe Edge Runtime-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script type="text/javascript" charset="utf-8" src="c-fix_edgePreload.js"></script>
+    <script src="jquery/jquery-1.10.1.min.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script>
+        function SendCLID(id) {
+
+            cpjs.sendToAndroid(id);
+        }
+        function OnHSPClick(ID, redirPage) {
+
+
+
+            var IDPREF = ID;
+            if (ID != 'NextBrand')
+
+                SendCLID(IDPREF);
+
+            if (redirPage != '')
+                window.location.href = redirPage;
+            else
+                javaObj.playNextFocussedBrand();
+        }
+
+    </script>
+    <style>
+        .edgeLoad-EDGE-103569781 { visibility:hidden; }
+        #ht1 {
+            position: absolute;
+            z-index: 0;
+            top: 36.5%;
+            left: 56%;
+            width: 44.1%;
+            height: 13.2%;
+            opacity: 0;
+        }
+
+        #ht2 {
+            position: absolute;
+            z-index: 0;
+            top: 50.2%;
+            left: 53%;
+            width: 47.1%;
+            height: 13%;
+            opacity: 0;
+        }
+    </style>
+<!--Adobe Edge Runtime End-->
+
+</head>
+<body style="margin:0;padding:0;">
+	<div id="Stage" class="EDGE-103569781">
+	</div>
+    <div id="ht1" onclick="OnHSPClick('cefixime1','cefixime1.htm');"></div>
+    <div id="ht2" onclick="OnHSPClick('cefixime2','cefixime2.htm');"></div>
+</body>
+</html>

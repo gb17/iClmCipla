@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script>
+  function red()
+  {
+  window.location.href = "Liopril1.htm";
+  }
+
+  
+function SendCLID(id)
+	{
+	    cpjs.sendToAndroid(id);
+	}
+
+function OnHSPClick(ID,redirPage)
+{
+   var IDPREF = "Liop-"+ID;
+   SendCLID(IDPREF);
+   
+   window.location.href = redirPage;
+
+}
+  </script>
+ </HEAD>
+
+ <BODY>
+   <div id="Liopril_page1"><img src="pop2.png" onclick="OnHSPClick('POP-P1','Liopril1.htm');" style="height:100%;width:100%;"/></div>
+ </BODY>
+</HTML>

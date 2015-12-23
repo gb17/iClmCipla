@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linselction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/playlisrel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/playlistnew"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="ONE VIEW"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewsamplednew"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/playlistnew"
+                android:background="#757575" >
+            </View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/specialty"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="DETAILING"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewsampled"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/specialty"
+                android:background="#757575"
+                android:visibility="gone" >
+            </View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/brands"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="PERFORMANCE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewsamplech"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_below="@+id/brands"
+                android:background="#757575"
+                android:visibility="gone" >
+            </View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/therapy"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="CONNECT"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewsamplest"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_below="@+id/therapy"
+                android:background="#757575"
+                android:visibility="gone" >
+            </View>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.cirrius.iclmcipla.CustomScrollViewDash
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/graph1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/webview11"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Dr Coverage"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gtextview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview12"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Days in Field"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gtextview4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview13"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text=" Connect Logins"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gtextview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview14"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title64"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="15dip"
+                        android:text="Reporting Compliance"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gtextview24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/webview21"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="% Sales Growth"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gtextview3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview22"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title4n"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Detialing Adherence"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gtextview4n"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview23"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Dr Call Avg"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gtextview5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview24"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/titleg2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Overall Market Share"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                     <TextView
+                        android:id="@+id/gtextview57"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+
+                  
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/webview31"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text=" Playlist Deviation"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview32"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Detailing Adherence"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview79"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview33"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Face Time Trend(mins)"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview34"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/a2504a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="90%"
+                        android:textColor="#ffe082"
+                        android:textSize="90dp" />
+
+                    <TextView
+                        android:id="@+id/doctor2014a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/a2504a"
+                        android:layout_centerHorizontal="true"
+                        android:text="Content Downloaded"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/click14a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/doctor2014a"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="Last Downloaded on 20th Aug"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/webview41"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Therapy Wise Drs Detailed"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview42"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Speciality Wise Brands Detailed"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview099"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview43"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Specaility Wise Interactions"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview44"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/most"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dip"
+                        android:text="Most Visited Pages"
+                        android:textSize="20dp" />
+
+                    <TableRow
+                        android:id="@+id/tablerow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/most"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="18dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="50"
+                            android:textColor="#5882FA"
+                            android:textSize="40dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="40"
+                            android:textColor="#2EFE2E"
+                            android:textSize="40dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow1"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Introduction"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Efficacy"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow2"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Acenomorol"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Mezzo Drop"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow3"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="18dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="22"
+                            android:textColor="#FF8000"
+                            android:textSize="40dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="11"
+                            android:textColor="#81DAF5"
+                            android:textSize="40dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow4"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Side Effects"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Dosage"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow5"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Solsuna"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Acenomorol"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/webview51"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:textStyle="bold" 
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text=" % Reporting Compliance"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview52"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:textStyle="bold" 
+                        android:text="Speciality Wise Drs Covered"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview53"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:textStyle="bold" 
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Dr Coverage Trend"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview54"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title174a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:textStyle="bold" 
+                        android:text="Campaign Implementation"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview134a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/webview61"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title141"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Secondary Sales"
+                        android:textStyle="bold" 
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview62"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/doctor201"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="45dp"
+                        android:text="20%"
+                        android:textColor="#5882FA"
+                        android:textSize="85dp" />
+
+                    <TextView
+                        android:id="@+id/doctor20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/doctor201"
+                        android:layout_centerHorizontal="true"
+                        android:text=" Doctor Prescribed"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total150"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/doctor20"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="Cardio - 30 DRs"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/drs140"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/total150"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="Derma - 20 DRs"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/drs1403"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/drs140"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="      Gp - 10 DRs"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview63"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="RCPA"
+                        android:textStyle="bold" 
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview64"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title204a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:textStyle="bold" 
+                        android:text="Drs Converted"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview154a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/webview71"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Logins"
+                        android:textStyle="bold" 
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview72"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/mostu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold" 
+                        android:text="Most Researched  Articles"
+                        android:textSize="20dp" />
+
+                    <TableRow
+                        android:id="@+id/tablerow1u"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mostu"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="100"
+                            android:textColor="#5882FA"
+                            android:textSize="35dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="80"
+                            android:textColor="#2EFE2E"
+                            android:textSize="35dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow2u"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow1u"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Endoscopy"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Angioplasty"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow3u"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow2u"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Feeds"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Feeds"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow4u"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow3u"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="60"
+                            android:textColor="#FF8000"
+                            android:textSize="35dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="50"
+                            android:textColor="#81DAF5"
+                            android:textSize="35dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow5u"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow4u"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Bypass"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Laproscopy"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow6u"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow5u"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Video"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Abstract"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview73"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:textStyle="bold" 
+                        android:paddingLeft="25dip"
+                        android:text="Category View Trend"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview74"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/a2504a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="55dp"
+                        android:text="10"
+                        android:textColor="#2EFE2E"
+                        android:textSize="85dp" />
+
+                    <TextView
+                        android:id="@+id/doctor2014a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/a2504a1"
+                        android:layout_centerHorizontal="true"
+                        android:text="Queries raised this month"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/doctor2014a12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/doctor2014a1"
+                        android:layout_centerHorizontal="true"
+                        android:text="7 Queries Responded"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/webview81"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+                    
+                     <TextView
+                        android:id="@+id/mostum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold" 
+                        android:text="Top Favourites"
+                        android:textSize="20dp" />
+
+                    <TableRow
+                        android:id="@+id/tablerow1um"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mostum"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="20"
+                            android:textColor="#5882FA"
+                            android:textSize="35dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="16"
+                            android:textColor="#2EFE2E"
+                            android:textSize="35dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow2um"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow1um"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Gastrectomy"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Angioplasty"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow3um"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow2um"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Video"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Feeds"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow4um"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow3um"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="12"
+                            android:textColor="#FF8000"
+                            android:textSize="35dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="10"
+                            android:textColor="#81DAF5"
+                            android:textSize="35dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow5um"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow4um"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Mucsectomy"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Prebiotics"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tablerow6um"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tablerow5um"
+                        android:gravity="center_horizontal"
+                        android:textSize="15dp" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="60dp"
+                            android:text="Abstract"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="30dp"
+                            android:text="Abstract"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview82"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:textStyle="bold" 
+                        android:padding="10dip"
+                        android:paddingLeft="25dip"
+                        android:text="Category Wise Views"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview83"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/nmt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold" 
+                        android:text="Top Doctors"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/nmt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nmt"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Dr. Abhi Patel"
+                        android:textStyle="bold"
+                        android:textSize="23dp" />
+                     <TextView
+                        android:id="@+id/nmt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nmt1"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="10 logins  5 likes  10 Comments"
+                        android:textSize="13dp" />
+                     
+                      <TextView
+                        android:id="@+id/nmt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nmt2"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Dr. Varun Shah"
+                         android:textStyle="bold"
+                        android:textSize="23dp" />
+                     <TextView
+                        android:id="@+id/nmt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nmt3"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="6 logins  2 likes "
+                        android:textSize="13dp" />
+                     
+                       <TextView
+                        android:id="@+id/nmt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nmt4"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Dr. Aditi Sharma"
+                         android:textStyle="bold"
+                        android:textSize="23dp" />
+                     <TextView
+                        android:id="@+id/nmt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nmt5"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="5 logins  3 Comments "
+                        android:textSize="13dp" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview84"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingBottom="20dp" >
+
+                    <TextView
+                        android:id="@+id/title264a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:textStyle="bold" 
+                        android:paddingLeft="25dip"
+                        android:text=" Usage Trend"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gtextview264a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/icon_three_dot"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graph9"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+            </LinearLayout>
+        </LinearLayout>
+    </com.cirrius.iclmcipla.CustomScrollViewDash>
+
+</LinearLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/dashboard.xml -->

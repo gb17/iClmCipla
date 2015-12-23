@@ -1,0 +1,245 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_roundedwhitewithoutpadding"
+    android:paddingBottom="30dp"
+    tools:context="com.cirrius.iclmcipla.MainActivity" >
+
+    <TextView
+        android:id="@+id/TextViewActionPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Add Unlisted Physician"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:text="@string/icon_cross"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <TableRow
+        android:id="@+id/tablerow11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewActionPoint"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/phyname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Physician Name*"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/spec"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Specialty*"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow11"
+        android:layout_marginLeft="20dp"
+        android:paddingRight="10dp" >
+
+        <EditText
+            android:id="@+id/typeofphy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/typeofphy" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <Spinner
+            android:id="@+id/typeofphy1"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/speciality" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow99"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow111"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Patch"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow999"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow99"
+        android:layout_marginLeft="20dp"
+        android:paddingRight="10dp" >
+
+        <EditText
+            android:id="@+id/typeofphydr"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/patch" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow999"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" >
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow1"
+        android:layout_marginLeft="20dp" >
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@android:color/white" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/Duedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Due Date"
+        android:textColor="#848484"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Duetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow2"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/Duedate"
+        android:text="Time"
+        android:textColor="#848484"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edittextDuedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:gravity="center_horizontal"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:text="15/09/2015"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/edittime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginLeft="105dp"
+        android:layout_toRightOf="@+id/edittextDuedate"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:ems="4"
+        android:gravity="center_horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="11:46"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/ButtonSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:ems="5"
+        android:gravity="center_horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="Set"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+</RelativeLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/add_unlisted.xml -->

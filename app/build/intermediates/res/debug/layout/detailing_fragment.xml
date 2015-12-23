@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="#E8E8E8"
+    android:minHeight="770dp" >
+
+    <TextView
+        android:id="@+id/cardio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Digital Detailing"
+        android:textColor="#2E2E2E"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="19dp"
+        android:text="[Duration 5 mins]"
+        android:textColor="#2E2E2E"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/previewtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="17dp"
+        android:text="Preview"
+        android:textColor="#6B6B6B"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/icon_play"
+        android:textColor="#6B6B6B"
+        android:textSize="32sp" />
+
+    <ImageView
+        android:id="@+id/undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/undo" />
+
+    <GridView
+        android:id="@+id/addscroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardio"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="195dp"
+        android:layout_marginTop="15dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="5"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/pehla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addscroll"
+        android:orientation="horizontal"
+        android:paddingTop="20dp" >
+
+        <CheckBox
+            android:id="@+id/check_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manual Detailing"
+            android:textColor="#2E2E2E"
+            android:layout_marginLeft="25dp"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/manual_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pehla"
+        android:background="#E8E8E8"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFFF"
+            android:paddingTop="20dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/manual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:text="Manual Detailing"
+            android:textColor="#2E2E2E"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/cattxt"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/manual"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="5dp"
+            android:text="Category"
+            android:textColor="#2E2E2E"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+        <com.cirrius.iclmcipla.MultiSpinner
+            android:id="@+id/spinner1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cattxt"
+            android:layout_marginLeft="25dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/subcattxt"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/manual"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/cattxt"
+            android:paddingLeft="5dp"
+            android:text="Sub Category"
+            android:textColor="#2E2E2E"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+        <com.cirrius.iclmcipla.MultiSpinner
+            android:id="@+id/spinner2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subcattxt"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@id/spinner1"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/first"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/spinner1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:background="#D1D1D1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Clonazepam"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/spinner1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/first"
+            android:background="#D1D1D1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Metoprolol"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/spinner1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/second"
+            android:background="#D1D1D1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Zoloft"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/forth"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/spinner1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/third"
+            android:background="#D1D1D1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Tramadol"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fifth"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/spinner1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/forth"
+            android:background="#D1D1D1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Lexapro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/detailing_fragment.xml -->

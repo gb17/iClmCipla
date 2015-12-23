@@ -1,0 +1,779 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="1dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    tools:context="com.cirrius.iclmcipla.MainActivity" >
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="HISTORY"
+        android:textColor="#2E2E2E"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeMAIN"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/textview"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/x" >
+
+        <ImageView
+            android:id="@+id/imageviewLEFT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/leftme" />
+
+        <ImageView
+            android:id="@+id/imageviewRIGHT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/rightme" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/imageviewRIGHT"
+            android:layout_toRightOf="@+id/imageviewLEFT"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/relativeDATA"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeMAIN"
+        android:layout_marginTop="20dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Summary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textcalender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textSummary"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dip"
+                    android:text="@string/icon_calendar"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/textclock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textSummary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/textcalender"
+                    android:padding="10dip"
+                    android:text="@string/icon_clock"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/text17july"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textSummary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/textclock"
+                    android:background="#E0E0E0"
+                    android:padding="10dip"
+                    android:paddingLeft="20dip"
+                    android:text="17 JULY 2015 "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text123"
+                    android:layout_width="450dip"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textSummary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text17july"
+                    android:background="#E0E0E0"
+                    android:padding="10dip"
+                    android:paddingRight="40dip"
+                    android:text="12.30 pm to 12.50 pm | 20 mins"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/jworking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@+id/jointwork"
+                    android:text="Joint Working"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/jointwork"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_toRightOf="@id/text123"
+                    android:src="@drawable/jointworkingglow" />
+                
+                <TextView
+                    android:id="@+id/jointwork_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jworking"
+                    android:layout_marginLeft="100dp"
+                    android:layout_toRightOf="@id/text123"
+                    android:text="John Patrick[ASM] + 1"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textclock"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/textcalender"
+                    android:padding="10dip"
+                    android:text="@string/icon_marker"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/textjcclinic"
+                    android:layout_width="607dip"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text17july"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/textlocation"
+                    android:background="#E0E0E0"
+                    android:padding="10dip"
+                    android:text="JC CLINIC Location"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textjcclinic"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_broderselectorblack"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Joint \nWorking"
+                            android:textSize="19dp"
+                            android:textStyle="italic" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t2"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Feedback"
+                            android:textSize="19dp"
+                            android:textStyle="italic" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t3"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Detailing"
+                            android:textSize="19dp"
+                            android:textStyle="italic" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t4"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Manual \nDetailing"
+                            android:textSize="19dp"
+                            android:textStyle="italic" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t5"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Sampling"
+                            android:textSize="19dp"
+                            android:textStyle="italic" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t6"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Input"
+                            android:textSize="19dp"
+                            android:textStyle="italic" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t7"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Order"
+                            android:textSize="19dp"
+                            android:textStyle="italic" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/t8"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="3"
+                                android:textSize="30dp" />
+
+                            <TextView
+                                android:id="@+id/actionclosed2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/t8"
+                                android:layout_marginTop="2dp"
+                                android:paddingBottom="10dp"
+                                android:text="Action \nClosed"
+                                android:textSize="19dp"
+                                android:textStyle="italic" />
+                        </TableRow>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/t9"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="6"
+                                android:textSize="30dp" >
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/actionclosed3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:paddingBottom="10dp"
+                                android:text="Action \nClosed"
+                                android:textSize="19dp"
+                                android:textStyle="italic" />
+                        </TableRow>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/t10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/icon_tickbox"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/t10"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Compaign \nActivity"
+                            android:textSize="19dp"
+                            android:textStyle="italic" >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/sideview1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="#212121" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="25dip"
+                    android:layout_marginTop="20dip"
+                    android:text="Feedback"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtdate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/gry_barright"
+                    android:paddingLeft="30dip"
+                    android:text=" 1 Aug 12:30pm"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relid1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:id="@+id/feed1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    layout="@layout/feedbackview" />
+
+                <View
+                    android:id="@+id/sideview"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/feed1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#212121" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="25dip"
+                    android:layout_marginTop="20dip"
+                    android:text="Detailing"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dip"
+                    android:layout_marginTop="20dip"
+                    android:layout_toRightOf="@id/tvb"
+                    android:text="Duration      [ 5 Min ]"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtdate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/gry_barright"
+                    android:paddingLeft="30dip"
+                    android:text=" 1 Aug 12:30pm"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/relativeSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/manual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Manual Detailing"
+                    android:textSize="20sp" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/manual"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp" >
+
+                    <TextView
+                        android:id="@+id/tm1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="#D1D1D1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="20dp"
+                        android:text="BRAND\nSolsuna"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tm2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="#D1D1D1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="20dp"
+                        android:text="BRAND\nMezzo Drop"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tm3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="#D1D1D1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="20dp"
+                        android:text="SERVICE\nInhalation/Nasal Product"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tm4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="#D1D1D1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="20dp"
+                        android:text="THERAPY\nAsthama"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tm5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="#C3C3C3"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="20dp"
+                        android:text="THERAPY\nSkin"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="20dp"
+                        android:text=""
+                        android:textSize="15sp"
+                        android:visibility="invisible" />
+                </TableRow>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/sideview6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/feed1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="#212121" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="25dip"
+                    android:layout_marginTop="20dip"
+                    android:text="Sampling  - Order - Inputs"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtdate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/gry_barright"
+                    android:paddingLeft="30dip"
+                    android:text=" 1 Aug 12:30pm"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:id="@+id/feed2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    layout="@layout/historysample" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="#212121" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/history.xml -->
