@@ -40,8 +40,8 @@ public class ImageAdapter extends BaseAdapter {
     // "Detailing", "Reporting", "Action Point", "Inventory", "Events",
     // "Phyzii NET", "Canvas", "Campaign", "Sync" };
     public String[] titles = {"Calendar", "Customers", "Detailing",
-            "Reporting", "Dashboard", "Campaign", "Enhance", "Inventory",
-            "Action Point", "Sync", "PhyziinetT", "Canvas"};
+            "Reporting", "Dashboard", "Non Call Activity", "Leave", "Inventory",
+            "Action Point", "Sync", "PhyziinetT", "Expense"};
 
     // Constructor
     public ImageAdapter(Context c) {
