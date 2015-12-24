@@ -40,8 +40,10 @@ public class LandingPage extends Activity {
         setContentView(R.layout.landing);
         GridView gridView = (GridView) findViewById(R.id.grid);
 
+//        Expandablelistviewfordoc list = new Expandablelistviewfordoc(
+//                LandingPage.this, 29, 1);
         Expandablelistviewfordoc list = new Expandablelistviewfordoc(
-                LandingPage.this, 29, 1);
+                LandingPage.this, 96, 1);
 
         View v = list.multilevleexpandalelistview(2);
 

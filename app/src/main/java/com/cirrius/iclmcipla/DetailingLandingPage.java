@@ -29,7 +29,6 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.cirrius.expand.Expandablelistviewfordoc;
-import com.cirrius.iclmcipla.R;
 
 public class DetailingLandingPage extends Activity implements OnClickListener {
     CalendarView calendar;

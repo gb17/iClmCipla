@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <WebView
         android:id="@+id/webView1"
@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/handle"
@@ -94,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <LinearLayout
                 android:id="@+id/content"
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/menubar"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/play"
@@ -118,7 +118,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_marginLeft="15dp"
-                    android:src="@drawable/lp" />
+                    android:src="@drawable/lp"
+                    android:visibility="gone" />
 
                 <View
                     android:layout_width="1dp"
@@ -133,7 +134,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_marginLeft="15dp"
-                    android:src="@drawable/feedback" />
+                    android:src="@drawable/feedback"
+                    android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/sampl1"
@@ -141,7 +143,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_marginLeft="15dp"
-                    android:src="@drawable/samplingicon" />
+                    android:src="@drawable/samplingicon"
+                    android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/order"
@@ -149,7 +152,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_marginLeft="15dp"
-                    android:src="@drawable/order_icon" />
+                    android:src="@drawable/order_icon"
+                    android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/email1"
@@ -221,7 +225,7 @@
                 android:background="#BF000000"
                 android:paddingBottom="5dp"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" >
+                android:paddingRight="10dp">
 
                 <LinearLayout
                     android:id="@+id/content2"
@@ -229,105 +233,105 @@
                     android:layout_height="192dp"
                     android:layout_marginBottom="7dp"
                     android:layout_marginTop="7dp"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <include
                         android:id="@+id/thumbviewbottom1"
+                        layout="@layout/dthumbnailbr1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr1" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom2"
+                        layout="@layout/dthumbnailbr4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr4" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom3"
+                        layout="@layout/dthumbnailbr7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr7" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom4"
+                        layout="@layout/dthumbnailbr3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr3" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom5"
+                        layout="@layout/dthumbnailbr5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr5" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom6"
+                        layout="@layout/dthumbnailbr6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr6" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom7"
+                        layout="@layout/dthumbnailbr3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr3" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom8"
+                        layout="@layout/dthumbnailbr7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr7" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom9"
+                        layout="@layout/dthumbnailbr1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr1" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbviewbottom10"
+                        layout="@layout/dthumbnailbr6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr6" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbview1"
+                        layout="@layout/dthumbnailbr4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr4" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbview1"
+                        layout="@layout/dthumbnailbr5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr5" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbview1"
+                        layout="@layout/dthumbnailbr3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr3" />
+                        android:layout_margin="7dp" />
 
                     <include
                         android:id="@+id/thumbview1"
+                        layout="@layout/dthumbnailbr4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
-                        layout="@layout/dthumbnailbr4" />
+                        android:layout_margin="7dp" />
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>
@@ -340,7 +344,7 @@
             android:background="#BF000000"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <LinearLayout
                 android:id="@+id/content3"
@@ -348,105 +352,105 @@
                 android:layout_height="160dp"
                 android:layout_marginBottom="7dp"
                 android:layout_marginTop="7dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <include
                     android:id="@+id/thumbviewbottom11"
+                    layout="@layout/thumbnailcolor1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailcolor1" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom21"
+                    layout="@layout/thumbnailcolor2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailcolor2" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom31"
+                    layout="@layout/thumbnailbalck2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailbalck2" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom41"
+                    layout="@layout/thumbnailblack3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailblack3" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom51"
+                    layout="@layout/thumbnamilblack4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnamilblack4" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom61"
+                    layout="@layout/thumbnailcolor2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailcolor2" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom71"
+                    layout="@layout/thumbnailbalck2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailbalck2" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom81"
+                    layout="@layout/thumbnamilblack4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnamilblack4" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom91"
+                    layout="@layout/thumbnailcolor1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailcolor1" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbviewbottom101"
+                    layout="@layout/thumbnailblack3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailblack3" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbview1"
+                    layout="@layout/thumbnailcolor2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailcolor2" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbview1"
+                    layout="@layout/thumbnailbalck2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailbalck2" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbview1"
+                    layout="@layout/thumbnamilblack4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnamilblack4" />
+                    android:layout_margin="7dp" />
 
                 <include
                     android:id="@+id/thumbview1"
+                    layout="@layout/thumbnailcolor1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    layout="@layout/thumbnailcolor1" />
+                    android:layout_margin="7dp" />
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>

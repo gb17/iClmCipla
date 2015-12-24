@@ -1,8 +1,5 @@
 package com.cirrius.iclmcipla;
 
-import com.cirrius.expand.Expandablelistviewfordoc;
-import com.cirrius.iclmcipla.R;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.cirrius.expand.Expandablelistviewfordoc;
+
 public class Reporting extends Activity {
 
     private Typeface font;
@@ -33,8 +32,10 @@ public class Reporting extends Activity {
         Utility.setactoinbart(getActionBar(), this, font, "Reporting");
         setContentView(R.layout.repoting);
 
+//        Expandablelistviewfordoc list = new Expandablelistviewfordoc(
+//                Reporting.this, 29, 1);
         Expandablelistviewfordoc list = new Expandablelistviewfordoc(
-                Reporting.this, 29, 1);
+                Reporting.this, 96, 1);
 
         View v = list.multilevleexpandalelistview(2);
         tick1 = (TextView) findViewById(R.id.tick1);

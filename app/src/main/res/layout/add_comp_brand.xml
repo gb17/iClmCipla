@@ -1,0 +1,350 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_roundedwhitewithoutpadding"
+    android:paddingBottom="30dp"
+    tools:context="com.cirrius.iclmcipla.MainActivity">
+
+    <TextView
+        android:id="@+id/TextViewActionPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Add Competitor Brand"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:text="@string/icon_cross"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <TableRow
+        android:id="@+id/tablerow11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewActionPoint"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Brand"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow11"
+        android:layout_marginLeft="20dp">
+
+        <Spinner
+            android:id="@+id/typeofphy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/SelectBrand" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@android:color/white" />
+
+        <Spinner
+            android:id="@+id/typeofphy1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/SelectBrand"
+            android:visibility="invisible" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow99"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow111"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/selectnsrch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SKUs"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow999"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow99"
+        android:layout_marginLeft="20dp">
+
+        <Spinner
+            android:id="@+id/typeofphy3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/SelectBrand" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@android:color/white" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/SelectBrand"
+            android:visibility="gone" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow999"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/TextViewselectbrand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Competitor 1"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/TextViewcategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="4dp"
+            android:text="Competitor 2"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow1"
+        android:layout_marginLeft="20dp">
+
+        <EditText
+            android:id="@+id/spinnerselectbrand"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/SelectBrand" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@android:color/white" />
+
+        <EditText
+            android:id="@+id/spinnercategory"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/category" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow2"
+        android:layout_marginTop="20dp"
+
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/TextViewassigntodepartmrnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Competitor 3"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/TextViewassigntoperson"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="4dp"
+            android:text="Competitor 4"
+            android:textColor="#848484"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tablerow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablerow3"
+
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp">
+
+        <EditText
+            android:id="@+id/spinnersassigntodepartment"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/data" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/spinnerassigntoperson"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_broderforedittext"
+            android:entries="@array/person" />
+    </TableRow>
+
+    TextView
+    android:id="@+id/TextViewDescription"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tablerow4"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:text="Description"
+    android:textColor="#848484"
+    android:textSize="18sp" />
+
+    EditText
+    android:id="@+id/EdittextDescription"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/TextViewDescription"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_broderforedittext"
+    android:lines="2"
+    android:maxLines="5"
+    android:paddingLeft="10dp" />
+
+    TextView
+    android:id="@+id/Duedate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/EdittextDescription"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="15dp"
+    android:text="Due Date"
+    android:textColor="#848484"
+    android:textSize="18sp" />
+
+    TextView
+    android:id="@+id/Duetime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/EdittextDescription"
+    android:layout_marginLeft="80dp"
+    android:layout_marginTop="15dp"
+    android:layout_toRightOf="@+id/Duedate"
+    android:text="Time"
+    android:textColor="#848484"
+    android:textSize="18sp" />
+
+    EditText
+    android:id="@+id/edittextDuedate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/Duedate"
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/bg_roundedgray"
+    android:editable="false"
+    android:gravity="center_horizontal"
+    android:paddingBottom="4dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="4dp"
+    android:text="15/09/2015"
+    android:textColor="#FFFFFF"
+    android:textSize="22sp" />
+
+    EditText
+    android:id="@+id/edittime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/Duedate"
+    android:layout_marginLeft="20dp"
+    android:layout_toRightOf="@+id/edittextDuedate"
+    android:background="@drawable/bg_roundedgray"
+    android:editable="false"
+    android:ems="5"
+    android:gravity="center_horizontal"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    android:text="11:46"
+    android:textColor="#FFFFFF"
+    android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/addcomp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Duedate"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:ems="4"
+        android:gravity="center_horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="Add"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+</RelativeLayout>

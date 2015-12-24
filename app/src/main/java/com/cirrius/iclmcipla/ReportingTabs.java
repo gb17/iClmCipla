@@ -4,11 +4,10 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
@@ -16,24 +15,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.text.format.DateFormat;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.iclm.util.MenuforThreedot;
+import com.cirrius.expand.Expandablelistviewfordoc;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -48,12 +40,8 @@ public class ReportingTabs extends Activity implements DateInterface {
     int count = 0;
     private LinearLayout mainLinear;
     private CustomScrollViewReporting physiScroll;
-    public static int showHide = 0;
-    public static RelativeLayout relative;
-    public static LinearLayout linselction;
-    ImageView jointwork;
-    TextView jointwork_name;
-    TextView timeView, timeView2;
+    public static LinearLayout linselctionforreporting;
+
     Calendar myCalendar = Calendar.getInstance();
     TextView dateView;
     TextView clickedTextView;
@@ -71,6 +59,7 @@ public class ReportingTabs extends Activity implements DateInterface {
     String[] Specialty = {"Nuclear cardiology", "Cardiac electrophysiology",
             "Urologic oncology", "Urologic oncology", "Neuromuscular Medicine"};
     String[] Class = {"Class B", "Class A", "Class C", "Class C", "Class B"};
+    int index = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,212 +68,155 @@ public class ReportingTabs extends Activity implements DateInterface {
         font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         Utility.setactoinbart(getActionBar(), this, font, "Reporting");
         setContentView(R.layout.reporting_tabs);
-        TextView threedot = (TextView) findViewById(R.id.threedot);
-        threedot.setTypeface(font);
-        TextView tp11 = (TextView) findViewById(R.id.textcalender);
-        TextView tp12 = (TextView) findViewById(R.id.textclock);
-        TextView tp13 = (TextView) findViewById(R.id.textlocation);
 
-        tp11.setTypeface(font);
-        tp12.setTypeface(font);
-        tp13.setTypeface(font);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null)
+            index = bundle.getInt("index");
 
-        TextView textjcclinic = (TextView) findViewById(R.id.textjcclinic);
-        textjcclinic.setOnClickListener(new OnClickListener() {
+//        Expandablelistviewfordoc list = new Expandablelistviewfordoc(
+//                ReportingTabs.this, 29, 1);
+        Expandablelistviewfordoc list = new Expandablelistviewfordoc(
+                ReportingTabs.this, 96, 1);
+        View v = list.multilevleexpandalelistview(2);
+        RelativeLayout rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
+        rl1.addView(v);
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                dialog_box = new Dialog(ReportingTabs.this);
-                dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog_box.setContentView(R.layout.thirdwala);
-                TextView close = (TextView) dialog_box.findViewById(R.id.close);
-                close.setTypeface(font);
-                TextView location = (TextView) dialog_box
-                        .findViewById(R.id.location);
-                location.setTypeface(font);
-                TextView clock = (TextView) dialog_box.findViewById(R.id.clock);
-                clock.setTypeface(font);
-                TextView calendar = (TextView) dialog_box
-                        .findViewById(R.id.calendar);
-                calendar.setTypeface(font);
-                close.setOnClickListener(new OnClickListener() {
 
-                    @Override
-                    public void onClick(View v) {
-                        // TODO Auto-generated method stub
-                        dialog_box.dismiss();
-                    }
-                });
-                Window window = dialog_box.getWindow();
-                window.setBackgroundDrawable(new ColorDrawable(
-                        Color.TRANSPARENT));
-                dialog_box.getWindow().setLayout(580, 700);
-                dialog_box.show();
-                timeView = (TextView) dialog_box.findViewById(R.id.time);
-                timeView.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // show the time picker dialog
-                        DialogFragment newFragment = new TimePickerFragment();
-                        clickedTextView = timeView;
-                        newFragment.show(getFragmentManager(), "timePicker");
-                    }
-                });
-                timeView2 = (TextView) dialog_box.findViewById(R.id.time2);
-                timeView2.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // show the time picker dialog
-                        DialogFragment newFragment = new TimePickerFragment();
-                        clickedTextView = timeView2;
-                        newFragment.show(getFragmentManager(), "timePicker");
-                    }
-                });
-                dateView = (TextView) dialog_box.findViewById(R.id.dateview);
-                dateView.setOnClickListener(new OnClickListener() {
-
-                    @Override
-                    public void onClick(View arg0) {
-                        // TODO Auto-generated method stub
-
-                        new DatePickerDialog(ReportingTabs.this, date,
-                                myCalendar.get(Calendar.YEAR), myCalendar
-                                .get(Calendar.MONTH), myCalendar
-                                .get(Calendar.DAY_OF_MONTH)).show();
-
-                    }
-                });
-            }
-        });
-
-        TextView status = (TextView) findViewById(R.id.status);
-        status.setTypeface(font);
-        status.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                dialog_box = new Dialog(ReportingTabs.this);
-                dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog_box.setContentView(R.layout.fourthwala);
-                TextView close = (TextView) dialog_box.findViewById(R.id.close);
-                close.setTypeface(font);
-                close.setOnClickListener(new OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        // TODO Auto-generated method stub
-                        dialog_box.dismiss();
-                    }
-                });
-                Window window = dialog_box.getWindow();
-                window.setBackgroundDrawable(new ColorDrawable(
-                        Color.TRANSPARENT));
-                dialog_box.getWindow().setLayout(580, 500);
-                // dialog_box.getWindow().clearFlags(
-                // WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-                dialog_box.show();
-            }
-        });
-
-        threedot.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                MenuforThreedot menuforThreedot = new MenuforThreedot(
-                        ReportingTabs.this);
-                dialog_box = menuforThreedot.menudialog();
-
-                Window window = dialog_box.getWindow();
-                WindowManager.LayoutParams wmlp = dialog_box.getWindow()
-                        .getAttributes();
-                int[] viewLocation = new int[2];
-                v.getLocationOnScreen(viewLocation);
-                wmlp.gravity = Gravity.TOP | Gravity.LEFT;
-                wmlp.x = viewLocation[0];
-                wmlp.y = viewLocation[1];
-                window.setBackgroundDrawable(new ColorDrawable(
-                        Color.TRANSPARENT));
-                dialog_box.getWindow().setLayout(450, 570);
-                dialog_box.show();
-
-                // dialog_box = new Dialog(ReportingTabs.this);
-                // dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                // dialog_box.setContentView(R.layout.addlist);
-                //
-                // RelativeLayout appointment = (RelativeLayout) dialog_box
-                // .findViewById(R.id.appointment);
-                // RelativeLayout leave = (RelativeLayout) dialog_box
-                // .findViewById(R.id.leave);
-                // RelativeLayout tot = (RelativeLayout) dialog_box
-                // .findViewById(R.id.tot);
-                // RelativeLayout todo = (RelativeLayout) dialog_box
-                // .findViewById(R.id.todo);
-                // TextView txt1 = (TextView)
-                // dialog_box.findViewById(R.id.txt1);
-                // TextView txt2 = (TextView)
-                // dialog_box.findViewById(R.id.txt2);
-                // TextView txt3 = (TextView)
-                // dialog_box.findViewById(R.id.txt3);
-                // TextView txt4 = (TextView)
-                // dialog_box.findViewById(R.id.txt4);
-                // txt1.setText("Edit Profile");
-                // txt2.setText("Start Meeting");
-                // txt3.setText("Locate");
-                // txt4.setText("Geo Tag");
-                //
-                // // appointment.setOnClickListener(mylisten);
-                // // leave.setOnClickListener(mylisten);
-                // // tot.setOnClickListener(mylisten);
-                // // todo.setOnClickListener(mylisten);
-                //
-                // Window window = dialog_box.getWindow();
-                //
-                // WindowManager.LayoutParams wmlp = dialog_box.getWindow()
-                // .getAttributes();
-                //
-                // wmlp.gravity = Gravity.TOP | Gravity.RIGHT;
-                // wmlp.x = 40; // x position
-                // wmlp.y = 80;
-                // window.setBackgroundDrawable(new ColorDrawable(
-                // Color.TRANSPARENT));
-                // dialog_box.getWindow().setLayout(200, 250);
-                // dialog_box.getWindow().clearFlags(
-                // WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-                // dialog_box.show();
-            }
-        });
-        TextView next = (TextView) findViewById(R.id.next);
-        next.setTypeface(font);
-        TextView map = (TextView) findViewById(R.id.map);
-        map.setTypeface(font);
-
-        TextView jworking = (TextView) findViewById(R.id.jworking);
-        jointwork_name = (TextView) findViewById(R.id.jointwork_name);
-        jointwork = (ImageView) findViewById(R.id.jointwork);
-
-        jworking.setOnClickListener(jointListener);
-        jointwork_name.setOnClickListener(jointListener);
-        jointwork_name.setVisibility(View.INVISIBLE);
-        jointwork.setOnClickListener(jointListener);
-        jointwork.setTag("1");
-
-        Bundle bundle = new Bundle();
-        bundle.putString("index", "2");
-        Fragment fragment = new PlaylistFragment();
+        Fragment fragment = new ReportingFragment();
         FragmentManager fm = getFragmentManager();
+        Bundle bundleNew = new Bundle();
+        bundleNew.putInt("index", index);
+        fragment.setArguments(bundleNew);
         FragmentTransaction ft = fm.beginTransaction();
-        fragment.setArguments(bundle);
-        ft.add(R.id.mainfrag, fragment);
+        ft.add(R.id.mainfragforreporting, fragment);
         ft.commit();
+        TextView prev = (TextView) findViewById(R.id.prev);
+        TextView next = (TextView) findViewById(R.id.next);
+        prev.setTypeface(font);
+        next.setTypeface(font);
+        TextView done1 = (TextView) findViewById(R.id.done);
+        done1.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                dialog_box = new Dialog(ReportingTabs.this);
+                dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog_box.setContentView(R.layout.secondwala);
+                TextView close = (TextView) dialog_box
+                        .findViewById(R.id.close);
+                close.setTypeface(font);
+                close.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        dialog_box.dismiss();
+                    }
+                });
+                Window window = dialog_box.getWindow();
+                window.setBackgroundDrawable(new ColorDrawable(
+                        Color.TRANSPARENT));
+                dialog_box.getWindow().setLayout(400, 300);
+                dialog_box.show();
+                TextView yes = (TextView) dialog_box.findViewById(R.id.yes);
+                yes.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        // TODO Auto-generated method stub
+                        Intent intent = new Intent(ReportingTabs.this,
+                                Reporting.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                    }
+                });
+                TextView cancel = (TextView) dialog_box
+                        .findViewById(R.id.cancel);
+                cancel.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        // TODO Auto-generated method stub
+                        dialog_box.dismiss();
+                    }
+                });
+
+            }
+        });
+        TextView cancel = (TextView) findViewById(R.id.cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                dialog_box = new Dialog(ReportingTabs.this);
+                dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog_box.setContentView(R.layout.secondwala);
+                TextView close = (TextView) dialog_box
+                        .findViewById(R.id.close);
+                TextView d1 = (TextView) dialog_box
+                        .findViewById(R.id.d1);
+                d1.setVisibility(View.GONE);
+
+                TextView d2 = (TextView) dialog_box
+                        .findViewById(R.id.d2);
+                d2.setText("Are You Sure You Want To Cancel ?");
+                close.setTypeface(font);
+                close.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        dialog_box.dismiss();
+                    }
+                });
+                Window window = dialog_box.getWindow();
+                window.setBackgroundDrawable(new ColorDrawable(
+                        Color.TRANSPARENT));
+                dialog_box.getWindow().setLayout(400, 300);
+                dialog_box.show();
+                TextView yes = (TextView) dialog_box.findViewById(R.id.yes);
+                yes.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        // TODO Auto-generated method stub
+                        Intent intent = new Intent(ReportingTabs.this,
+                                Reporting.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                    }
+                });
+                TextView cancel = (TextView) dialog_box
+                        .findViewById(R.id.cancel);
+                cancel.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        // TODO Auto-generated method stub
+                        dialog_box.dismiss();
+                    }
+                });
+
+            }
+        });
+        TextView sne = (TextView) findViewById(R.id.sne);
+        sne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReportingTabs.this, Reporting.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
         textview = (TextView) findViewById(R.id.textview);
 
         tab1 = (TextView) findViewById(R.id.tab1);
         tab2 = (TextView) findViewById(R.id.tab2);
         tab3 = (TextView) findViewById(R.id.tab3);
         tab4 = (TextView) findViewById(R.id.tab4);
+
+        if (index == 2) {
+            tab2.setText("INPUTS");
+            tab4.setText("PRESCRIPTION");
+        }
 
         tab11 = (View) findViewById(R.id.tab11);
         tab22 = (View) findViewById(R.id.tab22);
@@ -296,10 +228,14 @@ public class ReportingTabs extends Activity implements DateInterface {
         tab3.setOnClickListener(olc);
         tab4.setOnClickListener(olc);
 
-        physiScroll = (CustomScrollViewReporting) findViewById(R.id.physiscroll);
-        mainLinear = (LinearLayout) findViewById(R.id.mainfrag);
-        relative = (RelativeLayout) findViewById(R.id.relative);
-        linselction = (LinearLayout) findViewById(R.id.linselction);
+        physiScroll = (CustomScrollViewReporting) findViewById(R.id.reportingscroll);
+        mainLinear = (LinearLayout) findViewById(R.id.mainfragforreporting);
+        linselctionforreporting = (LinearLayout) findViewById(R.id.baapofallthetab);
+
+        textview.setText("VISIT DETAILS");
+        tab22.setVisibility(View.INVISIBLE);
+        tab2.setTypeface(null, Typeface.NORMAL);
+        tab2.setTextColor(Color.parseColor("#808080"));
 
     }
 
@@ -323,7 +259,7 @@ public class ReportingTabs extends Activity implements DateInterface {
                     tab22.setVisibility(View.INVISIBLE);
                     tab33.setVisibility(View.INVISIBLE);
                     tab44.setVisibility(View.INVISIBLE);
-                    textview.setText("DETAILING");
+                    textview.setText("VISIT DETAILS");
                     view = linear.getChildAt(0);
                     x = view.getLeft();
                     y = view.getTop();
@@ -338,7 +274,10 @@ public class ReportingTabs extends Activity implements DateInterface {
                     tab11.setVisibility(View.INVISIBLE);
                     tab33.setVisibility(View.INVISIBLE);
                     tab44.setVisibility(View.INVISIBLE);
-                    textview.setText("SAMPLING");
+                    if (index == 2)
+                        textview.setText("INPUTS");
+                    else
+                        textview.setText("SAMPLING");
                     view = linear.getChildAt(1);
                     x = view.getLeft();
                     y = view.getTop();
@@ -354,7 +293,7 @@ public class ReportingTabs extends Activity implements DateInterface {
                     tab22.setVisibility(View.INVISIBLE);
                     tab11.setVisibility(View.INVISIBLE);
                     tab44.setVisibility(View.INVISIBLE);
-                    textview.setText("FEEDBACK");
+                    textview.setText("DETAILING");
                     view = linear.getChildAt(2);
                     x = view.getLeft();
                     y = view.getTop();
@@ -370,7 +309,10 @@ public class ReportingTabs extends Activity implements DateInterface {
                     tab22.setVisibility(View.INVISIBLE);
                     tab33.setVisibility(View.INVISIBLE);
                     tab11.setVisibility(View.INVISIBLE);
-                    textview.setText("ACTION POINTS");
+                    if (index == 2)
+                        textview.setText("PRESCRIPTION");
+                    else
+                        textview.setText("ACTION POINTS");
                     view = linear.getChildAt(3);
                     x = view.getLeft();
                     y = view.getTop();
@@ -382,169 +324,14 @@ public class ReportingTabs extends Activity implements DateInterface {
             }
         }
     };
-    android.view.View.OnClickListener removeListener = new OnClickListener() {
-
-        @Override
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-            LinearLayout ll = (LinearLayout) v.getParent();
-            ll.setVisibility(View.GONE);
-            count--;
-        }
-    };
-
-    public void set(int show) {
-        showHide = show;
-        if (showHide == 0) {
-            if (relative != null) {
-                LayoutParams lp = (LayoutParams) relative.getLayoutParams();
-                if (lp.topMargin == -155) {
-                    LayoutParams param = new RelativeLayout.LayoutParams(
-                            RelativeLayout.LayoutParams.WRAP_CONTENT, 152);
-                    param.topMargin = 10;
-                    param.leftMargin = 10;
-                    param.rightMargin = 10;
-                    relative.setLayoutParams(param);
-                }
-            }
-        } else if (showHide == 1) {
-            if (relative != null) {
-                LayoutParams lp = (LayoutParams) relative.getLayoutParams();
-                if (lp.topMargin == 10) {
-                    LayoutParams param = new RelativeLayout.LayoutParams(
-                            RelativeLayout.LayoutParams.WRAP_CONTENT, 152);
-                    param.topMargin = -155;
-                    param.leftMargin = 10;
-                    param.rightMargin = 10;
-                    relative.setLayoutParams(param);
-                }
-            }
-        }
-
-    }
-
-    OnClickListener jointListener = new OnClickListener() {
-
-        @Override
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-
-            dialog = new Dialog(ReportingTabs.this);
-            dialog.getWindow();
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.joint_work);
-            dialog.getWindow().setBackgroundDrawable(
-                    new ColorDrawable(android.graphics.Color.TRANSPARENT));
-            dialog.setCancelable(false);
-            dialog.getWindow().setLayout(600, 370);
-            dialog.show();
-            final TextView doc1 = (TextView) dialog.findViewById(R.id.doc1);
-            jointwork_name.setText("John Patrick[ASM] + 1");
-            doc1.setTag("1");
-            doc1.setOnClickListener(new OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    if (doc1.getTag().equals("2")) {
-                        doc1.setBackgroundResource(R.drawable.roundforlayoutcyan);
-                        jointwork_name.setText("John Patrick[ASM] + 1");
-                        doc1.setTag("1");
-                    } else {
-                        doc1.setBackgroundResource(R.drawable.roundforlayout);
-                        doc1.setTag("2");
-                    }
-                }
-            });
-            final TextView doc2 = (TextView) dialog.findViewById(R.id.doc2);
-            doc2.setTag("2");
-            doc2.setOnClickListener(new OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    if (doc2.getTag().equals("1")) {
-                        doc2.setBackgroundResource(R.drawable.roundforlayout);
-                        doc2.setTag("2");
-                    } else {
-                        doc2.setBackgroundResource(R.drawable.roundforlayoutcyan);
-                        jointwork_name.setText("Alan Brown[RSM] + 1");
-                        doc2.setTag("1");
-                    }
-                }
-            });
-            ImageView close = (ImageView) dialog.findViewById(R.id.close);
-            ImageView donView = (ImageView) dialog.findViewById(R.id.done);
-            EditText add = (EditText) dialog.findViewById(R.id.add);
-            final LinearLayout ll1 = (LinearLayout) dialog
-                    .findViewById(R.id.layout1);
-            final LinearLayout ll2 = (LinearLayout) dialog
-                    .findViewById(R.id.layout2);
-            final LinearLayout ll3 = (LinearLayout) dialog
-                    .findViewById(R.id.layout3);
-            TextView text1 = (TextView) dialog.findViewById(R.id.closetxt1);
-            TextView text2 = (TextView) dialog.findViewById(R.id.closetxt2);
-            TextView text3 = (TextView) dialog.findViewById(R.id.closetxt3);
-            text1.setOnClickListener(removeListener);
-            text2.setOnClickListener(removeListener);
-            text3.setOnClickListener(removeListener);
-
-            add.setOnClickListener(new OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    if (count < 3)
-                        count++;
-                    if (count == 1) {
-                        ll1.setVisibility(View.VISIBLE);
-                    } else if (count == 2) {
-                        ll2.setVisibility(View.VISIBLE);
-                    } else if (count == 3) {
-                        ll3.setVisibility(View.VISIBLE);
-                    }
-                }
-            });
-
-            close.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    dialog.dismiss();
-                }
-            });
-            donView.setOnClickListener(new OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    if (doc1.getTag().equals("2") && doc2.getTag().equals("2")) {
-                        jointwork.setImageResource(R.drawable.jointworking);
-                        jointwork_name.setVisibility(View.INVISIBLE);
-                    } else {
-                        jointwork.setImageResource(R.drawable.jointworkingglow);
-                        jointwork_name.setVisibility(View.VISIBLE);
-                    }
-                    dialog.dismiss();
-                }
-            });
-        }
-    };
 
     public void changeHeader(int index) {
 
-        RelativeLayout rl = (RelativeLayout) linselction.getChildAt(index);
+        RelativeLayout rl = (RelativeLayout) linselctionforreporting.getChildAt(index);
         String header = ((TextView) rl.getChildAt(0)).getText().toString();
-
-        // if (header.equalsIgnoreCase("ACTION POINTS")) {
-        // plus.setVisibility(View.VISIBLE);
-        // history.setVisibility(View.VISIBLE);
-        // } else {
-        // plus.setVisibility(View.INVISIBLE);
-        // history.setVisibility(View.INVISIBLE);
-        // }
         textview.setText(header);
-        for (int i = 0; i < linselction.getChildCount(); i++) {
-            RelativeLayout relative = (RelativeLayout) linselction
+        for (int i = 0; i < linselctionforreporting.getChildCount(); i++) {
+            RelativeLayout relative = (RelativeLayout) linselctionforreporting
                     .getChildAt(i);
             if (index == i) {
                 ((TextView) relative.getChildAt(0)).setTypeface(null,
@@ -592,59 +379,6 @@ public class ReportingTabs extends Activity implements DateInterface {
     @Override
     public void setTimeToView(Calendar c) {
         clickedTextView.setText(DateFormat.format("h:mm a", c));
-    }
-
-    public class MyAdapterforspinner extends ArrayAdapter<String> {
-
-        Context context;
-
-        public MyAdapterforspinner(Context ctx, int txtViewResourceId,
-                                   String[] objects) {
-            super(ctx, txtViewResourceId, objects);
-            this.context = ctx;
-        }
-
-        @Override
-        public View getDropDownView(int position, View cnvtView, ViewGroup prnt) {
-            return getCustomView(position, cnvtView, prnt);
-        }
-
-        @Override
-        public View getView(int pos, View cnvtView, ViewGroup prnt) {
-            return getCustomView(pos, cnvtView, prnt);
-        }
-
-        public View getCustomView(int position, View convertView,
-                                  ViewGroup parent) {
-            LayoutInflater inflater = (LayoutInflater) context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.exrow_third, null);
-
-            TextView mItemName = (TextView) convertView
-                    .findViewById(R.id.eventsListEventRowText);
-
-            TextView mItemTime = (TextView) convertView.findViewById(R.id.time);
-
-            ImageView drImageView = (ImageView) convertView
-                    .findViewById(R.id.dr_image);
-            TextView mItemPrice = (TextView) convertView
-                    .findViewById(R.id.textViewItemPrice);
-
-            TextView childtextview3 = (TextView) convertView
-                    .findViewById(R.id.childtextview3);
-
-            TextView menufordr = (TextView) convertView
-                    .findViewById(R.id.menufordr);
-            menufordr.setVisibility(View.GONE);
-
-            drImageView.setImageResource(imageDoctor[position]);
-            mItemTime.setText(strTime[position]);
-            mItemName.setText(Drname[position]);
-            mItemPrice.setText(Specialty[position]);
-            childtextview3.setText(Class[position]);
-
-            return convertView;
-        }
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)

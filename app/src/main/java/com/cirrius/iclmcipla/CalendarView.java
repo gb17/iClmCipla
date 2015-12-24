@@ -30,6 +30,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -96,7 +98,7 @@ public class CalendarView extends LinearLayout {
     int morepatcharr[] = {2, 21, 16, 29, 18, 28, 30, 14};
 
     String[] maindata = {"Add Unlisted Physician", "Add Pharmacy",
-            "Add Distributor", "Add Action point", "Add TOT", "Add Leave",
+            "Add Distributor", "Add Action point", "Add Non Call Activity", "Add Leave",
             "Make Plan from STP", "Manual"};
 
     Context context;
@@ -137,6 +139,7 @@ public class CalendarView extends LinearLayout {
         this.context = context;
     }
 
+
     public CalendarView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initControl(context, attrs);
@@ -150,6 +153,7 @@ public class CalendarView extends LinearLayout {
         this.context = context;
         initControl(context, attrs);
     }
+
 
     /**
      * Load control xml layout
@@ -688,7 +692,7 @@ public class CalendarView extends LinearLayout {
                     @Override
                     public void onClick(View v) {
 
-                        callscheducledailog();
+                        callscheducledailog(99);
                     }
                 });
 
@@ -767,7 +771,7 @@ public class CalendarView extends LinearLayout {
         }
     }
 
-    public void callscheducledailog() {
+    public void callscheducledailog(int mode) {
         final LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -781,6 +785,12 @@ public class CalendarView extends LinearLayout {
         TextView tv1 = (TextView) dialog_box2.findViewById(R.id.txtu2);
         textundo = (TextView) dialog_box2.findViewById(R.id.textundo);
         textundo.setTypeface(font);
+        RelativeLayout relativeLayout = (RelativeLayout) dialog_box2.findViewById(R.id.relupper);
+
+
+        if (mode == 1) {
+            relativeLayout.setVisibility(View.GONE);
+        }
 
         //
 
@@ -809,12 +819,12 @@ public class CalendarView extends LinearLayout {
         // RelativeLayout.LayoutParams.WRAP_CONTENT,
         // RelativeLayout.LayoutParams.WRAP_CONTENT);
 
-        LinearLayout.LayoutParams tableRowLayoutParams1 = new LinearLayout.LayoutParams(
+        LayoutParams tableRowLayoutParams1 = new LayoutParams(
                 0, RelativeLayout.LayoutParams.WRAP_CONTENT, 1.5f);
 
         tableRowLayoutParams1.setMargins(0, 0, 15, 0);
-        LinearLayout.LayoutParams tableRowLayoutParams2 = new LinearLayout.LayoutParams(
-                0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
+        LayoutParams tableRowLayoutParams2 = new LayoutParams(
+                0, LayoutParams.WRAP_CONTENT, 1);
 
         // tableRowLayoutParams2.setMargins(40, 0, 0, 0);
 
@@ -877,16 +887,16 @@ public class CalendarView extends LinearLayout {
                 for (int i = 0; i < maindata.length; i++) {
                     TextView textView = new TextView(context);
                     View v1 = new View(context);
-                    LinearLayout.LayoutParams param = new
+                    LayoutParams param = new
 
-                            LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LayoutParams(
+                            LayoutParams.MATCH_PARENT,
 
-                            LinearLayout.LayoutParams.WRAP_CONTENT);
-                    LinearLayout.LayoutParams param1 = new
+                            LayoutParams.WRAP_CONTENT);
+                    LayoutParams param1 = new
 
-                            LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.WRAP_CONTENT,
+                            LayoutParams(
+                            LayoutParams.WRAP_CONTENT,
 
                             1);
                     textView.setLayoutParams(param);
@@ -912,9 +922,9 @@ public class CalendarView extends LinearLayout {
                                 View vf = lin1.getChildAt(0);
                                 lin1.removeAllViews();
                                 lin1.addView(vf);
-                                LinearLayout.LayoutParams tableRowLayoutParams3 = new LinearLayout.LayoutParams(
+                                LayoutParams tableRowLayoutParams3 = new LayoutParams(
                                         0,
-                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        LayoutParams.WRAP_CONTENT,
                                         2.5f);
 
                                 View vleave = inflater.inflate(
@@ -1065,9 +1075,9 @@ public class CalendarView extends LinearLayout {
                                 View vf = lin1.getChildAt(0);
                                 lin1.removeAllViews();
                                 lin1.addView(vf);
-                                LinearLayout.LayoutParams tableRowLayoutParams5 = new LinearLayout.LayoutParams(
+                                LayoutParams tableRowLayoutParams5 = new LayoutParams(
                                         0,
-                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        LayoutParams.WRAP_CONTENT,
                                         2.5f);
 
                                 View vtot = inflater.inflate(
@@ -1244,16 +1254,27 @@ public class CalendarView extends LinearLayout {
                                 View vf = lin1.getChildAt(0);
                                 lin1.removeAllViews();
                                 lin1.addView(vf);
-                                LinearLayout.LayoutParams tableRowLayoutParams4 = new LinearLayout.LayoutParams(
+                                LayoutParams tableRowLayoutParams4 = new LayoutParams(
                                         0,
-                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        LayoutParams.WRAP_CONTENT,
                                         2.5f);
 
                                 View vunlisted = inflater.inflate(
-                                        R.layout.add_unlisted, null);
+                                        R.layout.add_unlisted_new, null);
                                 vunlisted.setBackgroundColor(Color.TRANSPARENT);
                                 vunlisted
                                         .setLayoutParams(tableRowLayoutParams4);
+
+                                final LinearLayout linear = (LinearLayout) vunlisted.findViewById(R.id.linear);
+                                CheckBox check = (CheckBox) vunlisted.findViewById(R.id.check);
+                                check.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                    @Override
+                                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                        if (isChecked)
+                                            linear.setVisibility(View.VISIBLE);
+                                        else linear.setVisibility(View.INVISIBLE);
+                                    }
+                                });
 
                                 // /date
                                 final EditText edittextDuedate = (EditText) vunlisted
@@ -1316,9 +1337,9 @@ public class CalendarView extends LinearLayout {
                                 View vf = lin1.getChildAt(0);
                                 lin1.removeAllViews();
                                 lin1.addView(vf);
-                                LinearLayout.LayoutParams tableRowLayoutParams4 = new LinearLayout.LayoutParams(
+                                LayoutParams tableRowLayoutParams4 = new LayoutParams(
                                         0,
-                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        LayoutParams.WRAP_CONTENT,
                                         2.5f);
 
                                 View vunlisted = inflater.inflate(
@@ -1404,9 +1425,9 @@ public class CalendarView extends LinearLayout {
                                 View vf = lin1.getChildAt(0);
                                 lin1.removeAllViews();
                                 lin1.addView(vf);
-                                LinearLayout.LayoutParams tableRowLayoutParams4 = new LinearLayout.LayoutParams(
+                                LayoutParams tableRowLayoutParams4 = new LayoutParams(
                                         0,
-                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        LayoutParams.WRAP_CONTENT,
                                         2.5f);
 
                                 View vunlisted = inflater.inflate(
@@ -1460,7 +1481,7 @@ public class CalendarView extends LinearLayout {
 
     }
 
-    OnClickListener rounclick = new View.OnClickListener() {
+    OnClickListener rounclick = new OnClickListener() {
 
         @Override
         public void onClick(View v) {
@@ -1561,14 +1582,14 @@ public class CalendarView extends LinearLayout {
         for (int i = 0; i < maindata.length; i++) {
             TextView textView = new TextView(context);
             View v1 = new View(context);
-            LinearLayout.LayoutParams param = new
+            LayoutParams param = new
 
-                    LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                    LayoutParams(LayoutParams.MATCH_PARENT,
 
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
-            LinearLayout.LayoutParams param1 = new
+                    LayoutParams.WRAP_CONTENT);
+            LayoutParams param1 = new
 
-                    LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LayoutParams(LayoutParams.WRAP_CONTENT,
 
                     1);
             textView.setLayoutParams(param);
@@ -1855,8 +1876,17 @@ public class CalendarView extends LinearLayout {
                         d.requestWindowFeature(Window.FEATURE_NO_TITLE);
                         d.getWindow().setBackgroundDrawable(
                                 new ColorDrawable(android.R.color.transparent));
-                        d.setContentView(R.layout.add_unlisted);
-
+                        d.setContentView(R.layout.add_unlisted_new);
+                        final LinearLayout linear = (LinearLayout) d.findViewById(R.id.linear);
+                        CheckBox check = (CheckBox) d.findViewById(R.id.check);
+                        check.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                            @Override
+                            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                if (isChecked)
+                                    linear.setVisibility(View.VISIBLE);
+                                else linear.setVisibility(View.INVISIBLE);
+                            }
+                        });
                         TextView close = (TextView) d.findViewById(R.id.close);
                         EditText ButtonSet = (EditText) d
                                 .findViewById(R.id.ButtonSet);
@@ -2370,9 +2400,9 @@ public class CalendarView extends LinearLayout {
         LinearLayout parent = new LinearLayout(context);
         parent.setOrientation(LinearLayout.VERTICAL);
         dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        LinearLayout.LayoutParams param2 = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
+        LayoutParams param2 = new LayoutParams(
+                LayoutParams.MATCH_PARENT,
+                LayoutParams.WRAP_CONTENT);
         param2.topMargin = 5;
         param2.rightMargin = 10;
         param2.leftMargin = 10;

@@ -19,6 +19,12 @@
         <item>zoomIn</item>
         <item>zoomOut</item>
     </string-array>
+    <string-array name="calltype">
+        <item>Select</item>
+        <item>Face To Face</item>
+        <item>Phone Call</item>
+        <item>Conference</item>
+    </string-array>
     <string-array name="category">
         <item>Sample Request</item>
         <item>LBL</item>
@@ -113,12 +119,23 @@
         <item>Study</item>
         <item>PCP</item>
     </string-array>
+    <string-array name="session">
+        <item>Select</item>
+        <item>Morning</item>
+        <item>Evening</item>
+    </string-array>
     <string-array name="speciality">
         <item>Select Specialty</item>
         <item>Cardiology</item>
         <item>Neurology</item>
         <item>Chest Physician</item>
         <item>Dermatology</item>
+    </string-array>
+    <string-array name="timespent">
+        <item>Select</item>
+        <item>5 mins</item>
+        <item>10 mins</item>
+        <item>15 mins</item>
     </string-array>
     <string-array name="tot">
         <item>Select</item>
