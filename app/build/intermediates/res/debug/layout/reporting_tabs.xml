@@ -14,8 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_toLeftOf="@id/next">
+            android:layout_marginTop="10dp">
 
             <LinearLayout
                 android:id="@+id/baapofallthetab"
@@ -157,8 +156,8 @@
             android:id="@+id/reportingscroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/textview"
-            android:layout_above="@+id/endlayout">
+            android:layout_above="@+id/endlayout"
+            android:layout_below="@id/textview">
 
             <LinearLayout
                 android:id="@+id/mainfragforreporting"
@@ -192,7 +191,7 @@
                 android:textStyle="bold" />
 
             <HorizontalScrollView
-                android:layout_width="690dp"
+                android:layout_width="770dp"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
@@ -330,7 +329,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/bg_roundedgray"
                 android:paddingBottom="4dp"
                 android:paddingLeft="30dp"

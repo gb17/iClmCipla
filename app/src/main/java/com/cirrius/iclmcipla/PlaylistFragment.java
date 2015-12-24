@@ -102,9 +102,7 @@ import com.index.table.to.Book;
 
 public class PlaylistFragment extends Fragment {
     Typeface font;
-    private LinearLayout relativeDATA;
-    private String[] tabNames;
-    private RelativeLayout toadd[];
+
     private LinearLayout linearSecond;
     ArrayList<String> items = new ArrayList<String>();
     private int count;
@@ -433,20 +431,6 @@ public class PlaylistFragment extends Fragment {
                     + "12.30pm<br/>" + "Sat"));
             td3.setText(Html.fromHtml("<b>" + " 1 AUG" + "</b> "
                     + "12.30pm<br/>" + "Sat"));
-
-            relativeDATA = (LinearLayout) v2.findViewById(R.id.relativeDATA);
-            tabNames = new String[]{"q", "Additional Info", "Call History ",
-                    "Call History ", "Call History ", "q", "Additional Info",
-                    "Call History ", "Call History ", "Call History "};
-
-            String day[] = {"20 JUN", "3 JUL", "15 JUL", "1 AUG", "31 AUG",
-                    "01th OCT", "07th OCT", "15th OCT", "20th OCT", "27th OCT"};
-            String weekday[] = {"Sat", "Fri", "Sat", "Sat", "Sat", "Fri",
-                    "Sat", "Fri", "Sat", "Sat"};
-            String time[] = {"12.30pm", "12.30pm", "12.30pm", "12.30pm",
-                    "12.30pm", "12.30pm", "12.30pm", "12.30pm", "12.30pm",
-                    "12.30pm"};
-
             String[][] clockkkdata = {
                     {"111", "101", "100", "100", "100", "100"},
                     {"211", "101", "300", "300", "300", "300"},
@@ -490,97 +474,9 @@ public class PlaylistFragment extends Fragment {
                     {R.drawable.ac1, R.drawable.ac2, R.drawable.ac3,
                             R.drawable.dem1, R.drawable.dem2, R.drawable.dem3}};
 
-            toadd = new RelativeLayout[tabNames.length];
+            LinearLayout relativeDATA = (LinearLayout) v2.findViewById(R.id.relativeDATA);
+            addHistorypatti(relativeDATA, 0);
 
-            // for (int i = 0; i < tabNames.length; i++) {
-            for (int i = 0; i < 5; i++) {
-
-                toadd[i] = new RelativeLayout(getActivity());
-                toadd[i].setId(i);
-                TextView tv = new TextView(getActivity());
-                TextView tv1 = new TextView(getActivity());
-                TextView tv2 = new TextView(getActivity());
-
-                tv.setText(day[i]);
-                tv1.setText(weekday[i]);
-                tv2.setText(time[i]);
-
-                tv.setTextColor(Color.parseColor("#BDBDBD"));
-                tv.setTypeface(null, Typeface.BOLD);
-                tv.setPadding(20, 10, 10, 0);
-                tv.setTextSize(20);
-
-                tv1.setTextColor(Color.parseColor("#BDBDBD"));
-                tv1.setTypeface(null, Typeface.BOLD);
-                tv1.setPadding(20, 35, 10, 0);
-                tv1.setTextSize(17);
-
-                tv2.setTextSize(17);
-                tv2.setTextColor(Color.parseColor("#BDBDBD"));
-                tv2.setX(95);
-                tv2.setY(13);
-
-                // ImageView joint = new ImageView(getActivity());
-                // joint.setImageResource(R.drawable.jointworkingnew);
-                // joint.setLayoutParams(new
-                // android.widget.LinearLayout.LayoutParams(
-                // 30, 30));
-                // joint.setX(95);
-                // joint.setY(32);
-
-                if (i == 3) {
-                    tv.setTextColor(Color.parseColor("#ffffff"));
-                    tv1.setTextColor(Color.parseColor("#ffffff"));
-                    tv2.setTextColor(Color.parseColor("#ffffff"));
-                }
-
-                LinearLayout.LayoutParams llps = new LinearLayout.LayoutParams(
-                        250, LinearLayout.LayoutParams.WRAP_CONTENT);
-                toadd[i].setLayoutParams(llps);
-
-                toadd[i].addView(tv);
-                toadd[i].addView(tv1);
-                toadd[i].addView(tv2);
-                // if (i == 3) {
-                // toadd[i].addView(joint);
-                // }
-                relativeDATA.addView(toadd[i]);
-                toadd[i].setOnClickListener(new OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        // TODO Auto-generated method stub
-                        for (int i = 0; i < 5; i++) {
-                            TextView child = (TextView) toadd[i].getChildAt(0);
-                            TextView child1 = (TextView) toadd[i].getChildAt(1);
-                            TextView child2 = (TextView) toadd[i].getChildAt(2);
-                            if (v.getId() == i) {
-                                child.setTextColor(Color.WHITE);
-                                child1.setTextColor(Color.WHITE);
-                                child2.setTextColor(Color.WHITE);
-
-                                td1.setText(Html.fromHtml("<b>"
-                                        + child.getText() + "</b> "
-                                        + child2.getText() + "<br/>"
-                                        + child1.getText()));
-                                td2.setText(Html.fromHtml("<b>"
-                                        + child.getText() + "</b> "
-                                        + child2.getText() + "<br/>"
-                                        + child1.getText()));
-                                td3.setText(Html.fromHtml("<b>"
-                                        + child.getText() + "</b> "
-                                        + child2.getText() + "<br/>"
-                                        + child1.getText()));
-                            } else {
-                                child.setTextColor(Color.parseColor("#BDBDBD"));
-                                child1.setTextColor(Color.parseColor("#BDBDBD"));
-                                child2.setTextColor(Color.parseColor("#BDBDBD"));
-                            }
-                        }
-                    }
-                });
-
-            }
             linearSecond = (LinearLayout) v2.findViewById(R.id.relativeSecond);
 
             for (int i = 0; i < 4; i++) {
@@ -1049,6 +945,12 @@ public class PlaylistFragment extends Fragment {
             layout26.addView(graphs.lineChart(ast2, 19, 100, 50),
                     new LayoutParams(260, 200));
 
+            View v9 = inflater.inflate(R.layout.other_bu, null);
+            LinearLayout relativeDATAforOtherBu = (LinearLayout) v9.findViewById(R.id.relativeDATAforOtherBu);
+            addHistorypatti(relativeDATAforOtherBu, 1);
+            LinearLayout relativeDATAforOtherBu2 = (LinearLayout) v9.findViewById(R.id.relativeDATAforOtherBu2);
+            addHistorypatti(relativeDATAforOtherBu2, 2);
+
             LinearLayout linear = new LinearLayout(getActivity());
             linear.setOrientation(LinearLayout.VERTICAL);
             v1.setPadding(5, 10, 5, 40);
@@ -1059,6 +961,7 @@ public class PlaylistFragment extends Fragment {
             v6.setPadding(5, 10, 5, 40);
             v7.setPadding(5, 10, 5, 40);
             v8.setPadding(5, 10, 5, 40);
+            v9.setPadding(5, 10, 5, 40);
 
             linear.addView(v1);
             linear.addView(v2);
@@ -1068,6 +971,7 @@ public class PlaylistFragment extends Fragment {
             linear.addView(v6);
             linear.addView(v7);
             linear.addView(v8);
+            linear.addView(v9);
 
             return linear;
         } else if (index.equals("3")) {
@@ -5521,5 +5425,113 @@ public class PlaylistFragment extends Fragment {
             count--;
         }
     };
+
+    public void addHistorypatti(LinearLayout relativeDATA, int index) {
+        String[] tabNames = new String[]{"q", "Additional Info", "Call History ",
+                "Call History ", "Call History ", "q", "Additional Info",
+                "Call History ", "Call History ", "Call History "};
+
+        String day[] = {"20 JUN", "3 JUL", "15 JUL", "1 AUG", "31 AUG",
+                "01th OCT", "07th OCT", "15th OCT", "20th OCT", "27th OCT"};
+        String weekday[] = {"Sat", "Fri", "Sat", "Sat", "Sat", "Fri",
+                "Sat", "Fri", "Sat", "Sat"};
+        String time[] = {"12.30pm", "12.30pm", "12.30pm", "12.30pm",
+                "12.30pm", "12.30pm", "12.30pm", "12.30pm", "12.30pm",
+                "12.30pm"};
+
+        final RelativeLayout toadd[] = new RelativeLayout[tabNames.length];
+
+        // for (int i = 0; i < tabNames.length; i++) {
+        for (int i = 0; i < 5; i++) {
+
+            toadd[i] = new RelativeLayout(getActivity());
+            toadd[i].setId(i);
+            TextView tv = new TextView(getActivity());
+            TextView tv1 = new TextView(getActivity());
+            TextView tv2 = new TextView(getActivity());
+
+            tv.setText(day[i]);
+            tv1.setText(weekday[i]);
+            tv2.setText(time[i]);
+
+            tv.setTextColor(Color.parseColor("#BDBDBD"));
+            tv.setTypeface(null, Typeface.BOLD);
+            tv.setPadding(20, 10, 10, 0);
+            tv.setTextSize(20);
+
+            tv1.setTextColor(Color.parseColor("#BDBDBD"));
+            tv1.setTypeface(null, Typeface.BOLD);
+            tv1.setPadding(20, 35, 10, 0);
+            tv1.setTextSize(17);
+
+            tv2.setTextSize(17);
+            tv2.setTextColor(Color.parseColor("#BDBDBD"));
+            tv2.setX(95);
+            tv2.setY(13);
+
+            if (i == 3 && index == 0) {
+                tv.setTextColor(Color.parseColor("#ffffff"));
+                tv1.setTextColor(Color.parseColor("#ffffff"));
+                tv2.setTextColor(Color.parseColor("#ffffff"));
+            }
+            if (i == 1 && index == 1) {
+                tv.setTextColor(Color.parseColor("#ffffff"));
+                tv1.setTextColor(Color.parseColor("#ffffff"));
+                tv2.setTextColor(Color.parseColor("#ffffff"));
+            }
+            if (i == 4 && index == 2) {
+                tv.setTextColor(Color.parseColor("#ffffff"));
+                tv1.setTextColor(Color.parseColor("#ffffff"));
+                tv2.setTextColor(Color.parseColor("#ffffff"));
+            }
+
+            LinearLayout.LayoutParams llps = new LinearLayout.LayoutParams(
+                    250, LinearLayout.LayoutParams.WRAP_CONTENT);
+            toadd[i].setLayoutParams(llps);
+
+            toadd[i].addView(tv);
+            toadd[i].addView(tv1);
+            toadd[i].addView(tv2);
+            // if (i == 3) {
+            // toadd[i].addView(joint);
+            // }
+            relativeDATA.addView(toadd[i]);
+            toadd[i].setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    // TODO Auto-generated method stub
+                    for (int i = 0; i < 5; i++) {
+                        TextView child = (TextView) toadd[i].getChildAt(0);
+                        TextView child1 = (TextView) toadd[i].getChildAt(1);
+                        TextView child2 = (TextView) toadd[i].getChildAt(2);
+                        if (v.getId() == i) {
+                            child.setTextColor(Color.WHITE);
+                            child1.setTextColor(Color.WHITE);
+                            child2.setTextColor(Color.WHITE);
+
+                            td1.setText(Html.fromHtml("<b>"
+                                    + child.getText() + "</b> "
+                                    + child2.getText() + "<br/>"
+                                    + child1.getText()));
+                            td2.setText(Html.fromHtml("<b>"
+                                    + child.getText() + "</b> "
+                                    + child2.getText() + "<br/>"
+                                    + child1.getText()));
+                            td3.setText(Html.fromHtml("<b>"
+                                    + child.getText() + "</b> "
+                                    + child2.getText() + "<br/>"
+                                    + child1.getText()));
+                        } else {
+                            child.setTextColor(Color.parseColor("#BDBDBD"));
+                            child1.setTextColor(Color.parseColor("#BDBDBD"));
+                            child2.setTextColor(Color.parseColor("#BDBDBD"));
+                        }
+                    }
+                }
+            });
+
+        }
+    }
 
 }

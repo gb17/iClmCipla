@@ -1,16 +1,10 @@
 package com.gb.siglelist;
 
-import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -91,14 +85,16 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private TextView text10;
     private TextView text11;
     private TextView text12;
+    int _index;
 
     Integer[] images = {R.drawable.classroom, R.drawable.digital, R.drawable.fieldwork};
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
-                                 HashMap<String, List<String>> listChildData) {
+                                 HashMap<String, List<String>> listChildData, int index) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
+        this._index = index;
     }
 
     @Override
@@ -129,18 +125,27 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         ImageView imageView = (ImageView) convertView
                 .findViewById(R.id.dr_image);
-        if (groupPosition == 2 && childPosition == 0)
-            imageView.setImageResource(R.drawable.fieldwork);
-        else if (groupPosition == 3)
-            imageView.setImageResource(R.drawable.digital);
-        else if (childPosition == 1)
-            imageView.setImageResource(R.drawable.digital);
-        else if (childPosition == 0)
-            imageView.setImageResource(R.drawable.classroom);
+
+        if (_index == 1) {
+            imageView.setImageResource(R.drawable.expleave);
+        } else {
+            if (groupPosition == 0 && childPosition == 0)
+                imageView.setImageResource(R.drawable.expcal);
+            else if (groupPosition == 1 && childPosition == 0)
+                imageView.setImageResource(R.drawable.exptot);
+            else if (groupPosition == 2 && childPosition == 0)
+                imageView.setImageResource(R.drawable.expchk);
+            else if (groupPosition == 2 && childPosition == 1)
+                imageView.setImageResource(R.drawable.exptot);
+            else {
+                imageView.setImageResource(R.drawable.exptot);
+            }
+        }
+     /*   )*/
 
 
         txtListChild.setText(childText);
-        TextView drmenu = (TextView) convertView
+       /* TextView drmenu = (TextView) convertView
                 .findViewById(R.id.menufordr);
         drmenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -214,7 +219,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                     text10.setText(arrayfordialog[9]);
                     text11.setText(arrayfordialog[10]);
                     text12.setText(arrayfordialog[11]);
-                }
+                }*/
 //                    imageView.setImageResource(R.drawable.fieldwork);
 //                else if (groupPosition == 3)
 //                    imageView.setImageResource(R.drawable.digital);
@@ -223,7 +228,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 //                else if (childPosition == 0)
 //                    imageView.setImageResource(R.drawable.classroom);
 
-
+/*
                 Window window = dialog_box.getWindow();
 
                 WindowManager.LayoutParams wmlp = dialog_box.getWindow()
@@ -239,7 +244,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                 dialog_box.getWindow().setLayout(400, 450);
                 dialog_box.show();
             }
-        });
+        });*/
 
         return convertView;
     }

@@ -83,7 +83,7 @@ public class EnhanceLandingPage extends Activity implements OnClickListener {
 
         SingleListview singleListview = new SingleListview(EnhanceLandingPage.this);
 
-        rl1.addView(singleListview.getviewsSigleExpandalelistview());
+        rl1.addView(singleListview.getviewsSigleExpandalelistview(1));
 
     }
 

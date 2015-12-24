@@ -40,8 +40,8 @@ import java.util.Locale;
 
 public class Physicians extends Activity {
     Typeface font;
-    TextView tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9;
-    View tab11, tab22, tab33, tab44, tab55, tab66, tab77, tab88, tab99;
+    TextView tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab12;
+    View tab11, tab22, tab33, tab44, tab55, tab66, tab77, tab88, tab99, tab100, tab120;
 
     CustomScrollView physiScroll;
     public static HorizontalScrollView scroll;
@@ -49,10 +49,8 @@ public class Physicians extends Activity {
     public static RelativeLayout relative;
     public static LinearLayout linselction;
     public static TextView textview;
-
     public static int showHide = 0;
-    private TextView tab10;
-    private View tab100;
+
     Calendar myCalendar = Calendar.getInstance();
     EditText edittextDuedate;
     Integer[] imageDoctor = {R.drawable.doc1, R.drawable.doct_1,
@@ -129,8 +127,8 @@ public class Physicians extends Activity {
         tab7 = (TextView) findViewById(R.id.tab7);
         tab8 = (TextView) findViewById(R.id.tab8);
         tab9 = (TextView) findViewById(R.id.tab9);
-
         tab10 = (TextView) findViewById(R.id.tab10);
+        tab12 = (TextView) findViewById(R.id.tab12);
 
         tab11 = (View) findViewById(R.id.tab11);
         tab22 = (View) findViewById(R.id.tab22);
@@ -141,8 +139,8 @@ public class Physicians extends Activity {
         tab77 = (View) findViewById(R.id.tab77);
         tab88 = (View) findViewById(R.id.tab88);
         tab99 = (View) findViewById(R.id.tab99);
-
         tab100 = (View) findViewById(R.id.tab100);
+        tab120 = (View) findViewById(R.id.tab120);
 
         tab1.setOnClickListener(olc);
         tab2.setOnClickListener(olc);
@@ -154,6 +152,8 @@ public class Physicians extends Activity {
         tab8.setOnClickListener(olc);
         tab9.setOnClickListener(olc);
         tab10.setOnClickListener(olc);
+        tab12.setOnClickListener(olc);
+
         physiScroll = (CustomScrollView) findViewById(R.id.physiscroll);
         scroll = (HorizontalScrollView) findViewById(R.id.scroll);
         mainLinear = (LinearLayout) findViewById(R.id.mainfrag);
@@ -182,6 +182,8 @@ public class Physicians extends Activity {
                     tab8.setTextColor(Color.parseColor("#808080"));
                     tab9.setTextColor(Color.parseColor("#808080"));
                     tab10.setTextColor(Color.parseColor("#808080"));
+                    tab12.setTextColor(Color.parseColor("#808080"));
+
                     tab1.setTypeface(null, Typeface.BOLD);
                     tab2.setTypeface(null, Typeface.NORMAL);
                     tab3.setTypeface(null, Typeface.NORMAL);
@@ -192,6 +194,7 @@ public class Physicians extends Activity {
                     tab8.setTypeface(null, Typeface.NORMAL);
                     tab9.setTypeface(null, Typeface.NORMAL);
                     tab10.setTypeface(null, Typeface.NORMAL);
+                    tab12.setTypeface(null, Typeface.NORMAL);
 
                     tab11.setVisibility(View.VISIBLE);
                     tab22.setVisibility(View.INVISIBLE);
@@ -203,6 +206,7 @@ public class Physicians extends Activity {
                     tab88.setVisibility(View.INVISIBLE);
                     tab99.setVisibility(View.INVISIBLE);
                     tab100.setVisibility(View.INVISIBLE);
+                    tab120.setVisibility(View.INVISIBLE);
 
                     textview.setText("PLAYLIST");
                     view = linear.getChildAt(0);
@@ -242,6 +246,8 @@ public class Physicians extends Activity {
 
                     tab10.setTextColor(Color.parseColor("#808080"));
                     tab100.setVisibility(View.INVISIBLE);
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
 
                     textview.setText("HISTORY");
                     view = linear.getChildAt(1);
@@ -283,6 +289,8 @@ public class Physicians extends Activity {
 
                     tab10.setTextColor(Color.parseColor("#808080"));
                     tab100.setVisibility(View.INVISIBLE);
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
 
                     textview.setText("ACTION POINTS");
                     view = linear.getChildAt(2);
@@ -323,6 +331,8 @@ public class Physicians extends Activity {
 
                     tab10.setTextColor(Color.parseColor("#808080"));
                     tab100.setVisibility(View.INVISIBLE);
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
 
                     break;
 
@@ -354,11 +364,12 @@ public class Physicians extends Activity {
                     tab66.setVisibility(View.INVISIBLE);
                     tab77.setVisibility(View.INVISIBLE);
                     tab88.setVisibility(View.INVISIBLE);
+                    tab99.setVisibility(View.INVISIBLE);
 
                     tab10.setTextColor(Color.parseColor("#808080"));
                     tab100.setVisibility(View.INVISIBLE);
-
-                    tab99.setVisibility(View.INVISIBLE);
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
 
                     break;
 
@@ -394,6 +405,8 @@ public class Physicians extends Activity {
 
                     tab10.setTextColor(Color.parseColor("#808080"));
                     tab100.setVisibility(View.INVISIBLE);
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
 
                     textview.setText("CAMPAIGN");
                     view = linear.getChildAt(3);
@@ -434,6 +447,8 @@ public class Physicians extends Activity {
 
                     tab10.setTextColor(Color.parseColor("#808080"));
                     tab100.setVisibility(View.INVISIBLE);
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
 
                     textview.setText("PROFILE");
                     view = linear.getChildAt(4);
@@ -473,6 +488,10 @@ public class Physicians extends Activity {
                     tab99.setVisibility(View.INVISIBLE);
                     tab10.setTextColor(Color.parseColor("#808080"));
                     tab100.setVisibility(View.INVISIBLE);
+
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
+
                     textview.setText("CONNECT");
                     view = linear.getChildAt(5);
                     x = view.getLeft();
@@ -512,6 +531,8 @@ public class Physicians extends Activity {
 
                     tab10.setTextColor(Color.parseColor("#808080"));
                     tab100.setVisibility(View.INVISIBLE);
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
 
                     textview.setText("FOCUS BRANDS");
                     view = linear.getChildAt(6);
@@ -551,9 +572,55 @@ public class Physicians extends Activity {
 
                     tab10.setTextColor(Color.parseColor("#000000"));
                     tab100.setVisibility(View.VISIBLE);
+                    tab12.setTextColor(Color.parseColor("#808080"));
+                    tab120.setVisibility(View.INVISIBLE);
 
                     textview.setText("PRESCRIPTION");
                     view = linear.getChildAt(7);
+                    x = view.getLeft();
+                    y = view.getTop();
+                    physiScroll.scrollTo(x, y + 74);
+                    break;
+                case R.id.tab12:
+                    tab9.setTextColor(Color.parseColor("#808080"));
+                    tab2.setTextColor(Color.parseColor("#808080"));
+                    tab3.setTextColor(Color.parseColor("#808080"));
+                    tab4.setTextColor(Color.parseColor("#808080"));
+                    tab5.setTextColor(Color.parseColor("#808080"));
+                    tab6.setTextColor(Color.parseColor("#808080"));
+                    tab7.setTextColor(Color.parseColor("#808080"));
+                    tab8.setTextColor(Color.parseColor("#808080"));
+                    tab1.setTextColor(Color.parseColor("#808080"));
+                    tab10.setTextColor(Color.parseColor("#808080"));
+
+                    tab1.setTypeface(null, Typeface.NORMAL);
+                    tab2.setTypeface(null, Typeface.NORMAL);
+                    tab3.setTypeface(null, Typeface.NORMAL);
+                    tab4.setTypeface(null, Typeface.NORMAL);
+                    tab5.setTypeface(null, Typeface.NORMAL);
+                    tab6.setTypeface(null, Typeface.NORMAL);
+                    tab7.setTypeface(null, Typeface.NORMAL);
+                    tab8.setTypeface(null, Typeface.NORMAL);
+                    tab9.setTypeface(null, Typeface.NORMAL);
+                    tab10.setTypeface(null, Typeface.NORMAL);
+                    tab12.setTypeface(null, Typeface.BOLD);
+
+                    tab99.setVisibility(View.INVISIBLE);
+                    tab22.setVisibility(View.INVISIBLE);
+                    tab33.setVisibility(View.INVISIBLE);
+                    tab44.setVisibility(View.INVISIBLE);
+                    tab55.setVisibility(View.INVISIBLE);
+                    tab66.setVisibility(View.INVISIBLE);
+                    tab77.setVisibility(View.INVISIBLE);
+                    tab88.setVisibility(View.INVISIBLE);
+                    tab11.setVisibility(View.INVISIBLE);
+                    tab100.setVisibility(View.INVISIBLE);
+
+                    tab12.setTextColor(Color.parseColor("#000000"));
+                    tab120.setVisibility(View.VISIBLE);
+
+                    textview.setText("OTHER BU VISITS");
+                    view = linear.getChildAt(8);
                     x = view.getLeft();
                     y = view.getTop();
                     physiScroll.scrollTo(x, y + 74);

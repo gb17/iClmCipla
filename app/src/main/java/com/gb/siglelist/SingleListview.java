@@ -29,7 +29,7 @@ public class SingleListview {
 
     }
 
-    public View getviewsSigleExpandalelistview() {
+    public View getviewsSigleExpandalelistview(int mode) {
 
 
         LayoutInflater inflater = (LayoutInflater) context
@@ -40,9 +40,9 @@ public class SingleListview {
 
         expListView = (ExpandableListView) relativeforexapandable
                 .findViewById(R.id.lvExp);
-        prepareListData();
+        prepareListData(mode);
 
-        listAdapter = new ExpandableListAdapter(context, listDataHeader, listDataChild);
+        listAdapter = new ExpandableListAdapter(context, listDataHeader, listDataChild,mode);
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
@@ -112,33 +112,63 @@ public class SingleListview {
     }
 
 
-    private void prepareListData() {
+    private void prepareListData(int mode) {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
+
+        Integer[] totd = {R.drawable.expchk, R.drawable.expcal,
+                R.drawable.expleave, R.drawable.exptot, R.drawable.expchk};
+
+        String[] totarr1 = {"Alan Spiegel", "ENT SUMMIT 2015", "Leave",
+                "Cyclic Meeting", ""};
+        String[] totarr2 = {"BROOKLYN Blvd", "Description about Heart Failure",
+                "Casual Leave", "BROOKLYN Blvd", ""};
+        String[] totarr3 = {"BIRTHDAY", "Brooklyn", "", "", ""};
+
         // Adding child data
         listDataHeader.add("21-DEC-MON");
-        listDataHeader.add("22-DEC-TUE");
-        listDataHeader.add("23-DEC-WED");
-        listDataHeader.add("24-DEC-THU");
+        listDataHeader.add("24-DEC-TUE");
+        listDataHeader.add("27-DEC-WED");
+        listDataHeader.add("31-DEC-THU");
 
         // Adding child data
         List<String> top250 = new ArrayList<String>();
-        top250.add("Interpersonal & Communication skills Program \nClassroom");
-        top250.add("Selling Skills Program \nDigital\n ");
+        if (mode == 1)
+            top250.add("Leave \nSick Leave");
+        else {
+            top250.add("Cyclic Meeting ");
+        }
 
 
         List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("Interpersonal & Communication skills Program \nClassroom");
-        nowShowing.add("Selling Skills Program \nDigital\n ");
+        if (mode == 1)
+            nowShowing.add("Leave \nCasual Leave");
+        else {
+            nowShowing.add("Selling skills development");
+        }
+        //   nowShowing.add("Selling Skills Program \nDigital\n ");
 
 
         List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("Field Work Training\n \n ");
+        if (mode == 1)
+            comingSoon.add("Leave \nSick Leave");
+        else {
+
+
+            comingSoon.add("Cyclic Meeting ");
+            comingSoon.add("ENT SUMMIT 2015");
+
+
+        }
 
 
         List<String> newwww = new ArrayList<String>();
-        newwww.add("Manager Development Program \n Digital\n ");
+        if (mode == 1)
+            newwww.add("Leave \nCasual Leave");
+        else {
+            newwww.add("Sales Program");
+        }
 
 
         listDataChild.put(listDataHeader.get(0), top250); // Header, Child data

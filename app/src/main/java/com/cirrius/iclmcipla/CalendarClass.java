@@ -49,6 +49,7 @@ import android.widget.TimePicker;
 import com.cirrius.animationlist.ListViewDraggingAnimation;
 import com.cirrius.calender.listview.ExpandablelistviewfordocNEW;
 import com.cirrius.iclmcipla.R;
+import com.gb.siglelist.SingleListview;
 import com.iclm.util.Viewgp;
 
 public class CalendarClass extends Activity implements DateInterface {
@@ -104,6 +105,7 @@ public class CalendarClass extends Activity implements DateInterface {
     private ExpandablelistviewfordocNEW list;
     public static RelativeLayout rl1;
     public static View editTextForDate;
+    String value = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,10 +115,35 @@ public class CalendarClass extends Activity implements DateInterface {
         setContentView(R.layout.calendar);
         // Expandablelistviewfordoc list = new Expandablelistviewfordoc(
         // CalendarClass.this, 22, 1);
-        list = new ExpandablelistviewfordocNEW(CalendarClass.this, "", 2);
-        View v = list.multilevleexpandalelistview();
-        rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
-        rl1.addView(v);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            value = extras.getString("call");
+        }
+
+
+        if (value.equals("NCA")) {
+
+            RelativeLayout rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
+            SingleListview singleListview = new SingleListview(CalendarClass.this);
+            rl1.addView(singleListview.getviewsSigleExpandalelistview(22));
+        } else if (value.equals("leave")) {
+
+
+            RelativeLayout rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
+
+            SingleListview singleListview = new SingleListview(CalendarClass.this);
+
+            rl1.addView(singleListview.getviewsSigleExpandalelistview(1));
+
+        } else {
+            list = new ExpandablelistviewfordocNEW(CalendarClass.this, "", 2);
+            View v = list.multilevleexpandalelistview();
+            rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
+            rl1.addView(v);
+
+        }
+
 
         addappointmentplus = (TextView) findViewById(R.id.addappointmentplus);
         addappointmentplus.setTypeface(font);
@@ -127,68 +154,71 @@ public class CalendarClass extends Activity implements DateInterface {
         serch = (EditText) findViewById(R.id.serch);
         Utility.hideKeyboard(serch);
 
-        serch.addTextChangedListener(new TextWatcher() {
+        if (!(value.equals("NCA") || value.equals("leave"))) {
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before,
-                                      int count) {
 
-            }
+            serch.addTextChangedListener(new TextWatcher() {
 
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
-                // TODO Auto-generated method stub
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before,
+                                          int count) {
 
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-                rl1.removeAllViews();
-                try {
-                    if (srchflag == 0) {
-                        if (!s.toString().trim().equals("")) {
-
-                            list = new ExpandablelistviewfordocNEW(
-                                    CalendarClass.this, s.toString(), 2);
-                            View v = list.multilevleexpandalelistview();
-                            rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
-                            rl1.addView(v);
-                        } else {
-                            list = new ExpandablelistviewfordocNEW(
-                                    CalendarClass.this, "", 2);
-                            View v = list.multilevleexpandalelistview();
-                            rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
-                            rl1.addView(v);
-                        }
-
-                    } else if (srchflag == 1) {
-
-                        if (!s.toString().trim().equals("")) {
-
-                            list = new ExpandablelistviewfordocNEW(
-                                    CalendarClass.this, s.toString(), 1);
-                            View v = list.multilevleexpandalelistview();
-                            rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
-                            rl1.addView(v);
-                        } else {
-                            list = new ExpandablelistviewfordocNEW(
-                                    CalendarClass.this, "", 1);
-                            View v = list.multilevleexpandalelistview();
-                            rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
-                            rl1.addView(v);
-                        }
-
-                    }
-
-                } catch (Exception e) {
-                    // TODO: handle exception
                 }
 
-            }
-        });
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count,
+                                              int after) {
+                    // TODO Auto-generated method stub
 
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                    rl1.removeAllViews();
+                    try {
+                        if (srchflag == 0) {
+                            if (!s.toString().trim().equals("")) {
+
+                                list = new ExpandablelistviewfordocNEW(
+                                        CalendarClass.this, s.toString(), 2);
+                                View v = list.multilevleexpandalelistview();
+                                rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
+                                rl1.addView(v);
+                            } else {
+                                list = new ExpandablelistviewfordocNEW(
+                                        CalendarClass.this, "", 2);
+                                View v = list.multilevleexpandalelistview();
+                                rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
+                                rl1.addView(v);
+                            }
+
+                        } else if (srchflag == 1) {
+
+                            if (!s.toString().trim().equals("")) {
+
+                                list = new ExpandablelistviewfordocNEW(
+                                        CalendarClass.this, s.toString(), 1);
+                                View v = list.multilevleexpandalelistview();
+                                rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
+                                rl1.addView(v);
+                            } else {
+                                list = new ExpandablelistviewfordocNEW(
+                                        CalendarClass.this, "", 1);
+                                View v = list.multilevleexpandalelistview();
+                                rl1 = (RelativeLayout) findViewById(R.id.listfordoc);
+                                rl1.addView(v);
+                            }
+
+                        }
+
+                    } catch (Exception e) {
+                        // TODO: handle exception
+                    }
+
+                }
+            });
+        }
         addappointmentplus.setOnClickListener(new OnClickListener() {
 
             @Override

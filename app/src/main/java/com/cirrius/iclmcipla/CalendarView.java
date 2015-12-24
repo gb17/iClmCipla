@@ -1071,95 +1071,23 @@ public class CalendarView extends LinearLayout {
                                 lin1.addView(vleave);
                             }
                             if (count == 4) {
-
                                 View vf = lin1.getChildAt(0);
                                 lin1.removeAllViews();
                                 lin1.addView(vf);
                                 LayoutParams tableRowLayoutParams5 = new LayoutParams(
                                         0,
                                         LayoutParams.WRAP_CONTENT,
-                                        2.5f);
+                                        2f);
 
                                 View vtot = inflater.inflate(
-                                        R.layout.addleavedialog, null);
+                                        R.layout.nca_layout, null);
 
                                 vtot.setBackgroundColor(Color.TRANSPARENT);
-                                TextView tvv = (TextView) vtot
-                                        .findViewById(R.id.sicklv);
-                                TextView tvv1 = (TextView) vtot
-                                        .findViewById(R.id.TextViewActionPoint);
-
-                                Spinner spinner = (Spinner) vtot
-                                        .findViewById(R.id.totspin);
-                                spinner.setVisibility(View.VISIBLE);
-
-                                tvv.setText("Transit");
-                                tvv1.setText("Add ToT");
-
-                                sicklv = (TextView) vtot
-                                        .findViewById(R.id.sicklv);
-                                sicklv.setText("Transit");
-                                anl = (TextView) vtot.findViewById(R.id.allv);
-                                anl.setOnClickListener(rounclick);
-
-                                anl.setText("Cycle Meeting");
-
-                                sicklv1 = (TextView) vtot
-                                        .findViewById(R.id.sicklv1);
-                                sicklv1.setText("Auditing");
-
-                                sicklv2 = (TextView) vtot
-                                        .findViewById(R.id.sicklv2);
-                                sicklv2.setText("Office Duty");
-
-                                sicklv3 = (TextView) vtot
-                                        .findViewById(R.id.sicklv3);
-
-                                sicklv3.setText("Administrative work");
-
-                                sicklv4 = (TextView) vtot
-                                        .findViewById(R.id.sicklv4);
-                                sicklv4.setText("Training");
-
-                                sicklv5 = (TextView) vtot
-                                        .findViewById(R.id.sicklv5);
-                                sicklv5.setText("Annual Meeting");
-
-                                sicklv8 = (TextView) vtot
-                                        .findViewById(R.id.sicklv8);
-                                sicklv8.setVisibility(View.VISIBLE);
-                                sicklv8.setText("Team Review Meeting");
-
-                                sicklv6 = (TextView) vtot
-                                        .findViewById(R.id.sicklv6);
-
-                                sicklv7 = (TextView) vtot
-                                        .findViewById(R.id.sicklv7);
-
-                                ButtonSet = (EditText) vtot
-                                        .findViewById(R.id.ButtonSet);
-
-                                ButtonSet.setOnClickListener(rounclick);
-
-                                sicklv.setOnClickListener(rounclick);
-                                sicklv1.setOnClickListener(rounclick);
-                                sicklv2.setOnClickListener(rounclick);
-                                sicklv3.setOnClickListener(rounclick);
-                                sicklv4.setOnClickListener(rounclick);
-                                sicklv5.setOnClickListener(rounclick);
-                                sicklv6.setOnClickListener(rounclick);
-                                sicklv7.setOnClickListener(rounclick);
-                                sicklv8.setOnClickListener(rounclick);
-                                anl.setOnClickListener(rounclick);
-
                                 TextView close = (TextView) vtot
                                         .findViewById(R.id.close);
-
-                                close.setVisibility(View.GONE);
-                                EditText ButtonSet = (EditText) vtot
-                                        .findViewById(R.id.ButtonSet);
-
-                                ButtonSet
+                                EditText submit = (EditText) vtot
+                                        .findViewById(R.id.submit);
+                                submit
                                         .setOnClickListener(new OnClickListener() {
 
                                             @Override
@@ -1178,44 +1106,14 @@ public class CalendarView extends LinearLayout {
                                         dialog_box1.dismiss();
                                     }
                                 });
+
                                 EditText description = (EditText) vtot
-                                        .findViewById(R.id.EdittextDescription);
+                                        .findViewById(R.id.remarks);
                                 Utility.hideKeyboard(description);
 
-                                final EditText edittime = (EditText) vtot
-                                        .findViewById(R.id.edittime);
-                                edittime.setOnClickListener(new OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        // show the time picker dialog
-                                        TimePickerFragment newFragment = new TimePickerFragment();
-                                        CalendarClass.editTextForDate = edittime;
-                                        newFragment.show(((Activity) context)
-                                                        .getFragmentManager(),
-                                                "timepicker");
-
-                                    }
-                                });
-
-                                final EditText edittime89 = (EditText) vtot
-                                        .findViewById(R.id.edittime1);
-                                edittime89
-                                        .setOnClickListener(new OnClickListener() {
-                                            @Override
-                                            public void onClick(View v) {
-                                                // show the time picker dialog
-                                                TimePickerFragment newFragment = new TimePickerFragment();
-                                                CalendarClass.editTextForDate = edittime89;
-                                                newFragment.show(
-                                                        ((Activity) context)
-                                                                .getFragmentManager(),
-                                                        "timepicker");
-
-                                            }
-                                        });
 
                                 final EditText edittextDuedate1 = (EditText) vtot
-                                        .findViewById(R.id.edittextDuedate1);
+                                        .findViewById(R.id.date1);
 
                                 edittextDuedate1
                                         .setOnClickListener(new OnClickListener() {
@@ -1232,8 +1130,7 @@ public class CalendarView extends LinearLayout {
                                         });
 
                                 final EditText edittextDuedate = (EditText) vtot
-                                        .findViewById(R.id.edittextDuedate);
-
+                                        .findViewById(R.id.date2);
                                 edittextDuedate
                                         .setOnClickListener(new OnClickListener() {
 
@@ -1613,65 +1510,26 @@ public class CalendarView extends LinearLayout {
                         d.requestWindowFeature(Window.FEATURE_NO_TITLE);
                         d.getWindow().setBackgroundDrawable(
                                 new ColorDrawable(android.R.color.transparent));
-                        d.setContentView(R.layout.addleavedialog);
+                        d.setContentView(R.layout.nca_layout);
+                        d.getWindow().setLayout(600, 670);
 
-                        TextView TextViewActionPoint = (TextView) d
-                                .findViewById(R.id.TextViewActionPoint);
-                        TextViewActionPoint.setText("Add TOT");
-
-                        sicklv = (TextView) d.findViewById(R.id.sicklv);
-                        sicklv.setText("Transit");
-                        anl = (TextView) d.findViewById(R.id.allv);
-
-                        anl.setText("Cycle Meeting");
-
-                        Spinner spinner = (Spinner) d
-                                .findViewById(R.id.totspin);
-                        spinner.setVisibility(View.VISIBLE);
-
-                        sicklv1 = (TextView) d.findViewById(R.id.sicklv1);
-                        sicklv1.setText("Auditing");
-
-                        sicklv2 = (TextView) d.findViewById(R.id.sicklv2);
-                        sicklv2.setText("Office Duty");
-
-                        sicklv3 = (TextView) d.findViewById(R.id.sicklv3);
-
-                        sicklv3.setText("Administrative work");
-
-                        sicklv4 = (TextView) d.findViewById(R.id.sicklv4);
-                        sicklv4.setText("Training");
-
-                        sicklv5 = (TextView) d.findViewById(R.id.sicklv5);
-                        sicklv5.setText("Annual Meeting");
-
-                        sicklv6 = (TextView) d.findViewById(R.id.sicklv6);
-
-                        sicklv7 = (TextView) d.findViewById(R.id.sicklv7);
-
-                        sicklv.setOnClickListener(rounclick);
-                        sicklv1.setOnClickListener(rounclick);
-                        sicklv2.setOnClickListener(rounclick);
-                        sicklv3.setOnClickListener(rounclick);
-                        sicklv4.setOnClickListener(rounclick);
-                        sicklv5.setOnClickListener(rounclick);
-                        sicklv6.setOnClickListener(rounclick);
-                        sicklv7.setOnClickListener(rounclick);
-                        anl.setOnClickListener(rounclick);
-                        d.getWindow().setLayout(470, 670);
-                        TextView close = (TextView) d.findViewById(R.id.close);
+                        TextView close = (TextView) d
+                                .findViewById(R.id.close);
+                        close.setVisibility(View.VISIBLE);
                         EditText ButtonSet = (EditText) d
-                                .findViewById(R.id.ButtonSet);
+                                .findViewById(R.id.submit);
 
-                        ButtonSet.setOnClickListener(new OnClickListener() {
+                        ButtonSet
+                                .setOnClickListener(new OnClickListener() {
 
-                            @Override
-                            public void onClick(View v) {
+                                    @Override
+                                    public void onClick(View v) {
 
-                                d.dismiss();
-                            }
-                        });
+                                        d.dismiss();
+                                    }
+                                });
                         close.setTypeface(font);
+
                         close.setOnClickListener(new OnClickListener() {
 
                             @Override
@@ -1680,40 +1538,14 @@ public class CalendarView extends LinearLayout {
                                 d.dismiss();
                             }
                         });
+
                         EditText description = (EditText) d
-                                .findViewById(R.id.EdittextDescription);
+                                .findViewById(R.id.remarks);
                         Utility.hideKeyboard(description);
 
-                        final EditText edittime = (EditText) d
-                                .findViewById(R.id.edittime);
-                        edittime.setOnClickListener(new OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                // show the time picker dialog
-                                TimePickerFragment newFragment = new TimePickerFragment();
-                                CalendarClass.editTextForDate = edittime;
-                                newFragment.show(((Activity) context)
-                                        .getFragmentManager(), "timepicker");
-
-                            }
-                        });
-
-                        final EditText edittime89 = (EditText) d
-                                .findViewById(R.id.edittime1);
-                        edittime89.setOnClickListener(new OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                // show the time picker dialog
-                                TimePickerFragment newFragment = new TimePickerFragment();
-                                CalendarClass.editTextForDate = edittime89;
-                                newFragment.show(((Activity) context)
-                                        .getFragmentManager(), "timepicker");
-
-                            }
-                        });
 
                         final EditText edittextDuedate1 = (EditText) d
-                                .findViewById(R.id.edittextDuedate1);
+                                .findViewById(R.id.date1);
 
                         edittextDuedate1
                                 .setOnClickListener(new OnClickListener() {
@@ -1722,15 +1554,15 @@ public class CalendarView extends LinearLayout {
                                     public void onClick(View arg0) {
                                         DialogFragment newFragment = new DatePickerFragment();
                                         CalendarClass.editTextForDate = edittextDuedate1;
-                                        newFragment.show(((Activity) context)
+                                        newFragment.show(
+                                                ((Activity) context)
                                                         .getFragmentManager(),
                                                 "datePicker");
                                     }
                                 });
 
                         final EditText edittextDuedate = (EditText) d
-                                .findViewById(R.id.edittextDuedate);
-
+                                .findViewById(R.id.date2);
                         edittextDuedate
                                 .setOnClickListener(new OnClickListener() {
 
@@ -1738,12 +1570,12 @@ public class CalendarView extends LinearLayout {
                                     public void onClick(View arg0) {
                                         DialogFragment newFragment = new DatePickerFragment();
                                         CalendarClass.editTextForDate = edittextDuedate;
-                                        newFragment.show(((Activity) context)
+                                        newFragment.show(
+                                                ((Activity) context)
                                                         .getFragmentManager(),
                                                 "datePicker");
                                     }
                                 });
-
                         d.show();
 
                     } else if (count == 5) {

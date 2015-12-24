@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white" >
+    android:background="@android:color/white">
 
     <RelativeLayout
         android:id="@+id/relative"
         android:layout_width="wrap_content"
         android:layout_height="65dp"
-        android:layout_margin="10dp" >
+        android:layout_margin="10dp">
 
         <ImageView
             android:id="@+id/dr_image"
@@ -23,7 +23,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/dr_image"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/name"
@@ -139,18 +139,18 @@
         android:layout_below="@id/relative"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:layout_toLeftOf="@id/next" >
+        android:layout_toLeftOf="@id/next">
 
         <LinearLayout
             android:id="@+id/linselction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <RelativeLayout
                 android:id="@+id/playlisrel"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tab1"
@@ -174,13 +174,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
                     android:layout_below="@+id/view1"
-                    android:background="#757575" >
-                </View>
+                    android:background="#757575"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tab2"
@@ -204,13 +203,12 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view2"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tab3"
@@ -234,14 +232,13 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view3"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:visibility="gone" >
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tab4"
@@ -265,14 +262,13 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view4"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:visibility="gone" >
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tab5"
@@ -296,14 +292,13 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view5"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:visibility="gone" >
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tab6"
@@ -327,13 +322,12 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view6"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tab7"
@@ -357,13 +351,12 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view7"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tab8"
@@ -387,13 +380,12 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view8"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tab9"
@@ -417,13 +409,12 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view9"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tab10"
@@ -447,8 +438,36 @@
                     android:layout_height="10dp"
                     android:layout_below="@+id/view10"
                     android:background="#757575"
-                    android:visibility="invisible" >
-                </View>
+                    android:visibility="invisible"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tab12"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="OTHER BU VISITS"
+                    android:textColor="#808080"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tab12"
+                    android:background="#BDBDBD" />
+
+                <View
+                    android:id="@+id/tab120"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/view12"
+                    android:background="#757575"
+                    android:visibility="invisible"></View>
             </RelativeLayout>
         </LinearLayout>
     </HorizontalScrollView>
@@ -469,7 +488,7 @@
         android:id="@+id/physiscroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/textview" >
+        android:layout_below="@id/textview">
 
         <LinearLayout
             android:id="@+id/mainfrag"

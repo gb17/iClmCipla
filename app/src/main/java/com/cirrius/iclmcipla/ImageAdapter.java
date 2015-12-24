@@ -114,8 +114,13 @@ public class ImageAdapter extends BaseAdapter {
                 } else if (position == 10) {
                     Intent intent = new Intent(mContext, Physinet.class);
                     mContext.startActivity(intent);
+                } else if (position == 5) {
+                    Intent intent = new Intent(mContext, CalendarClass.class);
+                    intent.putExtra("call", "NCA");
+                    mContext.startActivity(intent);
                 } else if (position == 6) {
-                    Intent intent = new Intent(mContext, EnhanceLandingPage.class);
+                    Intent intent = new Intent(mContext, CalendarClass.class);
+                    intent.putExtra("call", "leave");
                     mContext.startActivity(intent);
                 } else if (position == 7) {
                     Intent intent = new Intent(mContext, InventoryTab.class);

@@ -14,8 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_toLeftOf="@id/next">
+            android:layout_marginTop="10dp">
 
             <LinearLayout
                 android:id="@+id/baapofallthetab"
@@ -192,7 +191,7 @@
                 android:textStyle="bold" />
 
             <HorizontalScrollView
-                android:layout_width="790dp"
+                android:layout_width="770dp"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
@@ -330,7 +329,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/bg_roundedgray"
                 android:paddingBottom="4dp"
                 android:paddingLeft="30dp"

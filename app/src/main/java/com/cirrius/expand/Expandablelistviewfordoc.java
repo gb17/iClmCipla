@@ -3,6 +3,7 @@ package com.cirrius.expand;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.app.TimePickerDialog;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -35,6 +36,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.cirrius.expand.DataForMultilevelExpandableListView.SubCategory;
@@ -48,10 +50,12 @@ import com.cirrius.iclmcipla.R;
 import com.cirrius.iclmcipla.ReportingTabs;
 import com.cirrius.iclmcipla.TimePickerFragment;
 
+import com.cirrius.iclmcipla.Utility;
 import com.iclm.util.MenuforThreedot;
 import com.iclm.util.Viewgp;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
@@ -106,7 +110,7 @@ public class Expandablelistviewfordoc {
 
     Dialog dialog_box1;
 
-    String[] maindata = {"Add Unplanned", "Add Unlisted Physician", "Add Pharmacy"
+    String[] maindata = {"Add Unplanned", "Add Unlisted Physician", "Add Pharmacy", "Add Non Call Activity", "Add Leave"
     };
 
     public Expandablelistviewfordoc(Context context) {
@@ -798,7 +802,182 @@ public class Expandablelistviewfordoc {
                     int count = Integer.parseInt((String) v.getTag());
                     dialog_box1.dismiss();
                     if (count == 4) {
-                    } else if (count == 5) {
+
+
+                            // TODO Auto-generated method stub
+                            final Dialog d = new Dialog(context);
+                            d.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                            d.getWindow().setBackgroundDrawable(
+                                    new ColorDrawable(android.R.color.transparent));
+                            d.setContentView(R.layout.addleavedialog);
+
+
+
+                            TextView close = (TextView) d.findViewById(R.id.close);
+                            EditText ButtonSet = (EditText) d.findViewById(R.id.ButtonSet);
+
+                            ButtonSet.setOnClickListener(new OnClickListener() {
+
+                                @Override
+                                public void onClick(View v) {
+                                    // TODO Auto-generated method stub
+                                    d.dismiss();
+                                }
+                            });
+                            close.setTypeface(font);
+                            close.setOnClickListener(new OnClickListener() {
+
+                                @Override
+                                public void onClick(View v) {
+                                    // TODO Auto-generated method stub
+                                    d.dismiss();
+                                }
+                            });
+                            EditText description = (EditText) d
+                                    .findViewById(R.id.EdittextDescription);
+                            Utility.hideKeyboard(description);
+
+                            final EditText edittime = (EditText) d
+                                    .findViewById(R.id.edittime);
+                            edittime.setOnClickListener(new OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    // TODO Auto-generated method stub
+
+                                    Calendar mcurrentTime = Calendar.getInstance();
+                                    int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                                    int minute = mcurrentTime.get(Calendar.MINUTE);
+                                    TimePickerDialog mTimePicker;
+                                    mTimePicker = new TimePickerDialog(context,
+                                            new TimePickerDialog.OnTimeSetListener() {
+                                                @Override
+                                                public void onTimeSet(
+                                                        TimePicker timePicker,
+                                                        int selectedHour, int selectedMinute) {
+                                                    edittime.setText(selectedHour + ":"
+                                                            + selectedMinute);
+                                                }
+                                            }, hour, minute, true);// Yes 24 hour
+                                    // time
+                                    mTimePicker.setTitle("Select Time");
+
+                                    mTimePicker.show();
+
+                                }
+                            });
+
+                            final EditText edittime1 = (EditText) d
+                                    .findViewById(R.id.edittime1);
+                            edittime1.setOnClickListener(new OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    // TODO Auto-generated method stub
+
+                                    Calendar mcurrentTime = Calendar.getInstance();
+                                    int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                                    int minute = mcurrentTime.get(Calendar.MINUTE);
+                                    TimePickerDialog mTimePicker;
+                                    mTimePicker = new TimePickerDialog(context,
+                                            new TimePickerDialog.OnTimeSetListener() {
+                                                @Override
+                                                public void onTimeSet(
+                                                        TimePicker timePicker,
+                                                        int selectedHour, int selectedMinute) {
+                                                    edittime1.setText(selectedHour + ":"
+                                                            + selectedMinute);
+                                                }
+                                            }, hour, minute, true);// Yes 24 hour
+                                    // time
+                                    mTimePicker.setTitle("Select Time");
+
+                                    mTimePicker.show();
+
+                                }
+                            });
+
+                            d.show();
+
+
+
+
+                    }
+                    if (count == 3) {
+
+                        final Dialog d = new Dialog(context);
+                        d.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                        d.getWindow().setBackgroundDrawable(
+                                new ColorDrawable(android.R.color.transparent));
+                        d.setContentView(R.layout.nca_layout);
+                        d.getWindow().setLayout(600, 700);
+
+                        TextView close = (TextView) d
+                                .findViewById(R.id.close);
+                        close.setVisibility(View.VISIBLE);
+                        EditText ButtonSet = (EditText) d
+                                .findViewById(R.id.submit);
+
+                        ButtonSet
+                                .setOnClickListener(new OnClickListener() {
+
+                                    @Override
+                                    public void onClick(View v) {
+
+                                        d.dismiss();
+                                    }
+                                });
+                        close.setTypeface(font);
+
+                        close.setOnClickListener(new OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+
+                                d.dismiss();
+                            }
+                        });
+
+                        EditText description = (EditText) d
+                                .findViewById(R.id.remarks);
+                        Utility.hideKeyboard(description);
+
+
+                        final EditText edittextDuedate1 = (EditText) d
+                                .findViewById(R.id.date1);
+
+                        edittextDuedate1
+                                .setOnClickListener(new OnClickListener() {
+
+                                    @Override
+                                    public void onClick(View arg0) {
+                                        DialogFragment newFragment = new DatePickerFragment();
+                                        CalendarClass.editTextForDate = edittextDuedate1;
+                                        newFragment.show(
+                                                ((Activity) context)
+                                                        .getFragmentManager(),
+                                                "datePicker");
+                                    }
+                                });
+
+                        final EditText edittextDuedate = (EditText) d
+                                .findViewById(R.id.date2);
+                        edittextDuedate
+                                .setOnClickListener(new OnClickListener() {
+
+                                    @Override
+                                    public void onClick(View arg0) {
+                                        DialogFragment newFragment = new DatePickerFragment();
+                                        CalendarClass.editTextForDate = edittextDuedate;
+                                        newFragment.show(
+                                                ((Activity) context)
+                                                        .getFragmentManager(),
+                                                "datePicker");
+                                    }
+                                });
+                        d.show();
+
+                    }
+
+                    else if (count == 5) {
 
                     } else if (count == 1) {
 
@@ -866,7 +1045,7 @@ public class Expandablelistviewfordoc {
 
                         d.show();
 
-                    } else if (count == 3 || count == 2) {
+                    } else if ( count == 2) {
 
                         final Dialog d = new Dialog(context);
                         d.requestWindowFeature(Window.FEATURE_NO_TITLE);
