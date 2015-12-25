@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="640dp"
+    android:orientation="vertical"
+    android:paddingBottom="40dp">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="OTHER BU VISITS"
+        android:textColor="#2E2E2E"
+        android:textSize="24sp" />
+
+
+    <TextView
+        android:id="@+id/rep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="BU 1  -  REP 1"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeMAIN"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rep1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/x">
+
+        <ImageView
+            android:id="@+id/imageviewLEFT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/leftme" />
+
+        <ImageView
+            android:id="@+id/imageviewRIGHT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/rightme" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/imageviewRIGHT"
+            android:layout_toRightOf="@+id/imageviewLEFT"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/relativeDATAforOtherBu"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"></LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/rep2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeMAIN"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="BU 2  -  REP 2"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeMAIN2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rep2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/x">
+
+        <ImageView
+            android:id="@+id/imageviewLEFT2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/leftme" />
+
+        <ImageView
+            android:id="@+id/imageviewRIGHT2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/rightme" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/imageviewRIGHT2"
+            android:layout_toRightOf="@+id/imageviewLEFT2"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/relativeDATAforOtherBu2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"></LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

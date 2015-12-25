@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_roundedwhitewithoutpadding"
+    android:paddingBottom="30dp"
+    tools:context="com.cirrius.iclmcipla.MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Add Doctor"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ButtonSet"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ButtonSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_roundedgray"
+        android:editable="false"
+        android:ems="5"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="Done"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+</RelativeLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/adddoctor.xml -->

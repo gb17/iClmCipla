@@ -134,9 +134,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         txtListChild.setText(childText);
         if((groupPosition == 0 && childPosition == 0) ||(groupPosition == 0 && childPosition == 2 )){
-            txtListChild.setTextColor(Color.CYAN);
+            txtListChild.setBackgroundColor(Color.parseColor("#00FFFF"));
         }else if(groupPosition == 1 || groupPosition == 2){
-            txtListChild.setTextColor(Color.CYAN);
+            txtListChild.setBackgroundColor(Color.parseColor("#00FFFF"));
         }
 
         return convertView;
