@@ -5,7 +5,7 @@
     android:layout_marginBottom="1dp"
     android:layout_marginLeft="2dp"
     android:layout_marginRight="2dp"
-    tools:context="com.cirrius.iclmcipla.MainActivity" >
+    tools:context="com.cirrius.iclmcipla.MainActivity">
 
     <TextView
         android:id="@+id/textview"
@@ -24,7 +24,7 @@
         android:layout_height="80dp"
         android:layout_below="@id/textview"
         android:layout_marginTop="10dp"
-        android:background="@drawable/x" >
+        android:background="@drawable/x">
 
         <ImageView
             android:id="@+id/imageviewLEFT"
@@ -51,14 +51,13 @@
             android:layout_height="match_parent"
             android:layout_toLeftOf="@+id/imageviewRIGHT"
             android:layout_toRightOf="@+id/imageviewLEFT"
-            android:scrollbars="none" >
+            android:scrollbars="none">
 
             <LinearLayout
                 android:id="@+id/relativeDATA"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:orientation="horizontal" >
-            </LinearLayout>
+                android:orientation="horizontal"></LinearLayout>
         </HorizontalScrollView>
     </RelativeLayout>
 
@@ -66,16 +65,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/relativeMAIN"
-        android:layout_marginTop="20dp" >
+        android:layout_marginTop="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/textSummary"
@@ -158,7 +157,7 @@
                     android:layout_marginTop="45dp"
                     android:layout_toRightOf="@id/text123"
                     android:src="@drawable/jointworkingglow" />
-                
+
                 <TextView
                     android:id="@+id/jointwork_name"
                     android:layout_width="wrap_content"
@@ -204,13 +203,13 @@
                     android:layout_marginRight="20dip"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/bg_broderselectorblack"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t1"
@@ -230,15 +229,14 @@
                             android:paddingBottom="10dp"
                             android:text="Joint \nWorking"
                             android:textSize="19dp"
-                            android:textStyle="italic" >
-                        </TextView>
+                            android:textStyle="italic"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t2"
@@ -258,15 +256,14 @@
                             android:paddingBottom="10dp"
                             android:text="Feedback"
                             android:textSize="19dp"
-                            android:textStyle="italic" >
-                        </TextView>
+                            android:textStyle="italic"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t3"
@@ -286,15 +283,14 @@
                             android:paddingBottom="10dp"
                             android:text="Detailing"
                             android:textSize="19dp"
-                            android:textStyle="italic" >
-                        </TextView>
+                            android:textStyle="italic"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t4"
@@ -314,15 +310,14 @@
                             android:paddingBottom="10dp"
                             android:text="Manual \nDetailing"
                             android:textSize="19dp"
-                            android:textStyle="italic" >
-                        </TextView>
+                            android:textStyle="italic"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t5"
@@ -342,15 +337,14 @@
                             android:paddingBottom="10dp"
                             android:text="Sampling"
                             android:textSize="19dp"
-                            android:textStyle="italic" >
-                        </TextView>
+                            android:textStyle="italic"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t6"
@@ -370,15 +364,14 @@
                             android:paddingBottom="10dp"
                             android:text="Input"
                             android:textSize="19dp"
-                            android:textStyle="italic" >
-                        </TextView>
+                            android:textStyle="italic"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t7"
@@ -398,15 +391,14 @@
                             android:paddingBottom="10dp"
                             android:text="Order"
                             android:textSize="19dp"
-                            android:textStyle="italic" >
-                        </TextView>
+                            android:textStyle="italic"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t8"
@@ -419,7 +411,7 @@
 
                         <TableRow
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" >
+                            android:layout_height="wrap_content">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -448,7 +440,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t9"
@@ -461,7 +453,7 @@
 
                         <TableRow
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" >
+                            android:layout_height="wrap_content">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -471,8 +463,7 @@
                                 android:layout_marginTop="10dp"
                                 android:paddingBottom="10dp"
                                 android:text="6"
-                                android:textSize="30dp" >
-                            </TextView>
+                                android:textSize="30dp"></TextView>
 
                             <TextView
                                 android:id="@+id/actionclosed3"
@@ -490,7 +481,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/t10"
@@ -510,8 +501,7 @@
                             android:paddingBottom="10dp"
                             android:text="Compaign \nActivity"
                             android:textSize="19dp"
-                            android:textStyle="italic" >
-                        </TextView>
+                            android:textStyle="italic"></TextView>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
@@ -527,7 +517,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -536,7 +526,7 @@
                     android:layout_marginBottom="10dip"
                     android:layout_marginLeft="25dip"
                     android:layout_marginTop="20dip"
-                    android:text="Feedback"
+                    android:text="Visit Details"
                     android:textSize="20sp" />
 
                 <TextView
@@ -554,15 +544,15 @@
             <RelativeLayout
                 android:id="@+id/relid1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <include
                     android:id="@+id/feed1"
+                    layout="@layout/newfeedback"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    layout="@layout/newfeedback" />
+                    android:layout_marginTop="5dp" />
 
                 <View
                     android:id="@+id/sideview"
@@ -577,7 +567,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tvb"
@@ -615,12 +605,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
-                android:orientation="vertical" >
-            </LinearLayout>
+                android:orientation="vertical"></LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/manual"
@@ -636,7 +625,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/manual"
                     android:layout_marginLeft="25dp"
-                    android:layout_marginTop="20dp" >
+                    android:layout_marginTop="20dp">
 
                     <TextView
                         android:id="@+id/tm1"
@@ -729,7 +718,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tvby"
@@ -755,15 +744,15 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <include
                     android:id="@+id/feed2"
+                    layout="@layout/historysample"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    layout="@layout/historysample" />
+                    android:layout_marginTop="5dp" />
             </RelativeLayout>
 
             <View
