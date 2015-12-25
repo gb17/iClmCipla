@@ -1024,6 +1024,7 @@ public class Utility {
         TextView activityname = (TextView) cView
                 .findViewById(R.id.activityname);
         activityname.setText(titlename);
+        activityname.setTypeface(font);
         actionBar.setCustomView(cView);
 
         actionBar.setBackgroundDrawable(context.getResources().getDrawable(

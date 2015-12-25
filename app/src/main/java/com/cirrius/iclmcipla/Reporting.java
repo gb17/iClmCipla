@@ -29,7 +29,7 @@ public class Reporting extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
-        Utility.setactoinbart(getActionBar(), this, font, "Reporting");
+        Utility.setactoinbart(getActionBar(), this, font, "Reporting "+  getResources().getString(R.string.icon_triangel)+"  Dr Alan Spiegel  17th July" );
         setContentView(R.layout.repoting);
 
 //        Expandablelistviewfordoc list = new Expandablelistviewfordoc(

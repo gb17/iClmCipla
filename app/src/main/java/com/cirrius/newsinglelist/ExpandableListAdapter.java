@@ -1,6 +1,7 @@
 package com.cirrius.newsinglelist;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -132,6 +133,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                 .findViewById(R.id.eventsListEventRowText);
 
         txtListChild.setText(childText);
+        if((groupPosition == 0 && childPosition == 0) ||(groupPosition == 0 && childPosition == 2 )){
+            txtListChild.setTextColor(Color.CYAN);
+        }else if(groupPosition == 1 || groupPosition == 2){
+            txtListChild.setTextColor(Color.CYAN);
+        }
+
         return convertView;
     }
 

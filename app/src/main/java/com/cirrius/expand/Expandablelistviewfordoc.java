@@ -94,7 +94,7 @@ public class Expandablelistviewfordoc {
     Integer[] imageDoctor = {R.drawable.doc1, R.drawable.doct_1,
             R.drawable.doct_12, R.drawable.doct_3, R.drawable.doct_4};
 
-    private String[] Drname = {"Alan Spiegel", "Alexander Fleming",
+    private String[] Drname = {"Alan Spiegel", "Ph. Alexander Fleming",
             "John Cussack", "Alexis E. Te", "Alice Rusk"};
 
     String strTime[] = {"10:30 am", "11:00 am", "12:00 am", "12:45 pm",
