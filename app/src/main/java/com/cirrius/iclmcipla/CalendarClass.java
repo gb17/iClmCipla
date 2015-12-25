@@ -89,7 +89,7 @@ public class CalendarClass extends Activity implements DateInterface {
 
     Calendar myCalendar = Calendar.getInstance();
 
-    private TextView sicklv;
+    private TextView sicklv, t1, t2;
     private TextView anl;
     private TextView sicklv1;
     private TextView sicklv2;
@@ -147,6 +147,11 @@ public class CalendarClass extends Activity implements DateInterface {
 
         addappointmentplus = (TextView) findViewById(R.id.addappointmentplus);
         addappointmentplus.setTypeface(font);
+
+        t1 = (TextView) findViewById(R.id.t1);
+        t1.setTypeface(font);
+        t2 = (TextView) findViewById(R.id.t2);
+        t2.setTypeface(font);
 
         selall = (TextView) findViewById(R.id.selall);
         selall.setTypeface(font);

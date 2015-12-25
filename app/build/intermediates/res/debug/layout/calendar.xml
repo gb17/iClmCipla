@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     android:background="#484848"
     android:baselineAligned="false"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#e0e0e0"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/today"
@@ -98,13 +98,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <RelativeLayout
             android:id="@+id/listfordoc1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1">
 
             <EditText
                 android:id="@+id/serch"
@@ -167,21 +167,91 @@
                 android:id="@+id/listfordoc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/serch" >
-            </RelativeLayout>
+                android:layout_below="@+id/serch"></RelativeLayout>
         </RelativeLayout>
 
-        <com.cirrius.iclmcipla.CalendarView
-            xmlns:calendarNS="http://schemas.android.com/apk/res/samples.aalamir.customcalendar"
-            android:id="@+id/calendar_view"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"
             android:layout_weight="2"
             android:background="@android:color/white"
-            android:paddingBottom="20dp"
+            android:paddingBottom="5dp"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp" />
+            android:paddingRight="20dp">
+
+            <com.cirrius.iclmcipla.CalendarView xmlns:calendarNS="http://schemas.android.com/apk/res/samples.aalamir.customcalendar"
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom" />
+
+            <LinearLayout
+                android:id="@+id/bottomm"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/holiborder"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Non Working Day" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/totborder"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Non Call Activity" />
+
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/icon_circle"
+                    android:textColor="#00FF00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Partial Non call Activity" />
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/icon_circle"
+                    android:textColor="#FF0000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Partial Leave" />
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
 </LinearLayout><!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/layout/calendar.xml -->

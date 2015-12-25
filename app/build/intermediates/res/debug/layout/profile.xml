@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="1dp"
     android:layout_marginLeft="2dp"
-    android:layout_marginRight="2dp" >
+    android:layout_marginRight="2dp">
 
     <TextView
         android:id="@+id/textview"
@@ -36,9 +36,9 @@
         android:layout_below="@id/textview"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="20dp"
-        android:visibility="invisible"
         android:layout_toLeftOf="@id/edit"
-        android:src="@drawable/searchnew" />
+        android:src="@drawable/searchnew"
+        android:visibility="invisible" />
 
     <EditText
         android:id="@+id/searchtxt"
@@ -47,23 +47,23 @@
         android:layout_below="@id/textview"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="20dp"
-        android:visibility="invisible"
         android:layout_toLeftOf="@id/search"
-        android:hint="   search" />
+        android:hint="   search"
+        android:visibility="invisible" />
 
     <LinearLayout
         android:id="@+id/card_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/searchtxt"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="#9A9A9A"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/card1"
@@ -76,7 +76,7 @@
                 android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:paddingLeft="15dp" >
+                android:paddingLeft="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Segment"
+                    android:text="Speciality"
                     android:textSize="14sp"
                     android:textStyle="italic" />
 
@@ -100,6 +100,67 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cardiologist"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Speciality by Practice"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardiovascular Surgeon"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Qualification"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MBBS/MD"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Class"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Visit Frequency"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -133,65 +194,7 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Speciality"
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cardiologist"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Super Speciality"
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Open Heart Surgery"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Speciality by Practice"
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cardiovascular Surgeon"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Qualification"
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MBBS/MD"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -205,7 +208,7 @@
                 android:layout_weight="1"
                 android:background="#E8E8E8"
                 android:orientation="vertical"
-                android:paddingLeft="15dp" >
+                android:paddingLeft="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -262,20 +265,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="PAN Issue No."
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PAN123456"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -292,35 +281,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Marital Status"
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Married"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Medical Service"
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Medium"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -334,7 +294,7 @@
                 android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:paddingLeft="15dp" >
+                android:paddingLeft="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -342,7 +302,7 @@
                     android:background="@drawable/gry_bar"
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
-                    android:text="ENGAGEMENT"
+                    android:text="IMPORTANT PARAMETERS"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
 
@@ -350,123 +310,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Visiting hours"
+                    android:text="Visit Days"
                     android:textSize="14sp"
                     android:textStyle="italic" />
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp" >
+                    android:layout_marginTop="10dp">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Day"
-                        android:textColor="#616161"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:background="@drawable/round"
                         android:gravity="center_horizontal"
-                        android:text="Hours"
-                        android:textColor="#616161"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp" >
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Mon"
+                        android:text="Monday"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:text="9 am to 11 am"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp" >
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Wed"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:text="6 pm to 8 pm"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp" >
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Fri"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:text="9 am to 11 am"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp" >
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Sat"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:text="4 pm to 6 pm"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/round"
+                        android:gravity="center_horizontal"
+                        android:text="Friday"
                         android:textSize="16sp"
                         android:textStyle="bold" />
                 </TableRow>
@@ -475,14 +343,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Appointment needed"
+                    android:text="Rx Level"
                     android:textSize="14sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Yes"
+                    android:text="Regular prescriber"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -490,14 +358,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Event Participation"
+                    android:text="Potential"
                     android:textSize="14sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="High"
+                    android:text="10,00,000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Overall market"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75% Share"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -513,7 +396,7 @@
                 android:layout_weight="1"
                 android:background="#E8E8E8"
                 android:orientation="vertical"
-                android:paddingLeft="15dp" >
+                android:paddingLeft="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -559,14 +442,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Hobbies"
+                    android:text="Marital Status"
                     android:textSize="14sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reading, Scientific research"
+                    android:text="Married"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -574,14 +457,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Media Presense"
+                    android:text="Birthday"
                     android:textSize="14sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="123456"
+                    android:text="01-01-1979"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -589,29 +472,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Article Written"
+                    android:text="Marriage Anniversary"
                     android:textSize="14sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Clinical Guidelines"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Language Spoken"
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="English, Spanish"
+                    android:text="21-04-2009"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -622,7 +490,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="#9A9A9A"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <LinearLayout
                 android:id="@+id/card5"
@@ -635,7 +504,7 @@
                 android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:paddingLeft="15dp" >
+                android:paddingLeft="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -749,7 +618,8 @@
                 android:layout_weight="1"
                 android:background="#E8E8E8"
                 android:orientation="vertical"
-                android:paddingLeft="15dp" >
+                android:paddingLeft="15dp"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -833,7 +703,8 @@
                 android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:paddingLeft="15dp" >
+                android:paddingLeft="15dp"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -917,7 +788,8 @@
                 android:layout_weight="1"
                 android:background="#E8E8E8"
                 android:orientation="vertical"
-                android:paddingLeft="15dp" >
+                android:paddingLeft="15dp"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"

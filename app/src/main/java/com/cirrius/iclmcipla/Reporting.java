@@ -29,7 +29,7 @@ public class Reporting extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
-        Utility.setactoinbart(getActionBar(), this, font, "Reporting "+  getResources().getString(R.string.icon_triangel)+"  Dr Alan Spiegel  17th July" );
+        Utility.setactoinbart(getActionBar(), this, font, "Reporting " + getResources().getString(R.string.icon_triangel) + "  Dr Alan Spiegel  17th July");
         setContentView(R.layout.repoting);
 
 //        Expandablelistviewfordoc list = new Expandablelistviewfordoc(
@@ -49,6 +49,7 @@ public class Reporting extends Activity {
         noreporting = (TextView) findViewById(R.id.noreport);
         noreporting.setOnClickListener(listener);
         nofilter = (TextView) findViewById(R.id.nofilter);
+        nofilter.setTypeface(font);
         nofilter.setOnClickListener(listener);
         nofilter.setTag("0");
 
@@ -150,9 +151,11 @@ public class Reporting extends Activity {
             tick.setTextColor(Color.YELLOW);
         } else if (index == 2) {
             tick.setText(R.string.icon_exclaim);
-            tick.setTextColor(Color.RED);
-        } else
-            tick.setVisibility(View.INVISIBLE);
+            tick.setTextColor(Color.parseColor("#00ffff"));
+        } else {
+            tick.setText(R.string.icon_cross);
+            tick.setTextColor(Color.parseColor("#FF0000"));
+        }
         tick.setTypeface(font);
         tick.setLayoutParams(tickparam);
 

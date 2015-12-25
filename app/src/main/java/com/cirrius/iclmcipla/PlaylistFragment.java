@@ -1,20 +1,5 @@
 package com.cirrius.iclmcipla;
 
-import java.io.ByteArrayOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Locale;
-import java.util.Vector;
-
-import org.achartengine.ChartFactory;
-import org.achartengine.GraphicalView;
-import org.achartengine.model.XYMultipleSeriesDataset;
-import org.achartengine.model.XYSeries;
-import org.achartengine.renderer.XYMultipleSeriesRenderer;
-import org.achartengine.renderer.XYSeriesRenderer;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -26,6 +11,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -73,6 +59,7 @@ import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -100,6 +87,21 @@ import com.github.mikephil.charting.utils.ValueFormatter;
 import com.index.table.service.UserService;
 import com.index.table.to.Book;
 
+import org.achartengine.ChartFactory;
+import org.achartengine.GraphicalView;
+import org.achartengine.model.XYMultipleSeriesDataset;
+import org.achartengine.model.XYSeries;
+import org.achartengine.renderer.XYMultipleSeriesRenderer;
+import org.achartengine.renderer.XYSeriesRenderer;
+
+import java.io.ByteArrayOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Locale;
+import java.util.Vector;
+
 public class PlaylistFragment extends Fragment {
     Typeface font;
 
@@ -111,7 +113,7 @@ public class PlaylistFragment extends Fragment {
     private ListView listview;
     private LinearLayout linearone, linearthree;
     ImageView gesture;
-    private TextView overallheader;
+    TextView overallheader;
     String url = "";
     String menutext = "";
     String[][] pageData;
@@ -348,24 +350,39 @@ public class PlaylistFragment extends Fragment {
             Bitmap bpp = BitmapFactory.decodeByteArray(data, 0, data.length);
             gestures.setImageBitmap(bpp);
 
-            overallheader = (TextView) vfeed.findViewById(R.id.overallheader);
-            happy = (TextView) vfeed.findViewById(R.id.happy);
+            Spinner spinner1 = (Spinner) vfeed.findViewById(R.id.spinner1);
+            Spinner spinner2 = (Spinner) vfeed.findViewById(R.id.spinner2);
+            Spinner spinner3 = (Spinner) vfeed.findViewById(R.id.spinner3);
 
-            happy.setTypeface(font);
-            // happy.setOnClickListener(feedListener);
-            happy.setTextColor(Color.parseColor("#4fc3f7"));
-            avg = (TextView) vfeed.findViewById(R.id.avg);
-            avg.setTypeface(font);
-            // avg.setOnClickListener(feedListener);
+            spinner1.setSelection(2);
+            spinner2.setSelection(2);
+            spinner3.setSelection(2);
 
-            sad = (TextView) vfeed.findViewById(R.id.sad);
-            sad.setTypeface(font);
+            spinner1.getSelectedView();
+            spinner1.setEnabled(false);
+            spinner2.getSelectedView();
+            spinner2.setEnabled(false);
+            spinner3.getSelectedView();
+            spinner3.setEnabled(false);
+
+//            overallheader = (TextView) vfeed.findViewById(R.id.overallheader);
+//            happy = (TextView) vfeed.findViewById(R.id.happy);
+//
+//            happy.setTypeface(font);
+//            // happy.setOnClickListener(feedListener);
+//            happy.setTextColor(Color.parseColor("#4fc3f7"));
+//            avg = (TextView) vfeed.findViewById(R.id.avg);
+//            avg.setTypeface(font);
+//            // avg.setOnClickListener(feedListener);
+//
+//            sad = (TextView) vfeed.findViewById(R.id.sad);
+//            sad.setTypeface(font);
             // sad.setOnClickListener(feedListener);
-            mainlayout = (LinearLayout) vfeed.findViewById(R.id.mainlayout);
-            ly2 = (LinearLayout) vfeed.findViewById(R.id.brndAdd2);
-            ly3 = (LinearLayout) vfeed.findViewById(R.id.mainlayout2);
-            addbrandsForHistory(4);
-            addbrandsForHistory(4, 1);
+//            mainlayout = (LinearLayout) vfeed.findViewById(R.id.mainlayout);
+//            ly2 = (LinearLayout) vfeed.findViewById(R.id.brndAdd2);
+//            ly3 = (LinearLayout) vfeed.findViewById(R.id.mainlayout2);
+//            addbrandsForHistory(4);
+//            addbrandsForHistory(4, 1);
 
             TextView tp1 = (TextView) v2.findViewById(R.id.t1);
 
@@ -945,11 +962,13 @@ public class PlaylistFragment extends Fragment {
             layout26.addView(graphs.lineChart(ast2, 19, 100, 50),
                     new LayoutParams(260, 200));
 
-            View v9 = inflater.inflate(R.layout.other_bu, null);
-            LinearLayout relativeDATAforOtherBu = (LinearLayout) v9.findViewById(R.id.relativeDATAforOtherBu);
-            addHistorypatti(relativeDATAforOtherBu, 1);
-            LinearLayout relativeDATAforOtherBu2 = (LinearLayout) v9.findViewById(R.id.relativeDATAforOtherBu2);
-            addHistorypatti(relativeDATAforOtherBu2, 2);
+            View v9 = inflater.inflate(R.layout.other_bu_grid, null);
+            createGrid(v9);
+
+//            LinearLayout relativeDATAforOtherBu = (LinearLayout) v9.findViewById(R.id.relativeDATAforOtherBu);
+//            addHistorypatti(relativeDATAforOtherBu, 1);
+//            LinearLayout relativeDATAforOtherBu2 = (LinearLayout) v9.findViewById(R.id.relativeDATAforOtherBu2);
+//            addHistorypatti(relativeDATAforOtherBu2, 2);
 
             LinearLayout linear = new LinearLayout(getActivity());
             linear.setOrientation(LinearLayout.VERTICAL);
@@ -5533,5 +5552,68 @@ public class PlaylistFragment extends Fragment {
 
         }
     }
+
+    private void createGrid(View v9) {
+        TableLayout tbl;
+        EditText[] edittext;
+
+        TableRow.LayoutParams llp = null;
+
+        TableRow tr;
+
+        tbl = (TableLayout) v9.findViewById(R.id.tablesforinv);
+        edittext = new EditText[5];
+        llp = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f);
+        llp.setMargins(1, 1, 0, 0);
+        tbl.removeAllViews();
+        llp = new TableRow.LayoutParams(0,
+                TableRow.LayoutParams.WRAP_CONTENT, 1f);
+        llp.setMargins(0, 1, 1, 0);
+        TableRow.LayoutParams llpweight2 = new TableRow.LayoutParams(0,
+                TableRow.LayoutParams.WRAP_CONTENT, 2f);
+        llpweight2.setMargins(0, 1, 1, 0);
+        String[][] productdetails = {
+                {"User", "Nilesh", "ALan", "Tim", ""},
+                {"Role", "Manager", "Area manager", "Sale Manager", ""},
+                {"Potential", "100000", "200000", "300000", "500000"},
+                {"Investment", "1000", "2000", "3000", "5000"},
+                {"Rx", "Non Prescriber", "Regular Prescriber", "Occasional Prescriber ", ""},
+                {"Market Share", "70%", "40%", "30%", "80%"},
+                {"Speciality", "MD", "Dermat", "GP", ""},
+                {"Class", "A", "B", "C", ""},
+                {"VF", "1", "3", "2", "4"},
+                {"Call Average", "3", "2", "3", "2"}
+
+        };
+        if (productdetails != null) {
+            for (int j = 0; j < productdetails.length; j++) {
+                tr = new TableRow(getActivity());
+
+                for (int i = 0; i < productdetails[i].length; i++) {
+
+                    edittext[i] = new EditText(getActivity());
+                    edittext[i].setBackgroundColor(Color.WHITE);
+                    edittext[i].setTextSize(15);
+                    edittext[i].setSingleLine();
+                    edittext[i].setText(productdetails[j][i]);
+                    edittext[i].setLayoutParams(llp);
+                    edittext[i].setTextColor(Color.BLACK);
+                    edittext[i].setEnabled(false);
+                    edittext[i].setKeyListener(null);
+                    edittext[i].setClickable(false);
+                    edittext[i].setGravity(Gravity.CENTER_HORIZONTAL);
+
+                    if (i == 1) {
+                        edittext[i].setBackgroundColor(Color.parseColor("#00FFFF"));
+                    }
+                    tr.addView(edittext[i]);
+
+                }
+                tbl.addView(tr);
+            }
+        }
+
+    }
+
 
 }

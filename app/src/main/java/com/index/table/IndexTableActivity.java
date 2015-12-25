@@ -595,9 +595,9 @@ public class IndexTableActivity extends CustomListIndex implements
     public boolean onCreateOptionsMenu(Menu menu) {
         // TODO Auto-generated method stub
 
-        menu.add(Menu.NONE, R.drawable.plus, 2, "").setIcon(R.drawable.plus)
+        menu.add(Menu.NONE, R.drawable.add_doctor, 2, "").setIcon(R.drawable.add_doctor)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        menu.add(Menu.NONE, R.drawable.cancel12, 3, "").setIcon(R.drawable.cancel12)
+        menu.add(Menu.NONE, R.drawable.del_doctor, 3, "").setIcon(R.drawable.del_doctor)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         menu.add(Menu.NONE, R.drawable.ic_action_search, 1, "")
                 .setIcon(R.drawable.ic_action_search)
@@ -623,7 +623,7 @@ public class IndexTableActivity extends CustomListIndex implements
                         WindowManager.LayoutParams.FLAG_DIM_BEHIND);
                 dialog_box.show();
                 return true;
-            case R.drawable.plus:
+            case R.drawable.add_doctor:
                 final Dialog d = new Dialog(IndexTableActivity.this);
                 d.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 d.getWindow().setBackgroundDrawable(
@@ -655,7 +655,7 @@ public class IndexTableActivity extends CustomListIndex implements
                 });
                 d.show();
                 return true;
-            case R.drawable.cancel12:
+            case R.drawable.del_doctor:
                 final Dialog dialog = new Dialog(IndexTableActivity.this);
                 dialog.getWindow();
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

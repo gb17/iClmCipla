@@ -40,8 +40,9 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/round_gray"
-                android:text="    "
-                android:textSize="16sp" />
+                android:text="@string/icon_cross"
+                android:textColor="#ff0000"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/noreport"
@@ -73,7 +74,7 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/round_gray"
                 android:text="@string/icon_exclaim"
-                android:textColor="#ff0000"
+                android:textColor="#00ffff"
                 android:textSize="20sp" />
         </LinearLayout>
 

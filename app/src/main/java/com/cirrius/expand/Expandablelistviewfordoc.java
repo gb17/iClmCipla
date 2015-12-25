@@ -533,7 +533,7 @@ public class Expandablelistviewfordoc {
                         tick2.setVisibility(View.VISIBLE);
                         tick2.setText(R.string.icon_exclaim);
                         tick2.setTextSize(20);
-                        tick2.setTextColor(Color.RED);
+                        tick2.setTextColor(Color.parseColor("#00ffff"));
                     }
 
                 }
@@ -804,100 +804,97 @@ public class Expandablelistviewfordoc {
                     if (count == 4) {
 
 
-                            // TODO Auto-generated method stub
-                            final Dialog d = new Dialog(context);
-                            d.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                            d.getWindow().setBackgroundDrawable(
-                                    new ColorDrawable(android.R.color.transparent));
-                            d.setContentView(R.layout.addleavedialog);
+                        // TODO Auto-generated method stub
+                        final Dialog d = new Dialog(context);
+                        d.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                        d.getWindow().setBackgroundDrawable(
+                                new ColorDrawable(android.R.color.transparent));
+                        d.setContentView(R.layout.addleavedialog);
 
 
+                        TextView close = (TextView) d.findViewById(R.id.close);
+                        EditText ButtonSet = (EditText) d.findViewById(R.id.ButtonSet);
 
-                            TextView close = (TextView) d.findViewById(R.id.close);
-                            EditText ButtonSet = (EditText) d.findViewById(R.id.ButtonSet);
+                        ButtonSet.setOnClickListener(new OnClickListener() {
 
-                            ButtonSet.setOnClickListener(new OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // TODO Auto-generated method stub
+                                d.dismiss();
+                            }
+                        });
+                        close.setTypeface(font);
+                        close.setOnClickListener(new OnClickListener() {
 
-                                @Override
-                                public void onClick(View v) {
-                                    // TODO Auto-generated method stub
-                                    d.dismiss();
-                                }
-                            });
-                            close.setTypeface(font);
-                            close.setOnClickListener(new OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // TODO Auto-generated method stub
+                                d.dismiss();
+                            }
+                        });
+                        EditText description = (EditText) d
+                                .findViewById(R.id.EdittextDescription);
+                        Utility.hideKeyboard(description);
 
-                                @Override
-                                public void onClick(View v) {
-                                    // TODO Auto-generated method stub
-                                    d.dismiss();
-                                }
-                            });
-                            EditText description = (EditText) d
-                                    .findViewById(R.id.EdittextDescription);
-                            Utility.hideKeyboard(description);
+                        final EditText edittime = (EditText) d
+                                .findViewById(R.id.edittime);
+                        edittime.setOnClickListener(new OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // TODO Auto-generated method stub
 
-                            final EditText edittime = (EditText) d
-                                    .findViewById(R.id.edittime);
-                            edittime.setOnClickListener(new OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    // TODO Auto-generated method stub
+                                Calendar mcurrentTime = Calendar.getInstance();
+                                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                                int minute = mcurrentTime.get(Calendar.MINUTE);
+                                TimePickerDialog mTimePicker;
+                                mTimePicker = new TimePickerDialog(context,
+                                        new TimePickerDialog.OnTimeSetListener() {
+                                            @Override
+                                            public void onTimeSet(
+                                                    TimePicker timePicker,
+                                                    int selectedHour, int selectedMinute) {
+                                                edittime.setText(selectedHour + ":"
+                                                        + selectedMinute);
+                                            }
+                                        }, hour, minute, true);// Yes 24 hour
+                                // time
+                                mTimePicker.setTitle("Select Time");
 
-                                    Calendar mcurrentTime = Calendar.getInstance();
-                                    int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-                                    int minute = mcurrentTime.get(Calendar.MINUTE);
-                                    TimePickerDialog mTimePicker;
-                                    mTimePicker = new TimePickerDialog(context,
-                                            new TimePickerDialog.OnTimeSetListener() {
-                                                @Override
-                                                public void onTimeSet(
-                                                        TimePicker timePicker,
-                                                        int selectedHour, int selectedMinute) {
-                                                    edittime.setText(selectedHour + ":"
-                                                            + selectedMinute);
-                                                }
-                                            }, hour, minute, true);// Yes 24 hour
-                                    // time
-                                    mTimePicker.setTitle("Select Time");
+                                mTimePicker.show();
 
-                                    mTimePicker.show();
+                            }
+                        });
 
-                                }
-                            });
+                        final EditText edittime1 = (EditText) d
+                                .findViewById(R.id.edittime1);
+                        edittime1.setOnClickListener(new OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // TODO Auto-generated method stub
 
-                            final EditText edittime1 = (EditText) d
-                                    .findViewById(R.id.edittime1);
-                            edittime1.setOnClickListener(new OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    // TODO Auto-generated method stub
+                                Calendar mcurrentTime = Calendar.getInstance();
+                                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                                int minute = mcurrentTime.get(Calendar.MINUTE);
+                                TimePickerDialog mTimePicker;
+                                mTimePicker = new TimePickerDialog(context,
+                                        new TimePickerDialog.OnTimeSetListener() {
+                                            @Override
+                                            public void onTimeSet(
+                                                    TimePicker timePicker,
+                                                    int selectedHour, int selectedMinute) {
+                                                edittime1.setText(selectedHour + ":"
+                                                        + selectedMinute);
+                                            }
+                                        }, hour, minute, true);// Yes 24 hour
+                                // time
+                                mTimePicker.setTitle("Select Time");
 
-                                    Calendar mcurrentTime = Calendar.getInstance();
-                                    int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-                                    int minute = mcurrentTime.get(Calendar.MINUTE);
-                                    TimePickerDialog mTimePicker;
-                                    mTimePicker = new TimePickerDialog(context,
-                                            new TimePickerDialog.OnTimeSetListener() {
-                                                @Override
-                                                public void onTimeSet(
-                                                        TimePicker timePicker,
-                                                        int selectedHour, int selectedMinute) {
-                                                    edittime1.setText(selectedHour + ":"
-                                                            + selectedMinute);
-                                                }
-                                            }, hour, minute, true);// Yes 24 hour
-                                    // time
-                                    mTimePicker.setTitle("Select Time");
+                                mTimePicker.show();
 
-                                    mTimePicker.show();
+                            }
+                        });
 
-                                }
-                            });
-
-                            d.show();
-
-
+                        d.show();
 
 
                     }
@@ -975,9 +972,7 @@ public class Expandablelistviewfordoc {
                                 });
                         d.show();
 
-                    }
-
-                    else if (count == 5) {
+                    } else if (count == 5) {
 
                     } else if (count == 1) {
 
@@ -1045,7 +1040,7 @@ public class Expandablelistviewfordoc {
 
                         d.show();
 
-                    } else if ( count == 2) {
+                    } else if (count == 2) {
 
                         final Dialog d = new Dialog(context);
                         d.requestWindowFeature(Window.FEATURE_NO_TITLE);

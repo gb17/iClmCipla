@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/first"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Type"
+            android:textColor="#848484"
+            android:textSize="19sp" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_broderforedittext"
+            android:clickable="false"
+            android:entries="@array/calltype" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Session"
+            android:textColor="#848484"
+            android:textSize="19sp" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_broderforedittext"
+            android:clickable="false"
+            android:entries="@array/session" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Time Spent"
+            android:textColor="#848484"
+            android:textSize="19sp" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_broderforedittext"
+            android:clickable="false"
+            android:entries="@array/timespent" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback : "
+            android:textColor="#848484"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/new_feed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_broderforedittext"
+            android:clickable="false"
+            android:editable="false"
+            android:lines="10"
+            android:maxLines="10"
+            android:paddingLeft="10dp"
+            android:text="Product detailing was good." />
+    </LinearLayout>
+
+</LinearLayout>
+
