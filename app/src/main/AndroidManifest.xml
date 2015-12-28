@@ -18,43 +18,46 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="com.neele.googlemapsdemo.permission.MAPS_RECEIVE" />
 
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/iconlogo"
         android:label="@string/app_name"
         android:theme="@style/Theme.Iclm">
         <activity
-            android:name="com.cirrius.iclmcipla.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.MainForCalforcalenser"
-            android:screenOrientation="landscape"></activity>
+            android:name=".MainForCalforcalenser"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.DetailingLandingPage"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:name=".DetailingLandingPage"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.DetailingPageV2"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:name=".DetailingPageV2"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.ContentLIb"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:name=".ContentLIb"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
             android:name="com.cirrius.events.Events"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
             android:name="com.index.table.IndexTableActivity"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.Login"
-            android:screenOrientation="landscape"></activity>
+            android:name=".Login"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.SplashScreen"
+            android:name=".SplashScreen"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,70 +66,74 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.cirrius.iclmcipla.Dashboard"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
-        <activity
-            android:name="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
-        <activity
-            android:name="com.cirrius.iclmcipla.VideoPlay"
-            android:screenOrientation="landscape"></activity>
-        <activity
-            android:name="com.cirrius.iclmcipla.AddScreen"
-            android:screenOrientation="landscape"></activity>
-        <activity
-            android:name="com.cirrius.events.EventTabs"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
-        <activity
-            android:name="com.cirrius.iclmcipla.Physicians"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
-        <activity
-            android:name="com.cirrius.iclmcipla.PhysicianPage"
+            android:name=".Dashboard"
+            android:parentActivityName=".LandingPage"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.ReportingTabs"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:name=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.Reporting"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:name=".VideoPlay"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.CalendarClass"
+            android:name=".AddScreen"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.cirrius.events.EventTabs"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Physicians"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".PhysicianPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ReportingTabs"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Reporting"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CalendarClass"
             android:configChanges="keyboard|orientation"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
+            android:parentActivityName=".LandingPage"
             android:screenOrientation="landscape"
-            android:windowSoftInputMode="adjustPan"></activity>
-        <activity android:name="com.cirrius.iclmcipla.Rough"></activity>
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Rough" />
         <activity
-            android:name="com.cirrius.iclmcipla.ActionPoint"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"></activity>
+            android:name=".ActionPoint"
+            android:parentActivityName=".LandingPage" />
         <activity
-            android:name="com.cirrius.iclmcipla.Physinet"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"></activity>
+            android:name=".Physinet"
+            android:parentActivityName=".LandingPage" />
         <activity
             android:name="com.cirrius.map.UserRouteActivity"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.InventoryTab"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:name=".InventoryTab"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
             android:name="com.cirrius.canvas.Canvas"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
         <activity
-            android:name="com.cirrius.iclmcipla.EnhanceLandingPage"
-            android:parentActivityName="com.cirrius.iclmcipla.LandingPage"
-            android:screenOrientation="landscape"></activity>
+            android:name=".EnhanceLandingPage"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyDEnjhQP4bup8_sej9Lp_f1Fc6xU8H9VXY" />
+
+        <activity
+            android:name="com.sync.SyncActivity"
+            android:label="@string/title_activity_sync"></activity>
     </application>
 
 </manifest>

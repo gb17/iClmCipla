@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.cirrius.canvas.Canvas;
 import com.index.table.IndexTableActivity;
+import com.sync.SyncActivity;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
@@ -124,6 +125,9 @@ public class ImageAdapter extends BaseAdapter {
                     mContext.startActivity(intent);
                 } else if (position == 7) {
                     Intent intent = new Intent(mContext, InventoryTab.class);
+                    mContext.startActivity(intent);
+                } else if (position == 9) {
+                    Intent intent = new Intent(mContext, SyncActivity.class);
                     mContext.startActivity(intent);
                 } else if (position == 11) {
                     Intent intent = new Intent(mContext, Canvas.class);

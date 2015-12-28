@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.text.format.DateFormat;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -142,61 +143,61 @@ public class ReportingTabs extends Activity implements DateInterface {
 
             }
         });
-        TextView cancel = (TextView) findViewById(R.id.cancel);
-        cancel.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                dialog_box = new Dialog(ReportingTabs.this);
-                dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog_box.setContentView(R.layout.secondwala);
-                TextView close = (TextView) dialog_box
-                        .findViewById(R.id.close);
-                TextView d1 = (TextView) dialog_box
-                        .findViewById(R.id.d1);
-                d1.setVisibility(View.GONE);
-
-                TextView d2 = (TextView) dialog_box
-                        .findViewById(R.id.d2);
-                d2.setText("Are You Sure You Want To Cancel ?");
-                close.setTypeface(font);
-                close.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        dialog_box.dismiss();
-                    }
-                });
-                Window window = dialog_box.getWindow();
-                window.setBackgroundDrawable(new ColorDrawable(
-                        Color.TRANSPARENT));
-                dialog_box.getWindow().setLayout(400, 300);
-                dialog_box.show();
-                TextView yes = (TextView) dialog_box.findViewById(R.id.yes);
-                yes.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        // TODO Auto-generated method stub
-                        Intent intent = new Intent(ReportingTabs.this,
-                                Reporting.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                    }
-                });
-                TextView cancel = (TextView) dialog_box
-                        .findViewById(R.id.cancel);
-                cancel.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        // TODO Auto-generated method stub
-                        dialog_box.dismiss();
-                    }
-                });
-
-            }
-        });
+//        TextView cancel = (TextView) findViewById(R.id.cancel);
+//        cancel.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                dialog_box = new Dialog(ReportingTabs.this);
+//                dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//                dialog_box.setContentView(R.layout.secondwala);
+//                TextView close = (TextView) dialog_box
+//                        .findViewById(R.id.close);
+//                TextView d1 = (TextView) dialog_box
+//                        .findViewById(R.id.d1);
+//                d1.setVisibility(View.GONE);
+//
+//                TextView d2 = (TextView) dialog_box
+//                        .findViewById(R.id.d2);
+//                d2.setText("Are You Sure You Want To Cancel ?");
+//                close.setTypeface(font);
+//                close.setOnClickListener(new View.OnClickListener() {
+//
+//                    @Override
+//                    public void onClick(View v) {
+//                        dialog_box.dismiss();
+//                    }
+//                });
+//                Window window = dialog_box.getWindow();
+//                window.setBackgroundDrawable(new ColorDrawable(
+//                        Color.TRANSPARENT));
+//                dialog_box.getWindow().setLayout(400, 300);
+//                dialog_box.show();
+//                TextView yes = (TextView) dialog_box.findViewById(R.id.yes);
+//                yes.setOnClickListener(new View.OnClickListener() {
+//
+//                    @Override
+//                    public void onClick(View v) {
+//                        // TODO Auto-generated method stub
+//                        Intent intent = new Intent(ReportingTabs.this,
+//                                Reporting.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                        startActivity(intent);
+//                    }
+//                });
+//                TextView cancel = (TextView) dialog_box
+//                        .findViewById(R.id.cancel);
+//                cancel.setOnClickListener(new View.OnClickListener() {
+//
+//                    @Override
+//                    public void onClick(View v) {
+//                        // TODO Auto-generated method stub
+//                        dialog_box.dismiss();
+//                    }
+//                });
+//
+//            }
+//        });
         TextView sne = (TextView) findViewById(R.id.sne);
         sne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -381,10 +382,67 @@ public class ReportingTabs extends Activity implements DateInterface {
         clickedTextView.setText(DateFormat.format("h:mm a", c));
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(Menu.NONE, R.drawable.cancel12, 1, "").setIcon(R.drawable.cancel12)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
+        return true;
+    }
+
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.drawable.cancel12:
+                dialog_box = new Dialog(ReportingTabs.this);
+                dialog_box.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog_box.setContentView(R.layout.secondwala);
+                TextView close = (TextView) dialog_box
+                        .findViewById(R.id.close);
+                TextView d1 = (TextView) dialog_box
+                        .findViewById(R.id.d1);
+                d1.setVisibility(View.GONE);
+
+                TextView d2 = (TextView) dialog_box
+                        .findViewById(R.id.d2);
+                d2.setText("Are You Sure You Want To Cancel ?");
+                close.setTypeface(font);
+                close.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        dialog_box.dismiss();
+                    }
+                });
+                Window window = dialog_box.getWindow();
+                window.setBackgroundDrawable(new ColorDrawable(
+                        Color.TRANSPARENT));
+                dialog_box.getWindow().setLayout(400, 300);
+                dialog_box.show();
+                TextView yes = (TextView) dialog_box.findViewById(R.id.yes);
+                yes.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        // TODO Auto-generated method stub
+                        Intent intent = new Intent(ReportingTabs.this,
+                                Reporting.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                    }
+                });
+                TextView cancel = (TextView) dialog_box
+                        .findViewById(R.id.cancel);
+                cancel.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        // TODO Auto-generated method stub
+                        dialog_box.dismiss();
+                    }
+                });
+                return true;
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 // Intent intent = new Intent(this, DetailingLandingPage.class);
@@ -394,4 +452,5 @@ public class ReportingTabs extends Activity implements DateInterface {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

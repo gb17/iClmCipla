@@ -191,7 +191,7 @@
                 android:textStyle="bold" />
 
             <HorizontalScrollView
-                android:layout_width="770dp"
+                android:layout_width="890dp"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
@@ -335,7 +335,7 @@
                 android:paddingLeft="30dp"
                 android:paddingRight="30dp"
                 android:paddingTop="4dp"
-                android:text="Done"
+                android:text="Submit"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -364,6 +364,7 @@
                 android:paddingRight="30dp"
                 android:paddingTop="4dp"
                 android:text="Cancel"
+                android:visibility="gone"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 

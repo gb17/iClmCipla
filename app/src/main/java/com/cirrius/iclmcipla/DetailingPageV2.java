@@ -1,14 +1,5 @@
 package com.cirrius.iclmcipla;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -65,9 +56,18 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.cirrius.iclmcipla.R;
 import com.idunnololz.widgets.ColorPickerDialog;
 import com.idunnololz.widgets.ColorPickerDialog.OnColorSelectedListener;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @SuppressLint("SetJavaScriptEnabled")
 public class DetailingPageV2 extends Activity implements OnClickListener {
@@ -77,6 +77,8 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
     TextView textv;
     ImageView upbutton;
     ImageView downbutton;
+
+    int alo = 0;
     @SuppressWarnings("deprecation")
     // topslideview;
             String url = "";
@@ -603,31 +605,46 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
     };
 
     public void displayFocussedBrands(int id) {
+        if (id < 19) {
+            String fd = "";
+            pageData = rw.getTableData("DVC", 9, " WHERE COL8 = 'F' ",
+                    "Order by CAST(COL9 as integer)");
+            fd = Utility.split(pageData[id][1], ".")[0].toUpperCase();
+            webView.getSettings().setPluginState(PluginState.ON);
+            webView.getSettings().setJavaScriptEnabled(true);
 
-        String fd = "";
-        pageData = rw.getTableData("DVC", 9, " WHERE COL8 = 'F' ",
-                "Order by CAST(COL9 as integer)");
-        fd = Utility.split(pageData[id][1], ".")[0].toUpperCase();
-        webView.getSettings().setPluginState(PluginState.ON);
-        webView.getSettings().setJavaScriptEnabled(true);
+            webView.getSettings().setAllowFileAccess(true);
+            webView.setWebViewClient(new WebViewClient());
 
-        webView.getSettings().setAllowFileAccess(true);
-        webView.setWebViewClient(new WebViewClient());
+            url = "file:///android_asset/" + fd + "/" + pageData[id][1];
 
-        url = "file:///android_asset/" + fd + "/" + pageData[id][1];
+            // startTime = System.currentTimeMillis();
+            webView = (WebView) findViewById(R.id.webView1);
+            webView.post(new Runnable() {
+                @Override
+                public void run() {
+                    webView.loadUrl(url);
+                }
+            });
+            // contentCode = pageData[index][0];
+            // brandCode = pageData[index][6];
+            // tempContentCode = contentCode;
+        } else {
+            webView = (WebView) findViewById(R.id.webView1);
 
-        // startTime = System.currentTimeMillis();
-        webView = (WebView) findViewById(R.id.webView1);
-        webView.post(new Runnable() {
-            @Override
-            public void run() {
-                webView.loadUrl(url);
-            }
-        });
-        // contentCode = pageData[index][0];
-        // brandCode = pageData[index][6];
-        // tempContentCode = contentCode;
 
+            alo = 33;
+            webView.post(new Runnable() {
+                @Override
+                public void run() {
+
+                    url = "file:///android_asset/" + "THANK" + "/"
+                            + "thank.htm";
+                    webView.loadUrl(url);
+
+                }
+            });
+        }
     }
 
     @Override
@@ -1524,34 +1541,136 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
 
     @Override
     public void onBackPressed() {
-        if (backCount == 0 && webView.getVisibility() == View.VISIBLE) {
-            backCount++;
-            mylinear.setVisibility(View.GONE);
-            myscroll2.setVisibility(View.GONE);
-            if (gesturesView2.getVisibility() == View.VISIBLE)
-                gesturesView2.setVisibility(View.GONE);
-            webView.getSettings().setPluginState(PluginState.ON);
-            webView.getSettings().setJavaScriptEnabled(true);
-            // webView.getSettings().setPluginsEnabled(true);
-            webView.getSettings().setAllowFileAccess(true);
 
-            url = "file:///android_asset/" + "THANK" + "/" + "thank.htm";
-            name.setVisibility(View.VISIBLE);
-            refrence.setVisibility(View.GONE);
-            open.setVisibility(View.GONE);
-            name.setPadding(0, 120, 0, 0);
-            webView.post(new Runnable() {
+        if (alo != 33) {
+
+
+            if (backCount == 0 && webView.getVisibility() == View.VISIBLE) {
+                backCount++;
+                mylinear.setVisibility(View.GONE);
+                myscroll2.setVisibility(View.GONE);
+                if (gesturesView2.getVisibility() == View.VISIBLE)
+                    gesturesView2.setVisibility(View.GONE);
+                webView.getSettings().setPluginState(PluginState.ON);
+                webView.getSettings().setJavaScriptEnabled(true);
+                // webView.getSettings().setPluginsEnabled(true);
+                webView.getSettings().setAllowFileAccess(true);
+
+                url = "file:///android_asset/" + "THANK" + "/" + "thank.htm";
+                name.setVisibility(View.VISIBLE);
+                refrence.setVisibility(View.GONE);
+                open.setVisibility(View.GONE);
+                name.setPadding(0, 120, 0, 0);
+                webView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        webView.loadUrl(url);
+
+                    }
+                });
+            } else {
+                backCount++;
+            }
+            if (backCount == 5) {
+                super.onBackPressed();
+                finish();
+            }
+
+        } else if (alo == 33) {
+
+            dialog = new Dialog(DetailingPageV2.this);
+            dialog.getWindow();
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.add_doc);
+            dialog.getWindow().setBackgroundDrawable(
+                    new ColorDrawable(
+                            android.graphics.Color.TRANSPARENT));
+            Display display = ((WindowManager) getSystemService(Context.WINDOW_SERVICE))
+                    .getDefaultDisplay();
+            // dialog.setCancelable(false);
+            int width = display.getWidth();
+            int height = display.getHeight();
+            dialog.getWindow().setLayout((29 * width) / 30,
+                    (height * 9) / 10);
+            LinearLayout first = (LinearLayout) dialog
+                    .findViewById(R.id.first);
+            first.addView(getView());
+            LinearLayout second = (LinearLayout) dialog
+                    .findViewById(R.id.second);
+            second.addView(getView2());
+            TextView close = (TextView) dialog
+                    .findViewById(R.id.crossvb);
+            close.setTypeface(font);
+            close.setOnClickListener(new OnClickListener() {
+
                 @Override
-                public void run() {
-                    webView.loadUrl(url);
+                public void onClick(View v) {
+                    // TODO Auto-generated method stub
+                    dialog.dismiss();
+
+                    backCount++;
+                    mylinear.setVisibility(View.GONE);
+                    myscroll2.setVisibility(View.GONE);
+                    if (gesturesView2.getVisibility() == View.VISIBLE)
+                        gesturesView2.setVisibility(View.GONE);
+                    webView.getSettings()
+                            .setPluginState(PluginState.ON);
+                    webView.getSettings().setJavaScriptEnabled(true);
+                    // webView.getSettings().setPluginsEnabled(true);
+                    webView.getSettings().setAllowFileAccess(true);
+
+                    url = "file:///android_asset/" + "THANK" + "/"
+                            + "thank.htm";
+                    name.setVisibility(View.VISIBLE);
+                    refrence.setVisibility(View.GONE);
+                    open.setVisibility(View.GONE);
+                    name.setPadding(0, 120, 0, 0);
+                    webView.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            webView.loadUrl(url);
+
+                        }
+                    });
 
                 }
             });
-        } else {
-            backCount++;
-        }
-        if (backCount == 5) {
-            super.onBackPressed();
+            TextView add_unlisted = (TextView) dialog
+                    .findViewById(R.id.add_unlisted);
+            final TextView v1 = (TextView) dialog.findViewById(R.id.v1);
+            final LinearLayout v2 = (LinearLayout) dialog
+                    .findViewById(R.id.v2);
+            final TextView v3 = (TextView) dialog.findViewById(R.id.v3);
+            final LinearLayout v4 = (LinearLayout) dialog
+                    .findViewById(R.id.v4);
+            final View v5 = (View) dialog.findViewById(R.id.v5);
+            add_unlisted.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    // TODO Auto-generated method stub
+                    v1.setVisibility(View.VISIBLE);
+                    v2.setVisibility(View.VISIBLE);
+                    v3.setVisibility(View.VISIBLE);
+                    v4.setVisibility(View.VISIBLE);
+                    v5.setVisibility(View.VISIBLE);
+
+                }
+            });
+            edit1 = (EditText) dialog.findViewById(R.id.edit1);
+            edit2 = (EditText) dialog.findViewById(R.id.edit1);
+
+            ImageView move1 = (ImageView) dialog
+                    .findViewById(R.id.move1);
+            ImageView move2 = (ImageView) dialog
+                    .findViewById(R.id.move2);
+            move1.setTag("1");
+            move2.setTag("2");
+            move1.setOnClickListener(listen);
+            move2.setOnClickListener(listen);
+            alo = 94;
+            dialog.show();
+        } else if (alo == 94) {
             finish();
         }
     }
@@ -1794,6 +1913,7 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // TODO Auto-generated method stub
+                lv.setEnabled(false);
                 LinearLayout grandpa = (LinearLayout) lv.getChildAt(position);
                 LinearLayout parentpa = (LinearLayout) grandpa.getChildAt(0);
                 TextView child = (TextView) parentpa.getChildAt(2);
@@ -1802,7 +1922,7 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
                 dataList.remove(position);
 
                 final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
+                handler.post(new Runnable() {
                     @Override
                     public void run() {
                         runOnUiThread(new Runnable() {
@@ -1820,10 +1940,11 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
                                 lv2.setAdapter(adapter2);
                                 adapter2.notifyDataSetChanged();
                                 button.setVisibility(View.VISIBLE);
+                                lv.setEnabled(true);
                             }
                         });
                     }
-                }, 600);
+                });
 
             }
         });
@@ -1864,9 +1985,10 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // TODO Auto-generated method stub
+                lv2.setEnabled(false);
                 dataList2.remove(position);
                 final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
+                handler.post(new Runnable() {
                     @Override
                     public void run() {
                         runOnUiThread(new Runnable() {
@@ -1877,10 +1999,11 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
                                         DetailingPageV2.this, dataList2, 2);
                                 lv2.setAdapter(adapter2);
                                 adapter2.notifyDataSetChanged();
+                                lv2.setEnabled(true);
                             }
                         });
                     }
-                }, 600);
+                });
             }
         });
         adapter2 = new CustomAdapter(DetailingPageV2.this, dataList2, 2);
@@ -1936,8 +2059,9 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
     OnClickListener listen = new OnClickListener() {
 
         @Override
-        public void onClick(View v) {
+        public void onClick(final View v) {
             // TODO Auto-generated method stub
+            v.setEnabled(false);
             String str = "";
             if (v.getTag().equals("1")) {
                 str = edit1.getText().toString();
@@ -1950,7 +2074,7 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
                 String[] strData = {str, "Bronx", "Class A"};
                 dataList2.add(strData);
                 final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
+                handler.post(new Runnable() {
                     @Override
                     public void run() {
                         runOnUiThread(new Runnable() {
@@ -1961,10 +2085,11 @@ public class DetailingPageV2 extends Activity implements OnClickListener {
                                         DetailingPageV2.this, dataList2, 2);
                                 lv2.setAdapter(adapter2);
                                 adapter2.notifyDataSetChanged();
+                                v.setEnabled(true);
                             }
                         });
                     }
-                }, 500);
+                });
             }
         }
     };

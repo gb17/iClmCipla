@@ -235,5 +235,6 @@
         <item>10 mins</item>
         <item>15 mins</item>
     </string-array>
+    <string name="title_activity_sync">SyncActivity</string>
 
 </resources>

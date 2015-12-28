@@ -445,6 +445,10 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/values/dimen.xml -->
     <eat-comment/>
     <dimen name="ambilwarna_hsvHeight">240dp</dimen>
@@ -677,6 +681,7 @@
     <!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="thumb"></string>
+    <string name="title_activity_sync">SyncActivity</string>
     <!-- From: file:/home/admin/AndroidstudioProjects/iClmCipla/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.3.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
