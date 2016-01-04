@@ -13,8 +13,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.cirrius.canvas.Canvas;
 import com.index.table.IndexTableActivity;
 import com.sync.SyncActivity;
 
@@ -130,8 +130,9 @@ public class ImageAdapter extends BaseAdapter {
                     Intent intent = new Intent(mContext, SyncActivity.class);
                     mContext.startActivity(intent);
                 } else if (position == 11) {
-                    Intent intent = new Intent(mContext, Canvas.class);
-                    mContext.startActivity(intent);
+                    Toast.makeText(mContext, "Coming Soon..", Toast.LENGTH_SHORT).show();
+//                    Intent intent = new Intent(mContext, Canvas.class);
+//                    mContext.startActivity(intent);
                 }
             }
         });

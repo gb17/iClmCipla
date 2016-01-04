@@ -1,12 +1,5 @@
 package com.cirrius.iclmcipla;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Locale;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -43,8 +36,14 @@ import android.widget.TextView;
 
 import com.cirrius.animationlist.ListViewDraggingAnimation;
 import com.cirrius.calender.listview.ExpandablelistviewfordocNEW;
-import com.cirrius.iclmcipla.R;
 import com.iclm.util.MyDragListnerforcalender;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Locale;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class CalendarView extends LinearLayout {
@@ -98,7 +97,7 @@ public class CalendarView extends LinearLayout {
     int morepatcharr[] = {2, 21, 16, 29, 18, 28, 30, 14};
 
     String[] maindata = {"Add Unlisted Physician", "Add Pharmacy",
-            "Add Distributor", "Add Action point", "Add Non Call Activity", "Add Leave",
+            "Add Stockiest", "Add Action point", "Add Non Call Activity", "Add Leave",
             "Make Plan from STP", "Manual"};
 
     Context context;
@@ -439,7 +438,7 @@ public class CalendarView extends LinearLayout {
             final TextView tot = (TextView) view.findViewById(R.id.tot);
 
             final TextView data = (TextView) view.findViewById(R.id.data);
-            // clear styling
+
             final TextView tv = (TextView) view.findViewById(R.id.top);
             tv.setTypeface(null, Typeface.NORMAL);
             tv.setTextColor(Color.BLACK);

@@ -67,7 +67,7 @@ public class ReportingTabs extends Activity implements DateInterface {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
-        Utility.setactoinbart(getActionBar(), this, font, "Reporting");
+        Utility.setactoinbart(getActionBar(), this, font, "Reporting " + getResources().getString(R.string.icon_triangel) + "  Dr Alan Spiegel  17th July");
         setContentView(R.layout.reporting_tabs);
 
         Bundle bundle = getIntent().getExtras();

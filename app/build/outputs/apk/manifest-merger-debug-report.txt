@@ -515,7 +515,11 @@ ADDED from AndroidManifest.xml:130:9
 		ADDED from AndroidManifest.xml:132:13
 activity#com.sync.SyncActivity
 ADDED from AndroidManifest.xml:134:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:137:13
 	android:label
+		ADDED from AndroidManifest.xml:138:13
+	android:parentActivityName
 		ADDED from AndroidManifest.xml:136:13
 	android:name
 		ADDED from AndroidManifest.xml:135:13

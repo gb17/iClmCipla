@@ -286,6 +286,7 @@ public class ExpandablelistviewfordocNEW {
 					chkcount.setVisibility(View.VISIBLE);
 
 					headertextview223.setTypeface(font);
+					headertextview223.setVisibility(View.INVISIBLE);
 					headertextview223.setOnClickListener(new OnClickListener() {
 
 						@Override

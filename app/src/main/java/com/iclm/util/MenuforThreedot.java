@@ -13,16 +13,17 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.cirrius.iclmcipla.ActionPoint;
+import com.cirrius.iclmcipla.DetailingPageV2;
 import com.cirrius.iclmcipla.R;
 import com.cirrius.iclmcipla.ReportingTabs;
 
 public class MenuforThreedot {
 
-    String[] maindata = {"Profile",
-            "Action points", "Detailing", "Preparation", "Schedule",
+    String[] maindata = {"Profile", "Action points", "Detailing", "Preparation", "Schedule",
             "Reporting"};
 
-    String[] profile = {"Profile", "View Profile", "Update Profile",
+    String[] profile = {"View Profile", "Update Profile",
             "Delete Request"};
     String[] geotag = {"Geo-Tag", "First Time", "Update", "Locate"};
     String[] EventsnCampaign = {"Events & Campaign", "View Tagged Events",
@@ -35,14 +36,14 @@ public class MenuforThreedot {
     String[] Schedule = {"Schedule", "View", "Reschedule", "Cancel Meeting"};
 
     String[][] mainter = {
-            {"Profile", "View Profile", "Update Profile", "Delete Request"},
+            {"View Profile", "Update Profile", "Delete Request"},
             {"Geo-Tag", "First Time", "Update", "Locate"},
             {"Events & Campaign", "View Tagged Events",
                     "View Tagged Campaign", "Tag Event/Update",
                     "Tag Campaign/Update"},
             {"Action points", "View", "Add View"},
-            {"Detailing", "Start Meeting[LP]", "Start Meeting[SP]",
-                    "Segement play..."},
+            {"View Schedule", "Re-Schedule Appointment", "TAG and Update Event",
+            },
             {"Preparation", "PCP", "View Playlist", "Customize"},
             {"Schedule", "View", "Reschedule", "Cancel Meeting"}};
     Context context;
@@ -92,14 +93,20 @@ public class MenuforThreedot {
             textView.setText(maindata[i]);
             textView.setTag("" + i);
 
-            if (i != maindata.length - 1) {
-                textView.setCompoundDrawablesWithIntrinsicBounds(0, 0,
-                        R.drawable.ic_chevron_right_white_24dp, 0);
+            if (i != maindata.length-1) {
+                if (i == 0 || i == 4)
+                    textView.setCompoundDrawablesWithIntrinsicBounds(0, 0,
+                            R.drawable.ic_chevron_right_white_24dp, 0);
+
+                else
+                {
+                    textView.setPadding(15,15,8,11);
+
+                }
                 left.addView(textView);
                 left.addView(v1);
             } else {
-                textView.setCompoundDrawablesWithIntrinsicBounds(0, 0,
-                        R.drawable.ic_chevron_right_white_24dp, 0);
+                textView.setPadding(8,13,8,13);
                 // textView.setVisibility(View.INVISIBLE);
                 left.addView(textView);
                 v1.setBackgroundColor(Color.parseColor("#484848"));
@@ -124,7 +131,7 @@ public class MenuforThreedot {
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
                 int count = Integer.parseInt((String) v.getTag());
                 right.removeAllViews();
-                if (count != 5) {
+                if (count != 5 && count != 1 && count != 2 && count != 3) {
                     vtemp.setBackgroundColor(Color.parseColor("#484848"));
                     v.setBackgroundColor(Color.parseColor("#9e9e9e"));
                     vtemp = v;
@@ -175,9 +182,19 @@ public class MenuforThreedot {
                     // dialog_box.getWindow().setLayout(450, 450);
                     dialog_box.show();
                 }
+                if (count == 1) {
+                    Intent intent = new Intent(context, ActionPoint.class);
+                    context.startActivity(intent);
 
+                }
                 if (count == 5) {
                     Intent intent = new Intent(context, ReportingTabs.class);
+                    context.startActivity(intent);
+
+                }
+
+                if (count == 2 || count == 3) {
+                    Intent intent = new Intent(context, DetailingPageV2.class);
                     context.startActivity(intent);
 
                 }

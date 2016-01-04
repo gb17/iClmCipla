@@ -39,7 +39,7 @@ public class ListAdapterForsynclist extends BaseAdapter {
             "Fade Pill", "Still SEP", "Ratio ZEP"};
 
     String strTime[] = {"10:30 am", "11:00 am", "12:00 am", "12:45 pm",
-            "01:30 pm", "Class B", "Class B", "Class A", "Class B", "Class C",
+            "01:30 pm", "02:30 am", "Class B", "Class A", "Class B", "Class C",
             "Class A", "10:30 am", "11:00 am", "12:00 am", "12:45 pm",
             "01:30 pm", "Class B", "Class B", "Class A", "Class B", "Class C",
             "Class A"};

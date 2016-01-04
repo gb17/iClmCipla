@@ -341,6 +341,7 @@ public class PlaylistFragment extends Fragment {
 
             View v1 = getMyView(0);
 
+
             View v2 = inflater.inflate(R.layout.history, null);
 
             View vfeed = v2.findViewById(R.id.feed1);
@@ -364,25 +365,6 @@ public class PlaylistFragment extends Fragment {
             spinner2.setEnabled(false);
             spinner3.getSelectedView();
             spinner3.setEnabled(false);
-
-//            overallheader = (TextView) vfeed.findViewById(R.id.overallheader);
-//            happy = (TextView) vfeed.findViewById(R.id.happy);
-//
-//            happy.setTypeface(font);
-//            // happy.setOnClickListener(feedListener);
-//            happy.setTextColor(Color.parseColor("#4fc3f7"));
-//            avg = (TextView) vfeed.findViewById(R.id.avg);
-//            avg.setTypeface(font);
-//            // avg.setOnClickListener(feedListener);
-//
-//            sad = (TextView) vfeed.findViewById(R.id.sad);
-//            sad.setTypeface(font);
-            // sad.setOnClickListener(feedListener);
-//            mainlayout = (LinearLayout) vfeed.findViewById(R.id.mainlayout);
-//            ly2 = (LinearLayout) vfeed.findViewById(R.id.brndAdd2);
-//            ly3 = (LinearLayout) vfeed.findViewById(R.id.mainlayout2);
-//            addbrandsForHistory(4);
-//            addbrandsForHistory(4, 1);
 
             TextView tp1 = (TextView) v2.findViewById(R.id.t1);
 

@@ -133,6 +133,8 @@
 
         <activity
             android:name="com.sync.SyncActivity"
+            android:parentActivityName=".LandingPage"
+            android:screenOrientation="landscape"
             android:label="@string/title_activity_sync"></activity>
     </application>
 

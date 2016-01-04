@@ -2006,6 +2006,80 @@ public class ReportingFragment extends Fragment {
         items.add("Dry syrup");
     }
 
+    public class ImageAdapter extends BaseAdapter {
+        private LayoutInflater mInflater;
+        private Context mContext;
+
+        public ImageAdapter(Context context) {
+            mContext = context;
+        }
+
+        public int getCount() {
+            return count;
+        }
+
+        public Object getItem(int position) {
+            return position;
+        }
+
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder holder;
+            if (convertView == null) {
+                holder = new ViewHolder();
+                convertView = LayoutInflater.from(mContext).inflate(
+                        R.layout.row_photo, null);
+                holder.textview = (TextView) convertView
+                        .findViewById(R.id.thumbImage);
+                holder.textview.setTextColor(Color.WHITE);
+                holder.checkbox = (CheckBox) convertView
+                        .findViewById(R.id.itemCheckBox);
+
+                convertView.setTag(holder);
+            } else {
+                holder = (ViewHolder) convertView.getTag();
+            }
+            holder.checkbox.setId(position);
+            holder.textview.setId(position);
+            holder.checkbox.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // TODO Auto-generated method stub
+                    CheckBox cb = (CheckBox) v;
+                    int id = cb.getId();
+                    if (thumbnailsselection[id]) {
+                        cb.setChecked(false);
+                        thumbnailsselection[id] = false;
+                    } else {
+                        cb.setChecked(true);
+                        thumbnailsselection[id] = true;
+
+                        System.out.println("cmncm" + items.get(id));
+
+                    }
+                }
+            });
+            holder.textview.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // TODO Auto-generated method stub
+                    int id = v.getId();
+                }
+            });
+            holder.textview.setText(items.get(position));
+            holder.checkbox.setChecked(thumbnailsselection[position]);
+            holder.id = position;
+            return convertView;
+        }
+    }
+
+    class ViewHolder {
+        TextView textview;
+        CheckBox checkbox;
+        int id;
+    }
+
     public class MyAdapter extends BaseAdapter {
         Context context;
         String history;
